@@ -1,0 +1,145 @@
+import java.awt.Desktop;
+import java.awt.EventQueue;
+import java.io.File;
+import java.io.IOException;
+import java.lang.Process;
+import java.lang.ProcessBuilder;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import javafx.stage.FileChooser;
+
+public class Viewer extends Application  {
+
+  private final Desktop desktop = Desktop.getDesktop(); 
+  private readSeq ifseq;
+
+  @Override
+  public void start(Stage stage) throws Exception {
+      stage.setTitle("Viewer");
+      stage.setWidth(1120);
+      stage.setHeight(880);
+
+      final FileChooser fileChooser = new FileChooser();
+      VBox root = new VBox();
+      
+      MenuBar menuBar = new MenuBar();
+      Menu fileMenu = new Menu("File");
+
+      MenuItem mnuImSequFS = new MenuItem("Import Seq File (unaligned FASTA)");
+      MenuItem mnuImSeqaFS = new MenuItem("Import Seq File (aligned FASTA)");
+      MenuItem mnuImSeqCl = new MenuItem("Import Seq File (Clustal)");
+      MenuItem mnuImTree = new MenuItem("Import Tree File");
+      MenuItem mnuImClus = new MenuItem("Import Cluster File");
+      MenuItem mnuExit = new MenuItem("Exit");
+
+      mnuImSeqCl.setOnAction(event -> {
+	      File file = fileChooser.showOpenDialog(stage);
+	      if (file != null)  {
+		  String filename = file.getName();
+		  ifseq = new readSeq(filename, 0);
+	      }
+	  });
+      mnuImSeqaFS.setOnAction(event -> {
+	      File file = fileChooser.showOpenDialog(stage);
+	      if (file != null)  {
+		  String filename = file.getName();
+		  ifseq = new readSeq(filename, 1);
+		  /*
+		  for (int j = 0 ; j < ifseq.size() ; ++j)  {
+		      System.out.println(ifseq.getName(j));
+		      System.out.println(ifseq.getSeq(j));
+		  }
+		  */
+	      } 
+	  });
+
+      mnuImSequFS.setOnAction(event -> {
+	      File file = fileChooser.showOpenDialog(stage);
+              ProcessBuilder pb = new ProcessBuilder("mafft","--auto", file.getName());
+	      File alnfasta = new File("dummy.txt");
+	      // 標準エラーを標準出力にマージ
+	      pb.redirectErrorStream(true);
+	      // 出力のリダイレクト先にファイルを指定
+	      pb.redirectOutput(alnfasta);
+	      try {
+		  Process p = pb.start();
+		  // 処理の終了を待つ
+		  p.waitFor();		  
+                  // 実行結果を取得するストリームの種別を出力
+	          //System.out.println(pb.redirectInput());     
+		  ifseq = new readSeq("dummy.txt", 1);
+		  /*  */
+		  for (int j = 0 ; j < ifseq.size() ; ++j)  {
+		      System.out.println(ifseq.getName(j));
+		      System.out.println(ifseq.getSeq(j));
+		  } 
+		  /*  */ 
+              }
+	      catch (IOException | InterruptedException e) {
+		  e.printStackTrace();
+	      }
+	  });
+
+      mnuExit.setOnAction(event -> System.exit(0));
+
+      fileMenu.getItems().addAll(mnuImSequFS, mnuImSeqaFS, mnuImSeqCl, mnuImTree, mnuImClus, mnuExit);
+      menuBar.getMenus().addAll(fileMenu);
+      
+      root.getChildren().addAll(menuBar);
+
+      HBox hbx = new HBox();
+      ScrollPane sp1 = new ScrollPane();
+      ScrollPane sp2 = new ScrollPane();
+      sp1.setPrefSize(380, 600);
+      sp2.setPrefSize(740, 600);
+      Image ex1 = new Image(getClass().getResourceAsStream("test.jpg"));
+
+      StackPane pn1 = new StackPane();
+      pn1.setPrefSize(1000, 1000);
+      StackPane pn2 = new StackPane();
+      pn2.setPrefSize(1000, 1000);
+
+      pn1.getChildren().addAll(new ImageView(ex1));
+      pn2.getChildren().addAll(new ImageView(ex1));
+      sp1.setContent(pn1);
+      sp2.setContent(pn2);
+
+      hbx.getChildren().addAll(sp1, sp2);
+
+      VBox vbx = new VBox();
+
+      ScrollPane sp3 = new ScrollPane();
+      sp3.setPrefSize(1120, 280);
+      vbx.getChildren().addAll(hbx, sp3);
+     
+      root.getChildren().addAll(vbx);
+     
+      stage.setScene(new Scene(root));
+      stage.show();
+  }
+
+  private void openFile(File file)  {
+      EventQueue.invokeLater(() -> { 
+	      try {
+		  desktop.open(file);
+              }
+	      catch (IOException ex)  {
+		  Logger.getLogger(Viewer.class.getName()).log(Level.SEVERE, null, ex);
+	      }
+	  });
+  }
+}
+

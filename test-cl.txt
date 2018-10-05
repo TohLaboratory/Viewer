@@ -1,0 +1,6 @@
+>cluster1
+   3
+2  3  6
+>cluster2
+   3
+4  5  1

@@ -1,0 +1,845 @@
+//2017’Ç¯4’·î10’Æü
+I. ’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤Î’ºî’À®’¤Ë’¤Ä’¤¤’¤Æ
+http://www.acroquest.co.jp/webworkshop/java_course/J_lecture13.html
+
+’¡Ê’£±’¡Ë’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤È’¤Ï’¡¢’Âç’»¨’ÇÄ’¤Ë’¤¤’¤Ã’¤Æ’¤·’¤Þ’¤¨’¤Ð’¡¢’¤¿’¤¯’¤µ’¤ó’¤¢’¤ëJava’¤Î’¥¯’¥é’¥¹’¤ò
+’Ê¬’Îà’¤¹’¤ë’¤¿’¤á’¤Î’»Å’ÁÈ’¤ß’¤Î’¤³’¤È
+
+’¼Â’ºÝ’¤Î’³«’È¯’¤Ç’¤Ï’¡¢’¿ô’½½’¡¢’¿ô’É´’Ã±’°Ì’¤Î’¥¯’¥é’¥¹’¤ò’ºî’À®’¤¹’¤ë’¤³’¤È’¤â’´õ’¤Ç’¤Ï’¤¢’¤ê’¤Þ’¤»’¤ó’¡£
+’¸¶’Â§’¤È’¤·’¤Æ’Æ±’¤¸’Ì¾’Á°’¤Î’¥¯’¥é’¥¹’¤ò2’¤Ä’°Ê’¾å’ºî’¤ë’¤³’¤È’¤Ï’¤Ç’¤­’¤Þ’¤»’¤ó’¤¬’¡¢’¤³’¤¦’¤¿’¤¯’¤µ’¤ó’¥¯’¥é’¥¹’¤¬’¤¢’¤Ã’¤Æ’¤Ï’¡¢
+’Æ±’¤¸’Ì¾’Á°’¤Î’¥¯’¥é’¥¹’¤¬’¤¢’¤ë’¤«’¤É’¤¦’¤«’¤ò’¹Í’¤¨’¤ë’¤À’¤±’¤Ç’¤â’·ù’¤Ë’¤Ê’¤ê’¤Þ’¤¹’¤è’¤Í’¡£
+’¤³’¤Î’Ìä’Âê’¤â’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤ò’»È’ÍÑ’¤¹’¤ë’¤³’¤È’¤Ç’²ò’·è’¤µ’¤ì’¤Þ’¤¹’¡£
+’°Û’¤Ê’¤ë’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤Ç’¤¢’¤ì’¤Ð’¡¢’Æ±’¤¸’Ì¾’Á°’¤Î’¥¯’¥é’¥¹’¤¬’¤¢’¤Ã’¤Æ’¤â’µö’¤µ’¤ì’¤ë’¤«’¤é’¤Ç’¤¹’¡£ 
+
+’¡Ê’£²’¡Ë’Îã’¤¨’¤Ð’¡¢’¤¢’¤ëJava’¤Î’¥¯’¥é’¥¹(’¤³’¤³’¤Ç’¤Ï’¡¢MyClass’¤È’¤¤’¤¦’Ì¾’Á°’¤Î’¥¯’¥é’¥¹’¤È’¤·’¤Þ’¤·’¤ç’¤¦)’¤¬
+foo’¤È’¤¤’¤¦’Ì¾’Á°’¤Î’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤Ë’Â°’¤¹’¤ë’¤³’¤È’¤ò’Àë’¸À’¤¹’¤ë’¾ì’¹ç’¡¢MyClass.java’¤Î’Àè’Æ¬’¤Ë’¡¢
+
+package foo;
+
+’¤È’µ­’½Ò’¤·’¤Þ’¤¹’¡£’¤³’¤ì’¤Ç’¥¯’¥é’¥¹MyClass’¤¬’¡¢’¥Ñ’¥Ã’¥±’¡¼’¥¸foo’¤Ë’Â°’¤¹’¤ë’¤³’¤È’¤ò’Àë’¸À’¤·’¤¿’¤³’¤È’¤Ë’¤Ê’¤ê’¤Þ’¤¹’¡£
+
+’¡Ê’£³’¡Ë’µÕ’¤Ë’¡¢’°Û’¤Ê’¤ë’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤Ë’Â°’¤¹’¤ë’¥¯’¥é’¥¹’¤ò’»È’ÍÑ’¤·’¤¿’¤¤’¾ì’¹ç’¡¢import’Ê¸’¤ò’»È’ÍÑ’¤·’¤Æ
+’°Û’¤Ê’¤ë’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤Î’¥¯’¥é’¥¹’¤ò’»È’ÍÑ’¤¹’¤ë’¤³’¤È’¤ò’Àë’¸À’¤·’¤Ê’¤±’¤ì’¤Ð’¤Ê’¤ê’¤Þ’¤»’¤ó’¡£
+’Îã’¤¨’¤Ð’¡¢’Àè’¤Û’¤É’Àë’¸À’¤·’¤¿foo’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤ÎMyClass’¤ò’»È’ÍÑ’¤·’¤¿’¤¤’¾ì’¹ç’¡¢
+’°Ê’²¼’¤Î’¤è’¤¦’¤Ë’¤·’¤Æ’¥¤’¥ó’¥Ý’¡¼’¥È’Àë’¸À’¤ò’¹Ô’¤¤’¤Þ’¤¹’¡£
+
+’¡Ê’£´’¡Ë’¥Ñ’¥Ã’¥±’¡¼’¥¸’Ì¾’¤ò’·è’¤á’¤ë’ºÝ’¤Ë’¤Ï’¡¢’Â¾’¤Ë’Ã¯’¤â’»È’¤Ã’¤Æ’¤¤’¤Ê’¤¤’¥Ñ’¥Ã’¥±’¡¼’¥¸’Ì¾’¤Ë’¤¹’¤ë’¤¿’¤á’¤Ë’¡¢
+’¥¤’¥ó’¥¿’¡¼’¥Í’¥Ã’¥È’¤Î’¥É’¥á’¥¤’¥ó’Ì¾’¤ò’µÕ’½ç’¤Ë’¤·’¤¿’¤â’¤Î’¤ò’Íø’ÍÑ’¤¹’¤ë’¤Î’¤¬’°ì’ÈÌ’Åª’¤Ç’¤¹’¡£
+Acroquest’¤Î’¾ì’¹ç’¤Ï’¡¢’¥É’¥á’¥¤’¥ó’Ì¾’¤¬ acroquest.co.jp ’¤Ê’¤Î’¤Ç’¡¢
+
+jp.co.acroquest.project1
+jp.co.acroquest.project2
+
+’¤Ê’¤É’¡¢jp.co.acroquest ’¤Ç’»Ï’¤Þ’¤ë’¥Ñ’¥Ã’¥±’¡¼’¥¸’Ì¾’¤ò’»È’ÍÑ’¤·’¤Þ’¤¹’¡£
+’¤³’¤Î’´·’Îã’¤Ë’½¾’¤Ã’¤Æ’¤¤’¤ì’¤Ð’¡¢’¥Ñ’¥Ã’¥±’¡¼’¥¸’Ì¾’¤¬’¾×’ÆÍ’¤¹’¤ë’²Ä’Ç½’À­’¤Ï’¤Þ’¤º’¤¢’¤ê’¤Þ’¤»’¤ó’¡£
+
+’¡Ê’£µ’¡Ë’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤ò’Íø’ÍÑ’¤·’¤¿’¥¯’¥é’¥¹’¥Õ’¥¡’¥¤’¥ë’¤Ï’¡¢
+’¥Ñ’¥Ã’¥±’¡¼’¥¸’Ì¾’¤È’Æ±’¤¸’Ì¾’Á°’¤Î’¥Õ’¥©’¥ë’¥À’¤Ë’ÃÖ’¤«’¤ì’¤Ê’¤±’¤ì’¤Ð’¤Ê’¤é’¤Ê’¤¤’¡£
+
+’Îã’¤¨’¤Ð’¡¢mypackage ’¤È’¤¤’¤¦’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤Î’¥¯’¥é’¥¹’¡¢MyAp ’¤Ï’¡¢mypackage ’¤È’¤¤’¤¦’Ì¾’Á°’¤Î
+’¥Õ’¥©’¥ë’¥À’¤Ë’ÃÖ’¤«’¤Ê’¤¯’¤Æ’¤Ï’¤¤’¤±’¤Þ’¤»’¤ó’¡£’¥¯’¥é’¥¹’¥Õ’¥¡’¥¤’¥ë’¤Î’¥Õ’¥¡’¥¤’¥ë’Ì¾’¤Ï’¡¢’¤â’¤Á’¤í’¤ó MyAp.class ’¤Ç’¤¹’¡£
+
+’¤Þ’¤¿’¡¢mypackage.sub ’¤È’¤¤’¤¦’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤ò’ºî’¤ë’¾ì’¹ç’¤Ï’¡¢mypackage’¥Õ’¥©’¥ë’¥À’¤Î’²¼’¤Ë
+sub ’¤È’¤¤’¤¦’Ì¾’Á°’¤Î’¥Õ’¥©’¥ë’¥À’¤ò’ºî’À®’¤·’¤Æ’¡¢’¥Ñ’¥Ã’¥±’¡¼’¥¸’¤Î’³¬’ÁØ’¤È’¥Õ’¥©’¥ë’¥À’¤Î’³¬’ÁØ’¤ò’¤¢’¤ï’¤»’¤Æ’¤ª’¤¯
+’É¬’Í×’¤¬’¤¢’¤ê’¤Þ’¤¹’¡£
+
+’¥ê’¥¹’¥È1 - MyMain.java
+
+import mypackage.MyAp;
+import mypackage.sub.SubAp;
+
+public class MyMain
+{
+    public static void main(String[] args)
+    {
+        MyAp ap = new MyAp();
+        SubAp subap = new SubAp();
+        ap.print();
+        subap.print();
+    }
+}
+
+
+’¥ê’¥¹’¥È2 - MyAp.java
+
+package mypackage;
+
+public class MyAp
+{
+    public MyAp()
+    {
+        System.out.println("Invoke mypackage.MyAp!");
+    }
+
+    public void print()
+    {
+        System.out.println("mypackage.MyAp.print()!");
+    }
+}
+
+
+’¥ê’¥¹’¥È3 - SubAp.java
+
+package mypackage.sub;
+
+public class SubAp
+{
+    public SubAp()
+    {
+        System.out.println("Invoke mypackage.sub.SubAp!");
+    }
+
+    public void print()
+    {
+        System.out.println("mypackage.sub.SubAp.print()!");
+    }
+}
+
+
+II. SPARQL
+https://www.ibm.com/developerworks/jp/java/library/j-sparql/
+
+RDF ’¥Õ’¥©’¡¼’¥Þ’¥Ã’¥È’¤Ç’ÊÝ’Â¸’¤µ’¤ì’¤ë’¥Ç’¡¼’¥¿’¤¬’Áý’¤¨’¤Æ’¤­’¤¿’¤¿’¤á’¤Ë’¡¢’ÆÃ’Äê’¤Ê’¾ð’Êó’¤ò’¸«’¤Ä’¤±’¤ë’¤¿’¤á’¤Î
+’´Ê’Ã±’¤Ê’Êý’Ë¡’¤¬’É¬’Í×’¤Ë’¤Ê’¤Ã’¤Æ’¤­’¤Þ’¤·’¤¿’¡£’¶¯’ÎÏ’¤Ê’¡¢’¿·’¤·’¤¤’¥¯’¥¨’¥ê’¡¼’¸À’¸ì’¤Ç’¤¢’¤ë SPARQL ’¤Ï’¡¢’¤½
+’¤Î’Í×’µá’¤Ë’±þ’¤¨’¤ë’¤â’¤Î’¤Ç’¤¢’¤ê’¡¢’¤³’¤ì’¤ò’Íø’ÍÑ’¤¹’¤ë’¤³’¤È’¤Ë’¤è’¤Ã’¤Æ’¡¢RDF ’¤Î’»³’¤Î’Ãæ’¤«’¤é’É¬’Í×’¤Ê’¥Ç’¡¼
+’¥¿’¤ò’ÍÆ’°×’¤Ë’¸«’¤Ä’¤±’¤ë’¤³’¤È’¤¬’¤Ç’¤­’¤Þ’¤¹’¡£
+
+Jena Semantic Web Toolkit ’¤ò’»È’¤Ã’¤Æ’¡¢’³§’¤µ’¤ó’¼«’¿È’¤Î Java ’¥¢’¥×’¥ê’¥±’¡¼’¥·’¥ç’¥ó’¤«’¤é SPARQL 
+’¥¯’¥¨’¥ê’¡¼’¹Ô’¤¦’Êý’Ë¡’¤ò’³Ø’¤Ó’¤Þ’¤¹’¡£
+
+RDF (Resource Description Framework) 
+    ’¥Ç’¡¼’¥¿’¤Î’Ãæ’±û’½¸’Ãæ’¤ò’Èò’¤±’¡¢’Ê¬’»¶’²½’¤¹’¤ë’¤³’¤È’¤¬’²Ä’Ç½
+    RDF ’¥â’¥Ç’¥ë’Æ±’»Î’¤Ï’ÍÆ’°×’¤Ë’¹ç’ÂÎ’¤¹’¤ë’¤³’¤È’¤¬’¤Ç’¤­’¡¢’¥·’¥ê’¥¢’¥ë’²½’¤·’¤¿ RDF ’¤Ï’Ã±’½ã’¤Ë’¡¢HTTP ’¤Ç’¸ò’´¹’¤¹’¤ë’¤³’¤È’¤¬’¤Ç’¤­’¤Þ’¤¹
+    ’¥¢’¥×’¥ê’¥±’¡¼’¥·’¥ç’¥ó’¤Ï’¡¢Web ’¾å’¤Ë’¤¢’¤ë’Ê£’¿ô’¤Î RDF ’¥Ç’¡¼’¥¿’¡¦’¥½’¡¼’¥¹’¤Ë’ÁÂ’·ë’¹ç’¤µ’¤ì’¤Þ’¤¹’¡£
+
+’É¬’Í×’¤Ê’¥Ç’¡¼’¥¿’¤ò RDF ’¥°’¥é’¥Õ’Æâ’¤Ç’¸«’¤Ä’¤±’¡¢’Áà’ºî’¤¹’¤ë’¤Ë’¤Ï’¡¢’¤É’¤¦’¤¹’¤ì’¤Ð’¤è’¤¤’¤Î’¤Ç’¤·’¤ç’¤¦’¡£
+    SPARQL (SPARQL Protocol And RDF Query Language) ’¤¬’¡¢’¸½’ºß’¡¢W3C ’¤Î’¥ï’¡¼’¥­’¥ó’¥°’¡¦’¥É’¥é’¥Õ’¥È
+    ’¤È’¤·’¤Æ’µÄ’ÏÀ’¤µ’¤ì’¤Æ’¤¤’¤Þ’¤¹’¡£
+
+
+http://qiita.com/maoringo/items/4742b5cd01c9e698260d
+RDF’¤È’¤Ï
+Resource Description Framework ’¤Î’Î¬
+	 Resource Description Framework (’¥ê’¥½’¡¼’¥¹’¡¦’¥Ç’¥£’¥¹’¥¯’¥ê’¥×’¥·’¥ç’¥ó’¡¦’¥Õ’¥ì’¡¼’¥à’¥ï’¡¼’¥¯’¡¢RDF) 
+	 ’¤È’¤Ï’¡¢’¥¦’¥§’¥Ö’¾å’¤Ë’¤¢’¤ë’¡Ö’¥ê’¥½’¡¼’¥¹’¡×’¤ò’µ­’½Ò’¤¹’¤ë’¤¿’¤á’¤Î’Åý’°ì’¤µ’¤ì’¤¿’ÏÈ’ÁÈ’¤ß’¤Ç’¤¢’¤ê’¡¢W3C’¤Ë’¤è’¤ê
+	 1999’Ç¯2’·î’¤Ë’µ¬’³Ê’²½’¤µ’¤ì’¤Æ’¤¤’¤ëœôó¦’Ãæ’Î¬œôó¦RDF’¤Ï’ÆÃ’¤Ë’¥á’¥¿’¥Ç’¡¼’¥¿’¤Ë’¤Ä’¤¤’¤Æ’µ­’½Ò’¤¹’¤ë’¤³’¤È’¤ò’ÌÜ’Åª’¤È
+	 ’¤·’¤Æ’¤ª’¤ê’¡¢’¥»’¥Þ’¥ó’¥Æ’¥£’¥Ã’¥¯’¡¦’¥¦’¥§’¥Ö’¤ò’¼Â’¸½’¤¹’¤ë’¤¿’¤á’¤Î’µ»’½Ñ’Åª’¤Ê’¹½’À®’Í×’ÁÇ’¤Î1’¤Ä’¤È’¤Ê’¤Ã’¤Æ’¤¤’¤ë’¡£
+
+
+’¥»’¥Þ’¥ó’¥Æ’¥£’¥Ã’¥¯’¥¦’¥§’¥Ö
+	Web’¥Ú’¡¼’¥¸’¤ª’¤è’¤Ó’¤½’¤Î’Ãæ’¤Ë’µ­’½Ò’¤µ’¤ì’¤¿’Æâ’ÍÆ’¤Ë’¤Ä’¤¤’¤Æ’¡¢’¤½’¤ì’¤¬’²¿’¤ò’°Õ’Ì£’¤¹’¤ë’¤«’¤ò’É½’¤¹’¾ð’Êó
+	(’¥á’¥¿’¥Ç’¡¼’¥¿)’¤ò’°ì’Äê’¤Î’µ¬’Â§’¤Ë’½¾’¤Ã’¤Æ’ÉÕ’²Ã’¤¹’¤ë’¤³’¤È’¤Ç’¡¢’¥³’¥ó’¥Ô’¥å’¡¼’¥¿’¤¬’¸ú’Î¨’¤è’¤¯’¾ð’Êó’¤ò
+	’¼ý’½¸’¡¦’²ò’¼á’¤Ç’¤­’¤ë’¤è’¤¦’¤Ë’¤¹’¤ë’¹½’ÁÛ’¡£
+	’¥¤’¥ó’¥¿’¡¼’¥Í’¥Ã’¥È’¤ò’¡¡’Ã±’¤Ê’¤ë’¥Ç’¡¼’¥¿’¤Î’½¸’¹ç’¡¡’¤«’¤é’¡¡’ÃÎ’¼±’¤Î’¥Ç’¡¼’¥¿’¥Ù’¡¼’¥¹’¡¡’¤Ë’¿Ê’²½’¤µ’¤»’¤è’¤¦
+	’¤È’¤¤’¤¦’»î’¤ß’¤¬’¥»’¥Þ’¥ó’¥Æ’¥£’¥Ã’¥¯Web’¤Ç’¤¢’¤ë’¡£
+
+RDF’¤Ï’Í×’ÁÇ’´Ö’¤Î’´Ø’·¸’À­’¤ò’µ­’½Ò’¤·’¤Æ’¤¤’¤¯’ÏÈ’ÁÈ’¤ß
+RDF’¤È’¤½’¤ì’¤¬’»È’¤ï’¤ì’¤Æ’É½’¸½’¤µ’¤ì’¤ë’¥»’¥Þ’¥ó’¥Æ’¥£’¥Ã’¥¯’¥¦’¥§’¥Ö’¤ò’Ä¾’´¶’Åª’¤Ë’Âª’¤¨’¤ë’¤Ê’¤é’¤Ð’¡¤’¥°’¥é’¥Õ’¤È’¤·’¤Æ’Âª’¤¨’¤ë’¤Î’¤¬’¤è’¤¤
+
+RDF’¤ò’¥°’¥é’¥Õ’¤È’¤·’¤Æ’Âª’¤¨’¤ë
+’¤È’¤¢’¤ë’¥Ç’¡¼’¥¿’¥Ù’¡¼’¥¹’¤Î"’Ìô’¤Î’²½’¹ç’Êª’¤ÎID DB00316"’¤Î"’Ì¾’Á°"’¤¬"’¥¢’¥»’¥È’¥¢’¥ß’¥Î’¥Õ’¥§’¥ó"’¤Ç’¤¢’¤ë’¡¤’¤È’¤·’¤Þ’¤¹
+
+’¤³’¤ì’¤òRDF’¡Ê’¤Î’Ãæ’¤Ç’¤â’ºÇ’¤â’´Ê’Ã±’¤Ê’É½’µ­’·Á’¼°’¡Ë’¤Ç’½ñ’¤¯’¤È’¡¤’¤³’¤¦’¤Ê’¤ê’¤Þ’¤¹’¡£
+’Ìô’¤ÎID:DB00316 ’¡¡’Ì¾’Á°’¡¡’¥¢’¥»’¥È’¥¢’¥ß’¥Î’¥Õ’¥§’¥ó.
+
+’¤³’¤Î’¤Þ’¤Þ’¤À’¤È’¡¤’¾¯’¤·’Ìä’Âê’¤¬’¤¢’¤ê’¤Þ’¤¹’¡£’Àè’¤Û’¤É’½Ò’¤Ù’¤¿"’µ¡’³£’¤Ë’¤â’Íý’²ò’¤Ç’¤­’¤ë’¤è’¤¦’¤Ê’À¤’³¦’¶¦’ÄÌ’¤Î’¥°’¥é’¥Õ"’¤È’¤¤’¤¦’¤â’¤Î’¤¬’½Ð’Íè’¤Ê’¤¤’¤Î’¤Ç’¤¹’¡£’¤â’¤¦’¾¯’¤·’¤Á’¤ã’¤ó’¤È’¤·’¤¿’¡¤RDF’¤Ç’½ñ’¤¤’¤Æ’¤¤’¤­’¤Þ’¤·’¤ç’¤¦’¡£
+
+Drug_ID:DB00316    label    "Acetaminophenœôòý.
+
+’¤³’¤ì’¤À’¤È’±Ñ’¸ì’¤Ë’¤·’¤¿’¤À’¤±
+’À¤’³¦’¶¦’ÄÌ’¤Ç’µ¡’³£’¤¬’È½’ÆÉ’¤Ç’¤­’¤ë’¥°’¥é’¥Õ’¤Ë’¤¹’¤ë’¤¿’¤á’¤Ë’¡¤’¤Á’¤ç’¤¤’¤È’Àë’¸À’¤ò’¤·’¤Æ’¤«’¤éRDF’¤ò’½ñ’¤­’¤Þ’¤¹’¡£(prefix<’ÀÜ’Æ¬’¼­>’¤È’¤¤’¤¤’¤Þ’¤¹’¡£’¡Ë
+
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix drugbank:   <http://bio2rdf.org/drugbank:> .
+drugbank:DB00316    rdfs:label  "Acetaminophenœôòý.
+
+’¤³’¤¦’¤¹’¤ë’¤³’¤È’¤Ç’¡¤’À¤’³¦’¶¦’ÄÌ’¤Ç’µ¡’³£’¤¬’È½’ÆÉ’¤Ç’¤­’¤ë’¥°’¥é’¥Õ’¤Ë’¶á’¤Å’¤­’¤Þ’¤¹’¡£
+’ºÇ’½é’¤Îprefix’¤Ç’¤³’¤ì’¤«’¤érdfs’¤È’½ñ’¤¯’¤Î’¤Ï’¡¤http://www.w3.org/2000/01/rdf-schema#’¤Î’Î¬’¤Ç’¤¢’¤ê’¡¤ 
+’¤³’¤ì’¤«’¤é’¡¤drugbank’¤È’½ñ’¤¯’¤Î’¤Ïhttp://bio2rdf.org/drugbank:’¤Î’Î¬’¤Ç’¤¹’¤è’¡¤’¤È’Àë’¸À’¤·’¤Æ’¤¤’¤ë          
+
+’¤³’¤³’¤Ç’Àë’¸À’¤·’¤¿prefix’¡¤rdfs’¤ädrugbank’¤Ï’´û’¤Ë’ÈÆ’ÍÑ’Åª’¤Ë’»È’¤ï’¤ì’¤Æ’¤¤’¤ë’¸ì’×Ã’¡Ê’Ä¾’´¶’Åª’¤Ë’¤Ï’¼­’½ñ’¤Î’¤è’¤¦’¤Ê’¤â’¤Î’¡Ë’¤Ç’¤¢’¤ê’¡¤’¤½’¤Î’°Õ’Ì£’¤Ï’ÌÀ’³Î’¤Ë’Äê’µÁ’¤µ’¤ì’¤Æ’¤¤’¤Þ’¤¹’¡£
+
+//2017’Ç¯4’·î11’Æü
+http://qiita.com/maoringo/items/4742b5cd01c9e698260d
+’¡Ê’£±’¡ËRDF’¤Î’Ê¸’Ë¡
+RDF’¤Î’µ­’½Ò’Êý’¼°’¤Ï’¡¤Subject’¡Ê’¼ç’¸ì’¡Ë Predicate’¡Ê’½Ò’¸ì’¡Ë Object’¡Ê’ÌÜ’Åª’¸ì’¡Ë’¤È’¤¤’¤¦’¡¤’±Ñ’¸ì’¤Î’Ê¸’¤Ë’¤Ê’¤¾’¤é’¤¨’¤é’¤ì’¤Þ’¤¹’¡£
+
+drugbank:DB00316		 Subject    
+rdfs:label  			 Predicate
+"Acetaminophenœôòý.		 Object
+
+’²½’¹ç’Êª’¡¤"Acetaminophen ’¡Ê’¥¢’¥»’¥È’¥¢’¥ß’¥Î’¥Õ’¥§’¥ó’¡Ë"’¤¬’¡¤"Prostaglandin G/H synthase 2’¡Ê’¥×’¥í’¥¹’¥¿’¥°’¥é’¥ó’¥Ç’¥£’¥ó ’¥¨’¥ó’¥É’¥Ú’¥ë’¥ª’¥­’¥·’¥É ’¹ç’À®’¹Ú’ÁÇ’¡Ë"’¤Î’¥¿’¡¼’¥²’¥Ã’¥È’¤Ë’¤Ê’¤ë’¤È’¤¤’¤¦’¤³’¤È’¤ò’½ñ’¤­’¤¿’¤¤’¤È’¤·’¤Þ’¤¹’¡£
+
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix drugbank:  <http://bio2rdf.org/drugbank:> .
+@prefix drugbank_vocab:  <http://bio2rdf.org/drugbank_vocabulary:> .
+@prefix drugbank_target:  <http://bio2rdf.org/drugbank_target:> .
+
+drugbank:DB00316 rdfs:label "Acetaminophen" ;
+                                 drugbank_vocab:target drugbank_target:290 .
+drugbank_target:290  rdfs:label  "Prostaglandin G/H synthase 2".
+
+RDF’¤ò’»È’¤Ã’¤Æ’ÌÜ’»Ø’¤¹’À¤’³¦’¤È’¤Ï’¡¤’¤³’¤Î’¤è’¤¦’¤Ê’Í×’ÁÇ’´Ö’¤Î’¥°’¥é’¥Õ’¤ò’·Ò’¤²’¤Þ’¤¯’¤Ã’¤Æ’¡¤’¥¦’¥§’¥Ö’¤Î’À¤’³¦’¤ò’¤Þ’¤ë’¤´’¤È’¥°’¥é’¥Õ’¤Ë’¤·’¤Æ’¤·’¤Þ’¤¦’¤³’¤È
+
+’¡Ê’£²’¡Ë’¼ê’»ý’¤Á’¤Î’¥Ç’¡¼’¥¿’¤òRDF’²½’¤·’¤è’¤¦’¡£
+’¼Â’ºÝ’¤ËRDF’¤ò’Â¾’¤ÎRDF’¤È’Åý’¹ç’¤·’¤è’¤¦’¤È’»×’¤Ã’¤¿’¤é’¼ê’¸µ’¤Î’¥Ç’¡¼’¥¿’¤ÎRDF’²½’¤¬’É¬’Í×
+
+’¤¢’¤ë’¸¦’µæ’½ê’¤Î’¸¦’µæ’»Ù’±ç’Éô’¡Ê’¤¢’¤¯’¤Þ’¤ÇFiction’¤Ë’¤·’¤Æ’¤¢’¤²’¤Æ’¤¯’¤À’¤µ’¤¤’¡Ë’¤¬’»Ù’±ç’¤·’¤Æ’¤¤’¤ë’Ìô’¤Î’¥Ç’¡¼’¥¿’¤òRDF’²½’¤·’¤¿’¤È’¤·’¤Þ’¤¹’¡£’Ãæ’¿È’¤Ï’¡¤’¤¢’¤ë’Ìô’¤ò’´ð’½à’¤È’¤·’¤Æ’¡¤’¤½’¤Î’Ì¾’Á°’¡¤’À½’ÉÊ’Ì¾’¡¤drugbankID’¡¤’¼À’´µ’Ì¾’¡¤’¼À’´µ’Ê¬’Îà’¤Ç’¤¢’¤ëicd10’¤ÎID’¤ò’¤Ä’¤±’¤Æ’¤¤’¤Þ’¤¹’¡£rdf’¡Ê’µ­’Ë¡’¤Ïttl’·Á’¼°’¡Ë’¤Î’Ãæ’¿È’¤Ï’¤³’¤¦’¤Ê’¤ê’¤Þ’¤¹’¡£
+
+@prefix drugbank:   <http://bio2rdf.org/drugbank:> .
+@prefix drgb: <http://bio2rdf.org/drugbank_vocabulary:> .
+@prefix dbowl:    <http://dbpedia.org/ontology/> .
+@prefix Medical_condition: <http://schema.org/MedicalCondition/> .
+
+<http://sampledrug.jp/Drug#1>
+        drgb:name "’¥¿’¥¯’¥í’¥ê’¥à’¥¹"@ja;
+        drgb:product "’¥×’¥í’¥°’¥é’¥Õ’ðù’Î³0.2mg"@ja;
+        dbowl:drugbank  drugbank:DB00864; 
+        Medical_condition:name  "’°Ü’¿¢’ÊÒ’ÂÐ’½É’¼ç’ÉÂ"@ja;
+        dbowl:icd10 "T860".
+
+
+prefix’¤Ç’°Ê’²¼’¤Î’µ­’½Ò’¤Ç’¾Ê’Î¬’¤·’¤¿’¤¤URI’¤ò’½ñ’¤¤’¤Æ’¤¤’¤Þ’¤¹’¡£
+’¤³’¤ÎRDF’¤Îdrgb:name,dbowl:drugbank’¤Î’Éô’Ê¬’¡Ê<http://sampledrug.jp/Drug#1>’¤Î’¼ç’¸ì(Subject’¡Ë’¤Ë’ÂÐ’¤·’¤Æ’½Ò’¸ì(Predicate)’¤È’¤¤’¤¤’¤Þ’¤¹’¡£’¤Á’¤Ê’¤ß’¤Ë"’¥¿’¥¯’¥í’¥ê’¥à’¥¹"@ja’¡¡’¤Ï’ÌÜ’Åª’¸ì’¡ÊObject’¡Ë’¤Ë’¤Ê’¤ê’¤Þ’¤¹’¡£’¡Ë’¤Ï’ÈÆ’ÍÑ’Åª’¤Ê’¤â’¤Î’¤ò’»È’¤¦’¤³’¤È’¤¬’Ë¾’¤Þ’¤·’¤¤’¤È’¤µ’¤ì’¤Æ’¤¤’¤Þ’¤¹’¡£
+
+
+
+
+
+
+//2017’Ç¯5’·î14’Æü
+FileChooser’ºî’À®
+’Îã’Âê’¤ò’Ãµ’¤¹
+
+(1)
+https://docs.oracle.com/javase/jp/8/javafx/user-interface-tutorial/file-chooser.htm
+
+’¥µ’¥ó’¥×’¥ë’¥×’¥í’¥°’¥é’¥à’¤Ï’¥³’¥ó’¥Ñ’¥¤’¥ë’¥¨’¥é’¡¼
+
+javac FileChooserSample.java
+FileChooserSample.java:70: ’¥¨’¥é’¡¼: ’¥·’¥ó’¥Ü’¥ë’¤ò’¸«’¤Ä’¤±’¤é’¤ì’¤Þ’¤»’¤ó
+        EventQueue.invokeLater(() -> {
+        ^
+  ’¥·’¥ó’¥Ü’¥ë:   ’ÊÑ’¿ô EventQueue
+  ’¾ì’½ê: ’¥¯’¥é’¥¹ FileChooserSample
+’¥¨’¥é’¡¼1’¸Ä
+
+(2)
+http://javafx-trick.appspot.com/article/110010/80074.html
+http://javafx-trick.appspot.com/article/110010/80074/70110.html
+
+javac FileChooser01.java
+FileChooser01.java:28: ’¥¨’¥é’¡¼: ’¥·’¥ó’¥Ü’¥ë’¤ò’¸«’¤Ä’¤±’¤é’¤ì’¤Þ’¤»’¤ó
+                File importFile = fc.showOpenDialog(primaryStage);
+                                    ^
+  ’¥·’¥ó’¥Ü’¥ë:   ’¥á’¥½’¥Ã’¥É showOpenDialog(Stage)
+  ’¾ì’½ê: ’¥¿’¥¤’¥×DirectoryChooser’¤Î’ÊÑ’¿ô fc
+’¥¨’¥é’¡¼1’¸Ä
+
+(3) http://www.java2s.com/Tutorials/Java/JavaFX/0555__JavaFX_FileChooser.htm
+
+javac FileChooserX.java
+’Ãí’°Õ:FileChooserX.java’¤Ï’Èó’¿ä’¾©’¤ÎAPI’¤ò’»È’ÍÑ’¤Þ’¤¿’¤Ï’¥ª’¡¼’¥Ð’¡¼’¥é’¥¤’¥É’¤·’¤Æ’¤¤’¤Þ’¤¹’¡£
+’Ãí’°Õ:’¾Ü’ºÙ’¤Ï’¡¢-Xlint:deprecation’¥ª’¥×’¥·’¥ç’¥ó’¤ò’»Ø’Äê’¤·’¤Æ’ºÆ’¥³’¥ó’¥Ñ’¥¤’¥ë’¤·’¤Æ’¤¯’¤À’¤µ’¤¤’¡£
+
+’¤¤’¤º’¤ì’¤â’¥¨’¥é’¡¼’¤¬’½Ð’¤ë
+
+
+(1)’¤Ï
+import java.awt.EventQueue
+
+’¤ò’ÄÉ’²Ã’¤¹’¤ë’¤È’¥³’¥ó’¥Ñ’¥¤’¥ë’¤Ç’¤­’¤¿
+’¼Â’¹Ô’¤â’¤Ç’¤­’¤¿
+
+-------------------------------------------------------------------
+JavaFX GUI ’¥×’¥í’¥°’¥é’¥ß’¥ó’¥°’¡¡’¤Ç’¥á’¥Ë’¥å’¡¼’¥Ð’¡¼’ºî’À®
+’½Ð’ÈÇ’¼Ò’¤Î’¥µ’¥¤’¥È’¤«’¤é’¥µ’¥ó’¥×’¥ë’¥³’¡¼’¥É’¤ò’¥À’¥¦’¥ó’¥í’¡¼’¥É
+
+ch08/src’¤Î’²¼’¤Î
+Menu01.java’¤ò’¥³’¥ó’¥Ñ’¥¤’¥ë
+’Æü’ËÜ’¸ì’¤¬’ÉÁ’¤«’¤ì’¤Æ’¤¤’¤ë’¤È’¤³’¤í’¤Ç’¥¨’¥é’¡¼’¤¬’½Ð’¤ë’¤Î’¤Ç
+’±Ñ’¸ì’¤Ë’ÊÑ’¹¹
+
+’¤¹’¤ë’¤È
+javac Menu01.java
+’Ãí’°Õ:Menu01.java’¤Ï’Èó’¿ä’¾©’¤ÎAPI’¤ò’»È’ÍÑ’¤Þ’¤¿’¤Ï’¥ª’¡¼’¥Ð’¡¼’¥é’¥¤’¥É’¤·’¤Æ’¤¤’¤Þ’¤¹’¡£
+’Ãí’°Õ:’¾Ü’ºÙ’¤Ï’¡¢-Xlint:deprecation’¥ª’¥×’¥·’¥ç’¥ó’¤ò’»Ø’Äê’¤·’¤Æ’ºÆ’¥³’¥ó’¥Ñ’¥¤’¥ë’¤·’¤Æ’¤¯’¤À’¤µ’¤¤’¡£
+fujihiroyuki-no-MacBook-Air:~ toh$ javac Menu01.java -Xlint:deprecation
+Menu01.java:8: ’·Ù’¹ð: [deprecation] javafx.scene.control’¤ÎMenuItemBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+import javafx.scene.control.MenuItemBuilder;
+                           ^
+Menu01.java:10: ’·Ù’¹ð: [deprecation] javafx.scene.layout’¤ÎBorderPaneBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+import javafx.scene.layout.BorderPaneBuilder;
+                          ^
+Menu01.java:12: ’·Ù’¹ð: [deprecation] javafx.stage’¤ÎStageBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+import javafx.stage.StageBuilder;
+                   ^
+Menu01.java:21: ’·Ù’¹ð: [deprecation] javafx.scene.control’¤ÎMenuItemBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+    MenuItem cut = MenuItemBuilder.create().text("cut").id("cut").build();
+                   ^
+Menu01.java:22: ’·Ù’¹ð: [deprecation] javafx.scene.control’¤ÎMenuItemBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+    MenuItem copy = MenuItemBuilder.create().text("copy").id("copy").build();
+                    ^
+Menu01.java:23: ’·Ù’¹ð: [deprecation] javafx.scene.control’¤ÎMenuItemBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+    MenuItem paste = MenuItemBuilder.create().text("paste").id("paste").build();
+                     ^
+Menu01.java:25: ’·Ù’¹ð: [deprecation] javafx.scene.control’¤ÎMenuItemBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+    MenuItem searchNext = MenuItemBuilder.create().text("next search").id("next").build();
+                          ^
+Menu01.java:26: ’·Ù’¹ð: [deprecation] javafx.scene.control’¤ÎMenuItemBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+    MenuItem searchPrev = MenuItemBuilder.create().text("forward search").id("prev").build();
+                          ^
+Menu01.java:35: ’·Ù’¹ð: [deprecation] javafx.scene.layout’¤ÎBorderPaneBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+    BorderPane root = BorderPaneBuilder.create().top( menuBar ).build();
+                      ^
+Menu01.java:37: ’·Ù’¹ð: [deprecation] javafx.stage’¤ÎStageBuilder’¤Ï’Èó’¿ä’¾©’¤Ë’¤Ê’¤ê’¤Þ’¤·’¤¿
+    stage = StageBuilder.create().width(240).height(200)
+            ^
+’·Ù’¹ð10’¸Ä
+
+Builder’´Ø’·¸’¤¬’Èó’¿ä’¾©’¤Ë’¤Ê’¤Ã’¤Æ’¤¤’¤ë
+’¥³’¥ó’¥Ñ’¥¤’¥ë’¤·’¤¿’¤â’¤Î’¤Ï’Æ°’ºî’¤Ï’¤¹’¤ë’¤¬’¡¢’¥á’¥Ë’¥å’¡¼’´Ø’·¸’¤ò’Ä´’¤Ù’¤Ê’¤ª’¤¹
+
+
+
+//2017’Ç¯5’·î15’Æü
+
+’¤Þ’¤º’¡¢’¥á’¥Ë’¥å’¡¼’¥Ð’¡¼’¤ò’´°’À®’¤µ’¤»’¤ë
+
+http://cartman0.hatenablog.com/entry/2016/03/20/000115#sec-Menubar-Menu
+
+’¤Î’µ­’½Ò’¤Ë’½¾’¤¦
+
+MenuY.java’¤Ë’¥µ’¥ó’¥×’¥ë’¤ò’¤Ï’¤ë
+
+--------------------------------------------------------------------
+
+’¡ÖJavaFX & Java8 ’¥×’¥í’¥°’¥é’¥ß’¥ó’¥°’¡×’¤Î’¸Þ’¾Ï’¤Ë’¥á’¥Ë’¥å’¡¼’¤Î’Îã’¤¢’¤ê
+
+ ’¥³’¥ó’¥Ñ’¥¤’¥ë’¤¹’¤ë’¤È’¥¨’¥é’¡¼
+
+javac MenuSample.java
+
+MenuSample.java:24: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu fileMenu = new Menu("œóõ½tœóõ½@œóõ½Cœóõ½œóõ½");
+                                  ^
+MenuSample.java:24: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu fileMenu = new Menu("œóõ½tœóõ½@œóõ½Cœóõ½œóõ½");
+                                    ^
+MenuSample.java:24: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu fileMenu = new Menu("œóõ½tœóõ½@œóõ½Cœóõ½œóõ½");
+                                      ^
+MenuSample.java:24: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu fileMenu = new Menu("œóõ½tœóõ½@œóõ½Cœóõ½œóõ½");
+                                        ^
+MenuSample.java:24: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu fileMenu = new Menu("œóõ½tœóõ½@œóõ½Cœóõ½œóõ½");
+                                         ^
+MenuSample.java:25: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuExit = new MenuItem("œóõ½Iœóõ½œóõ½");
+                                         ^
+MenuSample.java:25: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuExit = new MenuItem("œóõ½Iœóõ½œóõ½");
+                                           ^
+MenuSample.java:25: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuExit = new MenuItem("œóõ½Iœóõ½œóõ½");
+                                            ^
+MenuSample.java:29: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu colorMenu = new Menu("œóõ½Jœóõ½œóõ½œóõ½[");
+                                   ^
+MenuSample.java:29: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu colorMenu = new Menu("œóõ½Jœóõ½œóõ½œóõ½[");
+                                     ^
+MenuSample.java:29: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu colorMenu = new Menu("œóõ½Jœóõ½œóõ½œóõ½[");
+                                      ^
+MenuSample.java:29: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        Menu colorMenu = new Menu("œóõ½Jœóõ½œóõ½œóõ½[");
+                                       ^
+MenuSample.java:30: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuRed = new MenuItem("œóõ½œóõ½");
+                                        ^
+MenuSample.java:30: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuRed = new MenuItem("œóõ½œóõ½");
+                                         ^
+MenuSample.java:32: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuBlue = new MenuItem("œóõ½œóõ½");
+                                         ^
+MenuSample.java:32: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuBlue = new MenuItem("œóõ½œóõ½");
+                                          ^
+MenuSample.java:34: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuGreen = new MenuItem("œóõ½œóõ½");
+                                          ^
+MenuSample.java:34: ’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó
+        MenuItem mnuGreen = new MenuItem("œóõ½œóõ½");
+                                           ^
+’¥¨’¥é’¡¼18’¸Ä
+
+’¥¨’¥é’¡¼: ’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥°UTF8’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó’¡¡java’¤Ç’¸¡’º÷
+
+http://christina04.blog.fc2.com/blog-entry-41.html
+
+’¤Ë’Íý’Í³’¤¬’µ­’½Ò’¤µ’¤ì’¤Æ’¤¤’¤ë
+
+$ javac xxx.java
+
+’¤ò’¤·’¤¿’¤é
+
+’¤³’¤Î’Ê¸’»ú’¤Ï’¡¢’¥¨’¥ó’¥³’¡¼’¥Ç’¥£’¥ó’¥° UTF8 ’¤Ë’¥Þ’¥Ã’¥×’¤Ç’¤­’¤Þ’¤»’¤ó’¡£
+
+’¤È’¤¤’¤¦’·Ù’¹ð’¤¬’£±’£°’£°’¸Ä’¤Û’¤É’½Ð’¤Æ’¤­’¤Æ’¡¢’¼Â’ºÝ’¤Ë’¼Â’¹Ô’¤·’¤Æ’¤ß’¤¿’¤é’¥¨’¥é’¡¼’¡£
+’Ä´’¤Ù’¤Æ’¤ß’¤ë’¤È’¡¢’¥³’¥ó’¥Ñ’¥¤’¥ë’»þ’¤Ë’Ê¸’»ú’¥³’¡¼’¥É’¤¬’»Ø’Äê’¤µ’¤ì’¤Æ’¤¤’¤Ê’¤¤’¾ì’¹ç’¡¢’¥·’¥¹’¥Æ’¥à’É¸’½à’¤Î’Ê¸’»ú’¥³’¡¼’¥É(utf-8)’¤È’¤·’¤Æ’¥³’¥ó’¥Ñ’¥¤’¥ë’¤µ’¤ì’¤ë’¤é’¤·’¤¯’¡¢Shift-JIS’¤È’¤«’¤Ç’¥×’¥í’¥°’¥é’¥à’¤ò’½ñ’¤¤’¤Æ’¤¢’¤Ã’¤¿’¤ê’¤¹’¤ë’¤È’¡¢’¤³’¤ó’¤Ê’·Ù’¹ð’¤¬’½Ð’¤ë’¤é’¤·’¤¤’¡£
+
+’¤Ê’¤Î’¤Ç’Àµ’¤·’¤¤’¥³’¥ó’¥Ñ’¥¤’¥ë’¤Î’»Å’Êý’¤Ï
+
+$ javac -encoding SJIS xxx.java
+
+’¤È’¤¹’¤ì’¤ÐOK’¡£
+
+’¤¢’¤ì’¡©’¤Ç’¤â’¤½’¤â’¤½’¤âUbuntu’¤Î’¾ì’¹ç’Ê¸’»ú’¥³’¡¼’¥É’¤Ã’¤Æ’¤É’¤¦’¤ä’¤Ã’¤Æ’Ä´’¤Ù’¤ë’¤Î’¡©’¤È’ËÍ’¤È’Æ±’¤¸’¤³’¤È’¤ò’»×’¤Ã’¤¿’¿Í’¤â’¤¤’¤ë’¤È’»×’¤¤’¤Þ’¤¹’¡£
+’¤½’¤ó’¤Ê’¿Í’¤Ï’¡Ökcc’¡×’¤È’¤¤’¤¦’¥×’¥í’¥°’¥é’¥à’¤ò’¥¤’¥ó’¥¹’¥È’¡¼’¥ë’¤·’¤Æ’¤¯’¤À’¤µ’¤¤’¡£
+
+$ sudo apt-get install kcc
+
+’¤½’¤·’¤Æ’Ê¸’»ú’¥³’¡¼’¥É’¤ò’Ä´’¤Ù’¤ë’¤È’¤­’¤Ï’¼¡’¤Î’ÍÍ’¤Ë’ÂÇ’¤Æ’¤Ð’½Ð’¤Æ’¤­’¤Æ’¤¯’¤ì’¤Þ’¤¹’¡£
+
+$ kcc -c xxx.java
+xxx.java: shift-JIS
+
+javac -encoding SJIS MenuSample.java
+java MenuSample
+
+kcc’¤Ë’¤Ä’¤¤’¤Æ’¤Ï’ÊÌ’ÅÓ’Ä´’ºº
+
+-------------------------------------------------------------------------
+
+MenuBar:’¥È’¥Ã’¥×’¥ì’¥Ù’¥ë’¤Î’¥á’¥Ë’¥å’¡¼’¹à’ÌÜ’¤ò’¥¦’¥¤’¥ó’¥É’¥¦’¤Ë’É½’¼¨’¤¹’¤ë’¥³’¥ó’¥È’¥í’¡¼’¥ë
+Menu:’¡Ö’¥Õ’¥¡’¥¤’¥ë’¡×’¤ä’¡Ö’¥Ø’¥ë’¥×’¡×’¤Ê’¤É’¤Î’¥È’¥Ã’¥×’¥ì’¥Ù’¥ë’¤Î’¥á’¥Ë’¥å’¡¼’¹à’ÌÜ’¤ò’É½’¤¹’¥³’¥ó’¥È’¥í’¡¼’¥ë
+MenuItem: ’¡Ö’³«’¤¯’¡×’¡Ö’½ª’Î»’¡×’¤Ê’¤É’¤Î’¸Ä’¡¹’¤Î’¥á’¥Ë’¥å’¡¼’¹à’ÌÜ’¤ò’É½’¤¹’¥³’¥ó’¥È’¥í’¡¼’¥ë
+
+Menu’¤ò’ÁÈ’¤ß’¹þ’¤ó’¤À’¥¦’¥£’¥ó’¥É’¥¦’ºî’À®
+Viewer.java
+
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;;
+import javafx.stage.Stage;
+
+public class Viewer extends Application  {
+  @Override
+  public void start(Stage stage) throws Exception {
+      stage.setTitle("Viewer");
+      stage.setWidth(280);
+      stage.setHeight(220);
+
+      VBox root = new VBox();
+      
+      MenuBar menuBar = new MenuBar();
+      Menu fileMenu = new Menu("File");
+
+      MenuItem mnuImSeq = new MenuItem("Import Seq File");
+      MenuItem mnuImTree = new MenuItem("Import Tree File");
+      MenuItem mnuImClus = new MenuItem("Import Cluster File");
+      MenuItem mnuExit = new MenuItem("Exit");
+      mnuExit.setOnAction(event -> System.exit(0));
+      fileMenu.getItems().addAll(mnuImSeq, mnuImTree, mnuImClus, mnuExit);
+      menuBar.getMenus().addAll(fileMenu);
+      
+      root.getChildren().addAll(menuBar);
+     
+      stage.setScene(new Scene(root));
+      stage.show();
+  }
+}
+
+’¼¡’¤ËFile ’¥á’¥Ë’¥å’¡¼’¤Èfile chooser’¤ò’Ï¢’Æ°’¤µ’¤»’¤ë
+
+’ÆÉ’¤ß’¹þ’¤ó’¤À’ÇÛ’Îó’¤Î’É½’¼¨’¤Î’¤¿’¤á’¤Î’¥¹’¥¯’¥í’¡¼’¥ë
+
+http://fukuyama.co/file-i-mime
+Xcode’¤Îfile’¥³’¥Þ’¥ó’¥É’¤ò’»È’ÍÑ
+
+file Viewer.java
+Viewer.java: ASCII Java program text
+
+//2017’Ç¯5’·î17’Æü
+Viewer.java’¤ËFileChooser’¤ò’ÁÈ’¤ß’¹þ’¤ß’¡¢’¥Á’¥å’¡¼’¥¶’¡¼’¥¦’¥£’¥ó’¥É’¥¦’¤«’¤é’¥Õ’¥¡’¥¤’¥ë’¤ò’Áª’Âò’¤Ç’¤­’¤ë’¤è’¤¦’¤Ë’¤·’¤¿’¡£’¹Ô’¤¦’¤Ù’¤­’¤³’¤È
+(1)
+’¸½’ºß’¤Ï’²è’Áü’¥Õ’¥¡’¥¤’¥ë’¤ò’³«’¤¯’¤À’¤±’¤Ê’¤Î’¤Ç’¡¢’¤³’¤³’¤Çsequence file’¤ò’ÆÉ’¤ß’¹þ’¤á’¤ë’¤è’¤¦’¤Ë’¤¹’¤ë’¡£
+---> openFile’¥á’¥½’¥Ã’¥É’¤òfasta’¤Î’ÆÉ’¤ß’½Ð’¤·’¤Ë’¤¹’¤ë’¡£
+’¥á’¥½’¥Ã’¥É’¤Ç’¤Ï’¤Ê’¤¯’¡¢getSeq’¥¯’¥é’¥¹’¤ò’¸Æ’¤Ó’½Ð’¤·’¡¢clustal’·Á’¼°’¤«’ÈÝ’¤«’¤ò’È½’Äê’¤·’¤¿’¾å’¤Ç
+seqeunce’¤ò’ÆÉ’¤ß’½Ð’¤¹’¤è’¤¦’¤Ë’¤¹’¤ë’¡£
+(2) FileChooser’¤Î’½è’Íý’¤Î’¾Ü’ºÙ’¡Ü’¥¤’¥Ù’¥ó’¥È’½è’Íý’¤Ï’¡¢’¤Þ’¤À’Íý’²ò’ÉÔ’½½’Ê¬
+’³Î’Ç§’É¬’Í×
+
+import java.awt.Desktop;
+import java.awt.EventQueue;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;;
+import javafx.stage.Stage;
+import javafx.stage.FileChooser;
+
+public class Viewer extends Application  {
+
+  private final Desktop desktop = Desktop.getDesktop(); 
+
+  @Override
+  public void start(Stage stage) throws Exception {
+      stage.setTitle("Viewer");
+      stage.setWidth(1120);
+      stage.setHeight(880);
+
+      final FileChooser fileChooser = new FileChooser();
+      VBox root = new VBox();
+      
+      MenuBar menuBar = new MenuBar();
+      Menu fileMenu = new Menu("File");
+
+      MenuItem mnuImSeq = new MenuItem("Import Seq File");
+      MenuItem mnuImTree = new MenuItem("Import Tree File");
+      MenuItem mnuImClus = new MenuItem("Import Cluster File");
+      MenuItem mnuExit = new MenuItem("Exit");
+      mnuImSeq.setOnAction(event -> {
+	      File file = fileChooser.showOpenDialog(stage);
+	      if (file != null)  {
+		  openFile(file);
+	      }
+	  });
+      mnuExit.setOnAction(event -> System.exit(0));
+      fileMenu.getItems().addAll(mnuImSeq, mnuImTree, mnuImClus, mnuExit);
+      menuBar.getMenus().addAll(fileMenu);
+      
+      root.getChildren().addAll(menuBar);
+     
+      stage.setScene(new Scene(root));
+      stage.show();
+  }
+
+  private void openFile(File file)  {
+      EventQueue.invokeLater(() -> { 
+	      try {
+		  desktop.open(file);
+              }
+	      catch (IOException ex)  {
+		  Logger.getLogger(Viewer.class.getName()).log(Level.SEVERE, null, ex);
+	      }
+	  });
+  }
+}
+
+//2017’Ç¯6’·î1’Æü
+
+root’¤¬VBox’¤Ê’¤Î’¤Ç’¡¢’Îã’¤¨’¤ÐTextField’¤ò’ºî’À®’¤·’¤Æ’¡¢
+      root.getChildren().addAll("TextField’¤Î’¥¤’¥ó’¥¹’¥¿’¥ó’¥¹");
+’¤È’¤¹’¤ë’¤È’¡¢’¥á’¥Ë’¥å’¡¼’¥Ð’¡¼’¤Î’²¼’¤Ë’¥Æ’¥­’¥¹’¥È’¥Õ’¥£’¡¼’¥ë’¥É’¤¬’É½’¼¨’¤µ’¤ì’¤ë’¤³’¤È’¤ò’³Î’Ç§
+
+VBox’¤Ç’¾å’²¼’Æó’ÃÊ’¤Ë’¤¹’¤ë
+’°ì’ÃÊ’ÌÜ’¡¡HBox
+  ’º¸’¤Ë’¡¡’·Ï’Åý’¼ù’¤Ë’Áê’Åö’¤¹’¤ëScrollPane
+  ’±¦’¤Ë’¡¡’¥¢’¥é’¥¤’¥ó’¥á’¥ó’¥È’¤Ë’Áê’Åö’¤¹’¤ëScrollPane
+’Æó’ÃÊ’ÌÜ’¡¡’¥á’¥Ã’¥»’¡¼’¥¸’¤ò’½ñ’¤­’½Ð’¤¹ScrollPane
+
+PDB’¤Î’ºÂ’É¸’¡¡mmCIF’¤«PDBxml’¤Ç’ÆÉ’¤ß’¹þ’¤ß’¤Ï’ºî’À®’¤¹’¤ë’¤³’¤È
+’µìPDB’¥Õ’¥©’¡¼’¥Þ’¥Ã’¥È’¤Ë’¤Ä’¤¤’¤Æ’¤Ï’ÊÑ’´¹’½è’Íý(?)
+
+
+//2017’Ç¯’£¶’·î5’Æü
+Scroll Pane’¤Î’¥µ’¥¤’¥º
+Scroll Pane’¤Ë’¤Ï’¤ê’¤Ä’¤±’¤ëPane’¤Î’¥µ’¥¤’¥º
+’¤ò’³Î’Ç§’¤¹’¤ë
+
+https://docs.oracle.com/javase/jp/8/javafx/api/javafx/scene/control/ScrollPane.html
+’¤Î’µ­’½Ò’¤«’¤é
+
+ Rectangle rect = new Rectangle(200, 200, Color.RED);
+ ScrollPane s1 = new ScrollPane();
+ s1.setPrefSize(120, 120);
+ s1.setContent(rect);
+
+ stage’¤Î’¥µ’¥¤’¥º’¤¬’¡¡1120 x 880
+ ’¤È’¤ê’¤¢’¤¨’¤º’¡¢’²£’¤Ë380 x 600, 740 x 600, ’¤½’¤Î’²¼’¤Ë1120 x 280 ’¤Ë’¤·’¤Æ’¤ß’¤ë’¡£
+
+
+      HBox hbx = new HBox();
+      ScrollPane sp1 = new ScrollPane();
+      ScrollPane sp2 = new ScrollPane();
+      sp1.setPrefSize(380, 600);
+      sp2.setPrefSize(740, 600);
+      Image ex1 = new Image(getClass().getResourceAsStream("test.jpg"));
+      sp1.setContent(new ImageView(ex1));
+      sp2.setContent(new ImageView(ex1));
+
+      hbx.getChildren().addAll(sp1, sp2);
+
+      VBox vbx = new VBox();
+
+      ScrollPane sp3 = new ScrollPane();
+      sp3.setPrefSize(1120, 280);
+      vbx.getChildren().addAll(hbx, sp3);
+
+      root.getChildren().addAll(vbx);
+
+ ’¤³’¤³’¤Þ’¤Ç’¤ò’ÊÝ’Â¸
+
+cp Viewer.java Viewer.java.org050617
+
+
+ ’¾å’¤Î’Æó’¤Ä’¤ÎScrollPane’¤Ë’Æ³’Æþ’¤¹’¤ëStackPane’¤ò’Æó’¤Ä’½à’È÷
+ ’½Ä’²£’¤Ë’Âç’¤­’¤¯’¤È’¤ë
+
+https://docs.oracle.com/javase/jp/8/javafx/api/javafx/scene/layout/StackPane.html
+
+StackPane pn1 = new StackPane();
+pn1.setPrefSize(1000, 1000);
+StackPane pn2 = new StackPane();
+pn2.setPrefSize(1000, 1000);
+
+’¤³’¤ì’¤Ëimage’¤ò’Å½’ÉÕ’¤±’¤Æ’¤«’¤é’¡¢sp1, sp2’¤Ë’¤Î’¤Ã’¤±’¤ë
+pn1.getChildren().addAll(new ImageView(ex1));
+pn2.getChildren().addAll(new ImageView(ex1));
+
+’¤³’¤ì’¤Ç’¡¢’¥¹’¥¯’¥í’¡¼’¥ë’¥Ð’¡¼’¤¬’¤¢’¤é’¤ï’¤ì’¤ë’¤Î’¤Ç’¡¢StackPane’¤ò
+’·Ï’Åý’¼ù’¤ä’¥¢’¥é’¥¤’¥ó’¥á’¥ó’¥È’¤Î’¥µ’¥¤’¥º’¤Ë’±þ’¤¸’¤Æ’ºî’À®’¤¹’¤ì’¤Ð’¤è’¤¤’¡£
+
+’¸½’»þ’ÅÀ’¤Ç’¤Î’Ìä’Âê’ÅÀ’¤Ï’¡¢’ºÇ’³°’Éô’¤ÎWindow’¤ò’¥É’¥é’¥Ã’¥°’¤·’¤Æ’³È’Âç’¤¹’¤ë’¤È’·ä’´Ö’¤¬’¤Ç’¤­’¤ë’¤³’¤È
+(ScrollPane’¤ò’³°’Éô’¤ÎWindow’¤Î’¥µ’¥¤’¥º’¤Ë’¤¢’¤ï’¤»’¤Æ’³È’Âç’¤Ç’¤­’¤ë’¤è’¤¦’¤Ë’¤¹’¤ë’¤«’¡©
+setPrefSize’¤Ç’¤Ï’¤Ê’¤¤’¤ä’¤ê’Êý’¤ò’¸¡’Æ¤’¡Ë
+’ºÇ’²¼’ÃÊ’¤Î’¥á’¥Ã’¥»’¡¼’¥¸’¤ò’µ­’Æþ’¤¹’¤ë’Éô’Ê¬’¤ò’¡¢’¤É’¤¦’¥Ç’¥¶’¥¤’¥ó’¤¹’¤ë’¤«
+’¤Î’£²’ÅÀ’¤Ç’¤¢’¤ë’¡£
+
+’¤È’¤ê’¤¢’¤¨’¤º’¡¢’¥¢’¥é’¥¤’¥ó’¥á’¥ó’¥È’¤È’¥¯’¥é’¥¹’¥¿’¥Õ’¥¡’¥¤’¥ë(CardC)’¤ò’ºî’À®’¤·’¡¢’¤³’¤ì’¤Ç
+’¥¯’¥é’¥¹’¥¿’¤Ë’´ð’¤Å’¤¯’¥³’¥ó’¥»’¥ó’¥µ’¥¹’ÇÛ’Îó’¤ò’É½’¼¨’¤Ç’¤­’¤ë’¤è’¤¦’¤Ë’¤¹’¤ë’¡£
+
+//2017’Ç¯6’·î6’Æü
+
+importFasta’¥¯’¥é’¥¹’¤Îifseq’¤ò’¡¢’¥¤’¥Ù’¥ó’¥È’½è’Íý’Æâ’¤Ç’¤Ï’¤Ê’¤¯’¡¢
+private’ÊÑ’¿ô’¤È’¤·’¤Æ’¡¢Viewer’¥¯’¥é’¥¹’¤Î’¥È’¥Ã’¥×’¤Ç’Àë’¸À
+’¥¤’¥ó’¥¹’¥¿’¥ó’¥¹’²½’¤Ë’¤Ä’¤¤’¤Æ’¤Ï’¡¢’¤³’¤ì’¤Þ’¤Ç’ÄÌ’¤ê’¥¤’¥Ù’¥ó’¥È’½è’Íý’Æâ’¤Ç’¼Â’»Ü
+
+’¥³’¥ó’¥Ñ’¥¤’¥ë’¤·’Ä¾’¤·’¤Æ’¼Â’¹Ô’¤·’¤¿’¤¬’¡£’Ìä’Âê’Ìµ’¤·
+
+’¤³’¤ì’¤Ç’¡¢ifseq’¤«’¤é’ÇÛ’Îó’¤ò’É½’¼¨’¤¹’¤ë’¤Î’¤Ë’»È’ÍÑ’¤Ç’¤­’¤ë’¤è’¤¦’¤Ë’¤¹’¤ë
+
+
+
+//2017’Ç¯7’·î3’Æü
+ViewerS.java: ScrollPane’¤òSplitPane’¤Ë’ÃÖ’¤­’´¹’¤¨’¤¿’¡£
+
+//2017’Ç¯7’·î4’Æü
+(1) importFasta.java
+’¿·’¤·’¤¤’¥á’¥½’¥Ã’¥É’¤ò’Æ³’Æþ
+    public int getSeqLen(int i)  {
+        return  Seq.get(i).length();
+    }
+
+    public int getSeqSize() {
+	return seqSize;
+    }
+
+(2) cluster’¤Î’ÆÉ’¤ß’¹þ’¤ß’¥¯’¥é’¥¹’¤È’¡¢’¤½’¤Î’³Î’Ç§’¤Î’¤¿’¤á’¤Î’¥¯’¥é’¥¹’¤ò’ºî’À®
+(2-1) importCluster.java
+
+import java.io.*;
+import java.util.ArrayList;
+
+public class importCluster {
+    private int sizeOfCluster;
+    private ArrayList<Integer> numberOfMember = new ArrayList<Integer> (); 
+    private ArrayList<ArrayList<Integer>> clusterInfo = new ArrayList<ArrayList<Integer>>();
+    private ArrayList<Integer> ali;
+
+    public importCluster(String fileName)  {
+	try {
+	    String str;
+	    FileReader in = new FileReader(fileName);
+	    BufferedReader b = new BufferedReader(in);
+
+	    while((str = b.readLine()) != null)  {
+                str = str.trim();
+		int mnum = Integer.parseInt(str);
+		sizeOfCluster++;
+
+		int i = 0;
+                while (i < mnum)  {
+		    str = b.readLine();
+		    str = str.trim();
+                    String [] str2 = str.split(" ");
+		    ali = new ArrayList<Integer>(); 
+                    for (int j = 0; j < str2.length ; ++j)  {
+			if (str2[j].isEmpty() || str2[j].charAt(0) == ' ') continue;
+			else {
+			    ali.add(Integer.parseInt(str2[j]));
+			    i++;
+			}		
+		    }
+		}
+                numberOfMember.add(mnum);
+		clusterInfo.add(ali);
+	    }	    
+	}
+	catch (IOException e) {
+	}
+    }
+
+    int getClusterSize()  {
+	return sizeOfCluster;
+    }
+    ArrayList<Integer> getNumberOfMember()  {
+	return  numberOfMember;
+    }
+    ArrayList<ArrayList<Integer>> getCluster()  {
+	return clusterInfo;
+    }
+}
+
+
+(2-2)  ’³Î’Ç§’¤Î’°Ù’¤Î’¥¯’¥é’¥¹’¡¡’¡¡test3.java
+import java.io.*;
+import java.util.ArrayList;
+
+public class test3  {
+    public static void  main(String[] args)  { 
+	importCluster cl = new importCluster("testcl.txt");
+	int x = cl.getClusterSize();
+	System.out.println("Number of Clusters = " + x);
+	ArrayList<Integer> memnum = cl.getNumberOfMember();
+	ArrayList<ArrayList<Integer>> clinfo = cl.getCluster();
+	for (int i = 0 ; i < x ; ++i)  {
+	    System.out.println("cl id no = " + i + "; " + memnum.get(i)) ;           	    
+	    ArrayList<Integer> y = clinfo.get(i);
+	    for (int j = 0 ; j < memnum.get(i)  ; ++j)  {
+		System.out.print(y.get(j) + " ");
+	    }             
+	    System.out.println("//");
+	}
+    }
+}
+
+(2-3)  ’¼Â’¹Ô’Îã
+(2-3-1) ’¥³’¥ó’¥Ñ’¥¤’¥ë
+javac test3.java
+(2-3-2) ’¼Â’¹Ô
+java test3
+(2-3-3) ’½Ð’ÎÏ
+Number of Clusters = 3
+cl id no = 0; 10
+1 4 3 205 6 10 11 3 2 100 //
+cl id no = 1; 5
+91 93 88 51 49 //
+cl id no = 2; 8
+21 304 32 255 126 160 111 33 //
+
+(2-3-4)  ’»È’ÍÑ’¤·’¤¿’¥¯’¥é’¥¹’¥¿’¾ð’Êó’¥Õ’¥¡’¥¤’¥ë
+test.cl.txt
+
+    10
+ 1  4  3   205   6 10    11 3 2 100 
+ 5
+    91   93  88  51  49
+    8
+ 21  304  32   255   126 160    111 33
+
+
+’¥¯’¥é’¥¹’¥¿’¤Î’¥á’¥ó’¥Ð’¡¼’¤Î’¿ô
+’¥¯’¥é’¥¹’¥¿’¤Î’¹½’À®’Í×’ÁÇ’¡Ê’¾å’µ­’¤Î’¿ô’¤À’¤±’·«’¤ê’ÊÖ’¤·’¡¢’¶õ’Çò’¶è’ÀÚ’¡Ë
+
+’¤³’¤ì’¤ò’¥¯’¥é’¥¹’¥¿’¿ô’¤À’¤±’·«’¤ê’ÊÖ’¤¹
+œôó»’¡¡’¥¯’¥é’¥¹’¥¿’¤Î’¹½’À®’Í×’ÁÇ’¤Ï’¡¢’¥×’¥í’¥°’¥é’¥à’Ãæ’¤Ç’¤Ï’¤³’¤ì’¤«’¤é’£±’¤ò’°ú’¤¤’¤Æ’»È’¤¦
+
+//2017’Ç¯9’·î17’Æü
+No Weight’¤ÈArgos Weight’¤ò’ÁÈ’¤à
+Argos Weight’¤Î’¤¿’¤á’¤Ë’µ÷’Î¥’·×’»»
+p-distance’¤ÈPoisson’Êä’Àµ’¤ò’ÁÈ’¤à
+DistM.java	’µ÷’Î¥’·×’»»’ÍÑ
+SeqWeight.java’¡¡’½Å’¤ß’·×’»»’ÍÑ
+
+DistM’¤Î’µ÷’Î¥’¹Ô’Îó’¤«’¤é’¤ÎWeight’¤Î’·×’»»’¤È
+SeqWeight’¤Ë’¤è’¤ëWeight’·×’»»’¤¬’°ì’Ã×’¤¹’¤ë’¤³’¤È’¤ò’³Î’Ç§
+
+//2017’Ç¯9’·î18’Æü
+’ÊÝ’Â¸’ÅÙ/’ÊÑ’°Û’ÅÙ’¤Î’¥á’¥Ë’¥å’¡¼’¤Î’ºî’À®
+
+//2017’Ç¯9’·î19’Æü
+Weight’¤Î’·×’»»’¤òOK’¥Ü’¥¿’¥ó’¤ò’²¡’¤·’¤¿’¤é’·×’»»’¤¹’¤ë’¤è’¤¦’¤Ë’ÊÑ’¹¹
+
+aaindex1~3’¤ò’¡¢KEGG’¤«’¤é’¥À’¥¦’¥ó’¥í’¡¼’¥É
+
+Robinson & Robinson 1991’¤ò’Æþ’¼ê
+	 aaindex1’¤Ë’ÄÉ’²Ã ----> Jones’¤é’¤ÎAA composition’¤È’¤Û’¤Ü’Æ±’¤¸
+
+
+//2017’Ç¯9’·î20’Æü
+aaindex1’¤Èaaindex2’¤ò’ÆÉ’¤ß’¹þ’¤à’¥×’¥í’¥°’¥é’¥à’¤ò’ºî’À®
+aaIdx.java
+scoreIdx.java
+
+’¤½’¤ì’¤¾’¤ì’¡¢test5.java’¤Ètest.java’¤Îmain’¤«’¤é’¸Æ’¤Ó’½Ð’¤·’¤Æ’¥Á’¥§’¥Ã’¥¯
+
+//2017’Ç¯9’·î24’Æü
+molmil’¤Î’¥í’¡¼’¥«’¥ë’¤Ê’Î©’¤Á’¾å’¤²’¤ò’¥á’¥Ë’¥å’¡¼’¤«’¤é’¤Ç’¤­’¤ë’¤è’¤¦’¤Ë’¤·’¤¿
+
+IntAln.java   ’¥¢’¥é’¥¤’¥ó’¥á’¥ó’¥È’¤Î’Ê¸’»ú’¤ò’À°’¿ô’¤Ë’ÊÑ’´¹
+gap’µÚ’¤Óunidentified’¤Ï-1
+aaindex1, 2’¤È’Æ±’¤¸’½ç’ÈÖ’¤Î’¿ô’»ú
+
+//2017’Ç¯10’·î1’Æü
+ArrayList’¤Ë’¤Ä’¤¤’¤Æ’¤Î’³Ð’½ñ
+
+>>test21.java
+import java.util.ArrayList;
+
+class test21  {
+    ArrayList<ArrayList<ArrayList<Double>>> dx = new ArrayList<ArrayList<ArrayList<Double>>>();
+
+    test21()  {
+        int x = 0;
+	for (int k = 0 ; k < 5 ; ++k)  {
+	    ArrayList<ArrayList<Double>> d0 = new ArrayList<ArrayList<Double>>();
+	    for (int i = 0 ; i < 3 ; ++i)  {
+		/*
+		ArrayList<Double> d1 = new ArrayList<Double>(20);
+		for (int j = 0 ; j < 20 ; ++j)  d1.set(j, Double.valueOf((double)(x++)));
+		*/
+		ArrayList<Double> d1 = new ArrayList<Double>();
+		for (int j = 0 ; j < 20 ; ++j)  d1.add(Double.valueOf((double)(x++)));
+		d0.add(d1);
+	    }
+	    dx.add(d0);
+	}
+    }
+
+    double getd(int i, int j, int k)  {
+	return dx.get(i).get(j).get(k).doubleValue();
+    }
+}
+
+>> test22.java
+public class test22 {
+    static test21 test;
+
+    public static void main(String ... args)  { 
+	test = new test21();
+        for (int i = 0; i < 5 ; ++i) {
+	    for (int j = 0 ; j < 3 ; ++j)  {
+		for (int k = 0 ; k < 20 ; ++k) {
+		    System.out.println(i + ", "+j+", "+k+", "+test.getd(i,j,k));
+		}
+	    }
+	}
+    }
+}
+

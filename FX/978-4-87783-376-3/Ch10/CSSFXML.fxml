@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml" style="-fx-alignment:center"
+         prefWidth="220.0" prefHeight="80.0">
+    <children>
+        <Button text="Click Me!" style="-fx-text-fill:gray" prefWidth="80.0" />
+    </children>
+</HBox>

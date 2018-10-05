@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.ArrayList;
+
+public class importFasta   {
+    private  ArrayList<String> Seq = new ArrayList<String>();
+    private  ArrayList<String> Name = new ArrayList<String>();;
+
+    public importFasta(String fileName)  {
+        try  {
+            String str;
+            String str2[];
+            String seqstr = "";
+	    int  i = 0;
+	    FileReader in = new FileReader(fileName);
+	    BufferedReader b = new BufferedReader(in);
+            while((str = b.readLine()) != null) {
+		if (str.length() != 0 && str.charAt(0) == '>')  {
+                        Name.add(str);
+                        if (i != 0)   {
+			    Seq.add(seqstr);
+                            seqstr = "";; 
+			}
+                        i++;
+		    }   
+                    else  {
+                        if (str.length() == 0)  continue;
+			str2 = str.split(" ",0);
+                        for (int j = 0 ; j < str2.length ; ++j) {
+                            if (" ".equals(str2[j])) continue;
+			    seqstr=seqstr.concat(str2[j]);
+			}
+                    }
+	    }
+	    Seq.add(seqstr);
+	    in.close();
+	}
+	catch (IOException e) {
+	    System.out.println("importFasta:Input Error");
+	}
+    }
+
+    public String getSeq(int i)  {
+	return  Seq.get(i);
+    }
+    public String getName(int i)  {
+	return  Name.get(i);
+    }
+    public int size()  {
+	return  Name.size();
+    }
+}

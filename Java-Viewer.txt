@@ -1,0 +1,844 @@
+//2017年4月10日
+I. パッケージの作成について
+http://www.acroquest.co.jp/webworkshop/java_course/J_lecture13.html
+
+（１）パッケージとは、大雑把にいってしまえば、たくさんあるJavaのクラスを
+分類するための仕組みのこと
+
+実際の開発では、数十、数百単位のクラスを作成することも希ではありません。
+原則として同じ名前のクラスを2つ以上作ることはできませんが、こうたくさんクラスがあっては、
+同じ名前のクラスがあるかどうかを考えるだけでも嫌になりますよね。
+この問題もパッケージを使用することで解決されます。
+異なるパッケージであれば、同じ名前のクラスがあっても許されるからです。 
+
+（２）例えば、あるJavaのクラス(ここでは、MyClassという名前のクラスとしましょう)が
+fooという名前のパッケージに属することを宣言する場合、MyClass.javaの先頭に、
+
+package foo;
+
+と記述します。これでクラスMyClassが、パッケージfooに属することを宣言したことになります。
+
+（３）逆に、異なるパッケージに属するクラスを使用したい場合、import文を使用して
+異なるパッケージのクラスを使用することを宣言しなければなりません。
+例えば、先ほど宣言したfooパッケージのMyClassを使用したい場合、
+以下のようにしてインポート宣言を行います。
+
+（４）パッケージ名を決める際には、他に誰も使っていないパッケージ名にするために、
+インターネットのドメイン名を逆順にしたものを利用するのが一般的です。
+Acroquestの場合は、ドメイン名が acroquest.co.jp なので、
+
+jp.co.acroquest.project1
+jp.co.acroquest.project2
+
+など、jp.co.acroquest で始まるパッケージ名を使用します。
+この慣例に従っていれば、パッケージ名が衝突する可能性はまずありません。
+
+（５）パッケージを利用したクラスファイルは、
+パッケージ名と同じ名前のフォルダに置かれなければならない。
+
+例えば、mypackage というパッケージのクラス、MyAp は、mypackage という名前の
+フォルダに置かなくてはいけません。クラスファイルのファイル名は、もちろん MyAp.class です。
+
+また、mypackage.sub というパッケージを作る場合は、mypackageフォルダの下に
+sub という名前のフォルダを作成して、パッケージの階層とフォルダの階層をあわせておく
+必要があります。
+
+リスト1 - MyMain.java
+
+import mypackage.MyAp;
+import mypackage.sub.SubAp;
+
+public class MyMain
+{
+    public static void main(String[] args)
+    {
+        MyAp ap = new MyAp();
+        SubAp subap = new SubAp();
+        ap.print();
+        subap.print();
+    }
+}
+
+
+リスト2 - MyAp.java
+
+package mypackage;
+
+public class MyAp
+{
+    public MyAp()
+    {
+        System.out.println("Invoke mypackage.MyAp!");
+    }
+
+    public void print()
+    {
+        System.out.println("mypackage.MyAp.print()!");
+    }
+}
+
+
+リスト3 - SubAp.java
+
+package mypackage.sub;
+
+public class SubAp
+{
+    public SubAp()
+    {
+        System.out.println("Invoke mypackage.sub.SubAp!");
+    }
+
+    public void print()
+    {
+        System.out.println("mypackage.sub.SubAp.print()!");
+    }
+}
+
+
+II. SPARQL
+https://www.ibm.com/developerworks/jp/java/library/j-sparql/
+
+RDF フォーマットで保存されるデータが増えてきたために、特定な情報を見つけるための
+簡単な方法が必要になってきました。強力な、新しいクエリー言語である SPARQL は、そ
+の要求に応えるものであり、これを利用することによって、RDF の山の中から必要なデー
+タを容易に見つけることができます。
+
+Jena Semantic Web Toolkit を使って、皆さん自身の Java アプリケーションから SPARQL 
+クエリー行う方法を学びます。
+
+RDF (Resource Description Framework) 
+    データの中央集中を避け、分散化することが可能
+    RDF モデル同士は容易に合体することができ、シリアル化した RDF は単純に、HTTP で交換することができます
+    アプリケーションは、Web 上にある複数の RDF データ・ソースに疎結合されます。
+
+必要なデータを RDF グラフ内で見つけ、操作するには、どうすればよいのでしょう。
+    SPARQL (SPARQL Protocol And RDF Query Language) が、現在、W3C のワーキング・ドラフト
+    として議論されています。
+
+
+http://qiita.com/maoringo/items/4742b5cd01c9e698260d
+RDFとは
+Resource Description Framework の略
+	 Resource Description Framework (リソース・ディスクリプション・フレームワーク、RDF) 
+	 とは、ウェブ上にある「リソース」を記述するための統一された枠組みであり、W3Cにより
+	 1999年2月に規格化されている…中略…RDFは特にメタデータについて記述することを目的と
+	 しており、セマンティック・ウェブを実現するための技術的な構成要素の1つとなっている。
+
+
+セマンティックウェブ
+	Webページおよびその中に記述された内容について、それが何を意味するかを表す情報
+	(メタデータ)を一定の規則に従って付加することで、コンピュータが効率よく情報を
+	収集・解釈できるようにする構想。
+	インターネットを　単なるデータの集合　から　知識のデータベース　に進化させよう
+	という試みがセマンティックWebである。
+
+RDFは要素間の関係性を記述していく枠組み
+RDFとそれが使われて表現されるセマンティックウェブを直感的に捉えるならば，グラフとして捉えるのがよい
+
+RDFをグラフとして捉える
+とあるデータベースの"薬の化合物のID DB00316"の"名前"が"アセトアミノフェン"である，とします
+
+これをRDF（の中でも最も簡単な表記形式）で書くと，こうなります。
+薬のID:DB00316 　名前　アセトアミノフェン.
+
+このままだと，少し問題があります。先ほど述べた"機械にも理解できるような世界共通のグラフ"というものが出来ないのです。もう少しちゃんとした，RDFで書いていきましょう。
+
+Drug_ID:DB00316    label    "Acetaminophen”.
+
+これだと英語にしただけ
+世界共通で機械が判読できるグラフにするために，ちょいと宣言をしてからRDFを書きます。(prefix<接頭辞>といいます。）
+
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix drugbank:   <http://bio2rdf.org/drugbank:> .
+drugbank:DB00316    rdfs:label  "Acetaminophen”.
+
+こうすることで，世界共通で機械が判読できるグラフに近づきます。
+最初のprefixでこれからrdfsと書くのは，http://www.w3.org/2000/01/rdf-schema#の略であり， 
+これから，drugbankと書くのはhttp://bio2rdf.org/drugbank:の略ですよ，と宣言している          
+
+ここで宣言したprefix，rdfsやdrugbankは既に汎用的に使われている語彙（直感的には辞書のようなもの）であり，その意味は明確に定義されています。
+
+//2017年4月11日
+http://qiita.com/maoringo/items/4742b5cd01c9e698260d
+（１）RDFの文法
+RDFの記述方式は，Subject（主語） Predicate（述語） Object（目的語）という，英語の文になぞらえられます。
+
+drugbank:DB00316		 Subject    
+rdfs:label  			 Predicate
+"Acetaminophen”.		 Object
+
+化合物，"Acetaminophen （アセトアミノフェン）"が，"Prostaglandin G/H synthase 2（プロスタグランディン エンドペルオキシド 合成酵素）"のターゲットになるということを書きたいとします。
+
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix drugbank:  <http://bio2rdf.org/drugbank:> .
+@prefix drugbank_vocab:  <http://bio2rdf.org/drugbank_vocabulary:> .
+@prefix drugbank_target:  <http://bio2rdf.org/drugbank_target:> .
+
+drugbank:DB00316 rdfs:label "Acetaminophen" ;
+                                 drugbank_vocab:target drugbank_target:290 .
+drugbank_target:290  rdfs:label  "Prostaglandin G/H synthase 2".
+
+RDFを使って目指す世界とは，このような要素間のグラフを繋げまくって，ウェブの世界をまるごとグラフにしてしまうこと
+
+（２）手持ちのデータをRDF化しよう。
+実際にRDFを他のRDFと統合しようと思ったら手元のデータのRDF化が必要
+
+ある研究所の研究支援部（あくまでFictionにしてあげてください）が支援している薬のデータをRDF化したとします。中身は，ある薬を基準として，その名前，製品名，drugbankID，疾患名，疾患分類であるicd10のIDをつけています。rdf（記法はttl形式）の中身はこうなります。
+
+@prefix drugbank:   <http://bio2rdf.org/drugbank:> .
+@prefix drgb: <http://bio2rdf.org/drugbank_vocabulary:> .
+@prefix dbowl:    <http://dbpedia.org/ontology/> .
+@prefix Medical_condition: <http://schema.org/MedicalCondition/> .
+
+<http://sampledrug.jp/Drug#1>
+        drgb:name "タクロリムス"@ja;
+        drgb:product "プログラフ顆粒0.2mg"@ja;
+        dbowl:drugbank  drugbank:DB00864; 
+        Medical_condition:name  "移植片対宿主病"@ja;
+        dbowl:icd10 "T860".
+
+
+prefixで以下の記述で省略したいURIを書いています。
+このRDFのdrgb:name,dbowl:drugbankの部分（<http://sampledrug.jp/Drug#1>の主語(Subject）に対して述語(Predicate)といいます。ちなみに"タクロリムス"@ja　は目的語（Object）になります。）は汎用的なものを使うことが望ましいとされています。
+
+
+
+
+
+
+//2017年5月14日
+FileChooser作成
+例題を探す
+
+(1)
+https://docs.oracle.com/javase/jp/8/javafx/user-interface-tutorial/file-chooser.htm
+
+サンプルプログラムはコンパイルエラー
+
+javac FileChooserSample.java
+FileChooserSample.java:70: エラー: シンボルを見つけられません
+        EventQueue.invokeLater(() -> {
+        ^
+  シンボル:   変数 EventQueue
+  場所: クラス FileChooserSample
+エラー1個
+
+(2)
+http://javafx-trick.appspot.com/article/110010/80074.html
+http://javafx-trick.appspot.com/article/110010/80074/70110.html
+
+javac FileChooser01.java
+FileChooser01.java:28: エラー: シンボルを見つけられません
+                File importFile = fc.showOpenDialog(primaryStage);
+                                    ^
+  シンボル:   メソッド showOpenDialog(Stage)
+  場所: タイプDirectoryChooserの変数 fc
+エラー1個
+
+(3) http://www.java2s.com/Tutorials/Java/JavaFX/0555__JavaFX_FileChooser.htm
+
+javac FileChooserX.java
+注意:FileChooserX.javaは非推奨のAPIを使用またはオーバーライドしています。
+注意:詳細は、-Xlint:deprecationオプションを指定して再コンパイルしてください。
+
+いずれもエラーが出る
+
+
+(1)は
+import java.awt.EventQueue
+
+を追加するとコンパイルできた
+実行もできた
+
+-------------------------------------------------------------------
+JavaFX GUI プログラミング　でメニューバー作成
+出版社のサイトからサンプルコードをダウンロード
+
+ch08/srcの下の
+Menu01.javaをコンパイル
+日本語が描かれているところでエラーが出るので
+英語に変更
+
+すると
+javac Menu01.java
+注意:Menu01.javaは非推奨のAPIを使用またはオーバーライドしています。
+注意:詳細は、-Xlint:deprecationオプションを指定して再コンパイルしてください。
+fujihiroyuki-no-MacBook-Air:~ toh$ javac Menu01.java -Xlint:deprecation
+Menu01.java:8: 警告: [deprecation] javafx.scene.controlのMenuItemBuilderは非推奨になりました
+import javafx.scene.control.MenuItemBuilder;
+                           ^
+Menu01.java:10: 警告: [deprecation] javafx.scene.layoutのBorderPaneBuilderは非推奨になりました
+import javafx.scene.layout.BorderPaneBuilder;
+                          ^
+Menu01.java:12: 警告: [deprecation] javafx.stageのStageBuilderは非推奨になりました
+import javafx.stage.StageBuilder;
+                   ^
+Menu01.java:21: 警告: [deprecation] javafx.scene.controlのMenuItemBuilderは非推奨になりました
+    MenuItem cut = MenuItemBuilder.create().text("cut").id("cut").build();
+                   ^
+Menu01.java:22: 警告: [deprecation] javafx.scene.controlのMenuItemBuilderは非推奨になりました
+    MenuItem copy = MenuItemBuilder.create().text("copy").id("copy").build();
+                    ^
+Menu01.java:23: 警告: [deprecation] javafx.scene.controlのMenuItemBuilderは非推奨になりました
+    MenuItem paste = MenuItemBuilder.create().text("paste").id("paste").build();
+                     ^
+Menu01.java:25: 警告: [deprecation] javafx.scene.controlのMenuItemBuilderは非推奨になりました
+    MenuItem searchNext = MenuItemBuilder.create().text("next search").id("next").build();
+                          ^
+Menu01.java:26: 警告: [deprecation] javafx.scene.controlのMenuItemBuilderは非推奨になりました
+    MenuItem searchPrev = MenuItemBuilder.create().text("forward search").id("prev").build();
+                          ^
+Menu01.java:35: 警告: [deprecation] javafx.scene.layoutのBorderPaneBuilderは非推奨になりました
+    BorderPane root = BorderPaneBuilder.create().top( menuBar ).build();
+                      ^
+Menu01.java:37: 警告: [deprecation] javafx.stageのStageBuilderは非推奨になりました
+    stage = StageBuilder.create().width(240).height(200)
+            ^
+警告10個
+
+Builder関係が非推奨になっている
+コンパイルしたものは動作はするが、メニュー関係を調べなおす
+
+
+
+//2017年5月15日
+
+まず、メニューバーを完成させる
+
+http://cartman0.hatenablog.com/entry/2016/03/20/000115#sec-Menubar-Menu
+
+の記述に従う
+
+MenuY.javaにサンプルをはる
+
+--------------------------------------------------------------------
+
+「JavaFX & Java8 プログラミング」の五章にメニューの例あり
+
+ コンパイルするとエラー
+
+javac MenuSample.java
+
+MenuSample.java:24: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu fileMenu = new Menu("�t�@�C��");
+                                  ^
+MenuSample.java:24: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu fileMenu = new Menu("�t�@�C��");
+                                    ^
+MenuSample.java:24: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu fileMenu = new Menu("�t�@�C��");
+                                      ^
+MenuSample.java:24: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu fileMenu = new Menu("�t�@�C��");
+                                        ^
+MenuSample.java:24: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu fileMenu = new Menu("�t�@�C��");
+                                         ^
+MenuSample.java:25: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuExit = new MenuItem("�I��");
+                                         ^
+MenuSample.java:25: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuExit = new MenuItem("�I��");
+                                           ^
+MenuSample.java:25: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuExit = new MenuItem("�I��");
+                                            ^
+MenuSample.java:29: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu colorMenu = new Menu("�J���[");
+                                   ^
+MenuSample.java:29: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu colorMenu = new Menu("�J���[");
+                                     ^
+MenuSample.java:29: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu colorMenu = new Menu("�J���[");
+                                      ^
+MenuSample.java:29: エラー: この文字は、エンコーディングUTF8にマップできません
+        Menu colorMenu = new Menu("�J���[");
+                                       ^
+MenuSample.java:30: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuRed = new MenuItem("��");
+                                        ^
+MenuSample.java:30: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuRed = new MenuItem("��");
+                                         ^
+MenuSample.java:32: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuBlue = new MenuItem("��");
+                                         ^
+MenuSample.java:32: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuBlue = new MenuItem("��");
+                                          ^
+MenuSample.java:34: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuGreen = new MenuItem("��");
+                                          ^
+MenuSample.java:34: エラー: この文字は、エンコーディングUTF8にマップできません
+        MenuItem mnuGreen = new MenuItem("��");
+                                           ^
+エラー18個
+
+エラー: この文字は、エンコーディングUTF8にマップできません　javaで検索
+
+http://christina04.blog.fc2.com/blog-entry-41.html
+
+に理由が記述されている
+
+$ javac xxx.java
+
+をしたら
+
+この文字は、エンコーディング UTF8 にマップできません。
+
+という警告が１００個ほど出てきて、実際に実行してみたらエラー。
+調べてみると、コンパイル時に文字コードが指定されていない場合、システム標準の文字コード(utf-8)としてコンパイルされるらしく、Shift-JISとかでプログラムを書いてあったりすると、こんな警告が出るらしい。
+
+なので正しいコンパイルの仕方は
+
+$ javac -encoding SJIS xxx.java
+
+とすればOK。
+
+あれ？でもそもそもUbuntuの場合文字コードってどうやって調べるの？と僕と同じことを思った人もいると思います。
+そんな人は「kcc」というプログラムをインストールしてください。
+
+$ sudo apt-get install kcc
+
+そして文字コードを調べるときは次の様に打てば出てきてくれます。
+
+$ kcc -c xxx.java
+xxx.java: shift-JIS
+
+javac -encoding SJIS MenuSample.java
+java MenuSample
+
+kccについては別途調査
+
+-------------------------------------------------------------------------
+
+MenuBar:トップレベルのメニュー項目をウインドウに表示するコントロール
+Menu:「ファイル」や「ヘルプ」などのトップレベルのメニュー項目を表すコントロール
+MenuItem: 「開く」「終了」などの個々のメニュー項目を表すコントロール
+
+Menuを組み込んだウィンドウ作成
+Viewer.java
+
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;;
+import javafx.stage.Stage;
+
+public class Viewer extends Application  {
+  @Override
+  public void start(Stage stage) throws Exception {
+      stage.setTitle("Viewer");
+      stage.setWidth(280);
+      stage.setHeight(220);
+
+      VBox root = new VBox();
+      
+      MenuBar menuBar = new MenuBar();
+      Menu fileMenu = new Menu("File");
+
+      MenuItem mnuImSeq = new MenuItem("Import Seq File");
+      MenuItem mnuImTree = new MenuItem("Import Tree File");
+      MenuItem mnuImClus = new MenuItem("Import Cluster File");
+      MenuItem mnuExit = new MenuItem("Exit");
+      mnuExit.setOnAction(event -> System.exit(0));
+      fileMenu.getItems().addAll(mnuImSeq, mnuImTree, mnuImClus, mnuExit);
+      menuBar.getMenus().addAll(fileMenu);
+      
+      root.getChildren().addAll(menuBar);
+     
+      stage.setScene(new Scene(root));
+      stage.show();
+  }
+}
+
+次にFile メニューとfile chooserを連動させる
+
+読み込んだ配列の表示のためのスクロール
+
+http://fukuyama.co/file-i-mime
+Xcodeのfileコマンドを使用
+
+file Viewer.java
+Viewer.java: ASCII Java program text
+
+//2017年5月17日
+Viewer.javaにFileChooserを組み込み、チューザーウィンドウからファイルを選択できるようにした。行うべきこと
+(1)
+現在は画像ファイルを開くだけなので、ここでsequence fileを読み込めるようにする。
+---> openFileメソッドをfastaの読み出しにする。
+メソッドではなく、getSeqクラスを呼び出し、clustal形式か否かを判定した上で
+seqeunceを読み出すようにする。
+(2) FileChooserの処理の詳細＋イベント処理は、まだ理解不十分
+確認必要
+
+import java.awt.Desktop;
+import java.awt.EventQueue;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;;
+import javafx.stage.Stage;
+import javafx.stage.FileChooser;
+
+public class Viewer extends Application  {
+
+  private final Desktop desktop = Desktop.getDesktop(); 
+
+  @Override
+  public void start(Stage stage) throws Exception {
+      stage.setTitle("Viewer");
+      stage.setWidth(1120);
+      stage.setHeight(880);
+
+      final FileChooser fileChooser = new FileChooser();
+      VBox root = new VBox();
+      
+      MenuBar menuBar = new MenuBar();
+      Menu fileMenu = new Menu("File");
+
+      MenuItem mnuImSeq = new MenuItem("Import Seq File");
+      MenuItem mnuImTree = new MenuItem("Import Tree File");
+      MenuItem mnuImClus = new MenuItem("Import Cluster File");
+      MenuItem mnuExit = new MenuItem("Exit");
+      mnuImSeq.setOnAction(event -> {
+	      File file = fileChooser.showOpenDialog(stage);
+	      if (file != null)  {
+		  openFile(file);
+	      }
+	  });
+      mnuExit.setOnAction(event -> System.exit(0));
+      fileMenu.getItems().addAll(mnuImSeq, mnuImTree, mnuImClus, mnuExit);
+      menuBar.getMenus().addAll(fileMenu);
+      
+      root.getChildren().addAll(menuBar);
+     
+      stage.setScene(new Scene(root));
+      stage.show();
+  }
+
+  private void openFile(File file)  {
+      EventQueue.invokeLater(() -> { 
+	      try {
+		  desktop.open(file);
+              }
+	      catch (IOException ex)  {
+		  Logger.getLogger(Viewer.class.getName()).log(Level.SEVERE, null, ex);
+	      }
+	  });
+  }
+}
+
+//2017年6月1日
+
+rootがVBoxなので、例えばTextFieldを作成して、
+      root.getChildren().addAll("TextFieldのインスタンス");
+とすると、メニューバーの下にテキストフィールドが表示されることを確認
+
+VBoxで上下二段にする
+一段目　HBox
+  左に　系統樹に相当するScrollPane
+  右に　アラインメントに相当するScrollPane
+二段目　メッセージを書き出すScrollPane
+
+PDBの座標　mmCIFかPDBxmlで読み込みは作成すること
+旧PDBフォーマットについては変換処理(?)
+
+
+//2017年６月5日
+Scroll Paneのサイズ
+Scroll PaneにはりつけるPaneのサイズ
+を確認する
+
+https://docs.oracle.com/javase/jp/8/javafx/api/javafx/scene/control/ScrollPane.html
+の記述から
+
+ Rectangle rect = new Rectangle(200, 200, Color.RED);
+ ScrollPane s1 = new ScrollPane();
+ s1.setPrefSize(120, 120);
+ s1.setContent(rect);
+
+ stageのサイズが　1120 x 880
+ とりあえず、横に380 x 600, 740 x 600, その下に1120 x 280 にしてみる。
+
+
+      HBox hbx = new HBox();
+      ScrollPane sp1 = new ScrollPane();
+      ScrollPane sp2 = new ScrollPane();
+      sp1.setPrefSize(380, 600);
+      sp2.setPrefSize(740, 600);
+      Image ex1 = new Image(getClass().getResourceAsStream("test.jpg"));
+      sp1.setContent(new ImageView(ex1));
+      sp2.setContent(new ImageView(ex1));
+
+      hbx.getChildren().addAll(sp1, sp2);
+
+      VBox vbx = new VBox();
+
+      ScrollPane sp3 = new ScrollPane();
+      sp3.setPrefSize(1120, 280);
+      vbx.getChildren().addAll(hbx, sp3);
+
+      root.getChildren().addAll(vbx);
+
+ ここまでを保存
+
+cp Viewer.java Viewer.java.org050617
+
+
+ 上の二つのScrollPaneに導入するStackPaneを二つ準備
+ 縦横に大きくとる
+
+https://docs.oracle.com/javase/jp/8/javafx/api/javafx/scene/layout/StackPane.html
+
+StackPane pn1 = new StackPane();
+pn1.setPrefSize(1000, 1000);
+StackPane pn2 = new StackPane();
+pn2.setPrefSize(1000, 1000);
+
+これにimageを貼付けてから、sp1, sp2にのっける
+pn1.getChildren().addAll(new ImageView(ex1));
+pn2.getChildren().addAll(new ImageView(ex1));
+
+これで、スクロールバーがあらわれるので、StackPaneを
+系統樹やアラインメントのサイズに応じて作成すればよい。
+
+現時点での問題点は、最外部のWindowをドラッグして拡大すると隙間ができること
+(ScrollPaneを外部のWindowのサイズにあわせて拡大できるようにするか？
+setPrefSizeではないやり方を検討）
+最下段のメッセージを記入する部分を、どうデザインするか
+の２点である。
+
+とりあえず、アラインメントとクラスタファイル(CardC)を作成し、これで
+クラスタに基づくコンセンサス配列を表示できるようにする。
+
+//2017年6月6日
+
+importFastaクラスのifseqを、イベント処理内ではなく、
+private変数として、Viewerクラスのトップで宣言
+インスタンス化については、これまで通りイベント処理内で実施
+
+コンパイルし直して実行したが。問題無し
+
+これで、ifseqから配列を表示するのに使用できるようにする
+
+
+
+//2017年7月3日
+ViewerS.java: ScrollPaneをSplitPaneに置き換えた。
+
+//2017年7月4日
+(1) importFasta.java
+新しいメソッドを導入
+    public int getSeqLen(int i)  {
+        return  Seq.get(i).length();
+    }
+
+    public int getSeqSize() {
+	return seqSize;
+    }
+
+(2) clusterの読み込みクラスと、その確認のためのクラスを作成
+(2-1) importCluster.java
+
+import java.io.*;
+import java.util.ArrayList;
+
+public class importCluster {
+    private int sizeOfCluster;
+    private ArrayList<Integer> numberOfMember = new ArrayList<Integer> (); 
+    private ArrayList<ArrayList<Integer>> clusterInfo = new ArrayList<ArrayList<Integer>>();
+    private ArrayList<Integer> ali;
+
+    public importCluster(String fileName)  {
+	try {
+	    String str;
+	    FileReader in = new FileReader(fileName);
+	    BufferedReader b = new BufferedReader(in);
+
+	    while((str = b.readLine()) != null)  {
+                str = str.trim();
+		int mnum = Integer.parseInt(str);
+		sizeOfCluster++;
+
+		int i = 0;
+                while (i < mnum)  {
+		    str = b.readLine();
+		    str = str.trim();
+                    String [] str2 = str.split(" ");
+		    ali = new ArrayList<Integer>(); 
+                    for (int j = 0; j < str2.length ; ++j)  {
+			if (str2[j].isEmpty() || str2[j].charAt(0) == ' ') continue;
+			else {
+			    ali.add(Integer.parseInt(str2[j]));
+			    i++;
+			}		
+		    }
+		}
+                numberOfMember.add(mnum);
+		clusterInfo.add(ali);
+	    }	    
+	}
+	catch (IOException e) {
+	}
+    }
+
+    int getClusterSize()  {
+	return sizeOfCluster;
+    }
+    ArrayList<Integer> getNumberOfMember()  {
+	return  numberOfMember;
+    }
+    ArrayList<ArrayList<Integer>> getCluster()  {
+	return clusterInfo;
+    }
+}
+
+
+(2-2)  確認の為のクラス　　test3.java
+import java.io.*;
+import java.util.ArrayList;
+
+public class test3  {
+    public static void  main(String[] args)  { 
+	importCluster cl = new importCluster("testcl.txt");
+	int x = cl.getClusterSize();
+	System.out.println("Number of Clusters = " + x);
+	ArrayList<Integer> memnum = cl.getNumberOfMember();
+	ArrayList<ArrayList<Integer>> clinfo = cl.getCluster();
+	for (int i = 0 ; i < x ; ++i)  {
+	    System.out.println("cl id no = " + i + "; " + memnum.get(i)) ;           	    
+	    ArrayList<Integer> y = clinfo.get(i);
+	    for (int j = 0 ; j < memnum.get(i)  ; ++j)  {
+		System.out.print(y.get(j) + " ");
+	    }             
+	    System.out.println("//");
+	}
+    }
+}
+
+(2-3)  実行例
+(2-3-1) コンパイル
+javac test3.java
+(2-3-2) 実行
+java test3
+(2-3-3) 出力
+Number of Clusters = 3
+cl id no = 0; 10
+1 4 3 205 6 10 11 3 2 100 //
+cl id no = 1; 5
+91 93 88 51 49 //
+cl id no = 2; 8
+21 304 32 255 126 160 111 33 //
+
+(2-3-4)  使用したクラスタ情報ファイル
+test.cl.txt
+
+    10
+ 1  4  3   205   6 10    11 3 2 100 
+ 5
+    91   93  88  51  49
+    8
+ 21  304  32   255   126 160    111 33
+
+
+クラスタのメンバーの数
+クラスタの構成要素（上記の数だけ繰り返し、空白区切）
+
+これをクラスタ数だけ繰り返す
+※　クラスタの構成要素は、プログラム中ではこれから１を引いて使う
+
+//2017年9月17日
+No WeightとArgos Weightを組む
+Argos Weightのために距離計算
+p-distanceとPoisson補正を組む
+DistM.java	距離計算用
+SeqWeight.java　重み計算用
+
+DistMの距離行列からのWeightの計算と
+SeqWeightによるWeight計算が一致することを確認
+
+//2017年9月18日
+保存度/変異度のメニューの作成
+
+//2017年9月19日
+Weightの計算をOKボタンを押したら計算するように変更
+
+aaindex1~3を、KEGGからダウンロード
+
+Robinson & Robinson 1991を入手
+	 aaindex1に追加 ----> JonesらのAA compositionとほぼ同じ
+
+
+//2017年9月20日
+aaindex1とaaindex2を読み込むプログラムを作成
+aaIdx.java
+scoreIdx.java
+
+それぞれ、test5.javaとtest.javaのmainから呼び出してチェック
+
+//2017年9月24日
+molmilのローカルな立ち上げをメニューからできるようにした
+
+IntAln.java   アラインメントの文字を整数に変換
+gap及びunidentifiedは-1
+aaindex1, 2と同じ順番の数字
+
+//2017年10月1日
+ArrayListについての覚書
+
+>>test21.java
+import java.util.ArrayList;
+
+class test21  {
+    ArrayList<ArrayList<ArrayList<Double>>> dx = new ArrayList<ArrayList<ArrayList<Double>>>();
+
+    test21()  {
+        int x = 0;
+	for (int k = 0 ; k < 5 ; ++k)  {
+	    ArrayList<ArrayList<Double>> d0 = new ArrayList<ArrayList<Double>>();
+	    for (int i = 0 ; i < 3 ; ++i)  {
+		/*
+		ArrayList<Double> d1 = new ArrayList<Double>(20);
+		for (int j = 0 ; j < 20 ; ++j)  d1.set(j, Double.valueOf((double)(x++)));
+		*/
+		ArrayList<Double> d1 = new ArrayList<Double>();
+		for (int j = 0 ; j < 20 ; ++j)  d1.add(Double.valueOf((double)(x++)));
+		d0.add(d1);
+	    }
+	    dx.add(d0);
+	}
+    }
+
+    double getd(int i, int j, int k)  {
+	return dx.get(i).get(j).get(k).doubleValue();
+    }
+}
+
+>> test22.java
+public class test22 {
+    static test21 test;
+
+    public static void main(String ... args)  { 
+	test = new test21();
+        for (int i = 0; i < 5 ; ++i) {
+	    for (int j = 0 ; j < 3 ; ++j)  {
+		for (int k = 0 ; k < 20 ; ++k) {
+		    System.out.println(i + ", "+j+", "+k+", "+test.getd(i,j,k));
+		}
+	    }
+	}
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="FxmlBMI" prefWidth="220.0" prefHeight="80.0">
+  <children>
+    <VBox spacing="5">
+      <children>
+        <HBox>
+         <children>
+           <Label text="身長(cm):" prefWidth="80.0"  />
+           <TextField fx:id="txtHeight" prefWidth="100.0" />
+          </children>
+        </HBox>
+        <HBox>
+         <children>
+           <Label text="体重(kg):" prefWidth="80.0" />
+           <TextField fx:id="txtWeight" prefWidth="100.0" />
+          </children>
+        </HBox>
+        <HBox>
+         <children>
+           <Label text="BMI" fx:id="txtBMI" prefWidth="100.0" />
+           <Button onAction="#onCalcClicked" text="BMI計算" prefWidth="80.0" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
+

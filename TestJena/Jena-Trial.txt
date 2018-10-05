@@ -1,0 +1,607 @@
+//2017年７月２７日
+
+http://qiita.com/maoringo/items/7ede20a3a1da0b595391
+
+コマンドラインからのarqの実行の設定
+.bashrcにbinへのパス
+export PATH=~/bin:/opt/local/bin:/opt/local:/Users/toh/apache-jena-3.4.0/bin:sbin:$PATH
+
+.bash_profile
+JENA_HOMEの設定＋その次のif文
+export PATH=$PATH:/usr/local/bin/maxima:/Users/toh/apache-jena-3.4.0/bin:export PATH="/usr/local/sbin:$PATH"
+export JENA_HOME=/Users/toh/apache-jena-3.4.0 
+if [ -f ~/.bashrc ]; then
+     . ~/.bashrc
+fi
+
+http://qiita.com/takahiroki/items/2861561dc504a28a8c88 より
+基本の基本
+
+.bash_profile には、まず.profile と .bashrc を読み込む設定を記述する。(ソース: bash - Difference between .bashrc and .bash_profile)
+
+抜粋:
+
+if [ -r ~/.profile ]; then . ~/.profile; fi
+case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
+
+.profile には、環境変数の export をひたすら記述する。シェル自身と、シェルから実行されていくすべてのプロセスに影響を与えたいような設定（つまりはだいたいが環境変数の export）をここに記述する。bash をログインシェルとして介さないもろもろがあったりする場合にも、 .profile に書いておくと読み込まれる場合がある様子なので、できるかぎりこっちに寄せた方がいいっぽい。(ソース)
+
+対話シェルの時だけあればいい設定はすべて .bashrc に書く。 alias もは、下の理由によりおそらくここに記載しないとおかしなことに。
+
+
+
+以上の設定でarq使用可能
+
+arq --version
+Jena:       VERSION: 3.4.0
+Jena:       BUILD_DATE: 2017-07-17T11:43:07+0000
+ARQ:        VERSION: 3.4.0
+ARQ:        BUILD_DATE: 2017-07-17T11:43:07+0000
+RIOT:       VERSION: 3.4.0
+RIOT:       BUILD_DATE: 2017-07-17T11:43:07+0000
+
+
+arq --data ex002.ttl --query ex003.rq 
+--------------------------------
+| craigEmail                   |
+================================
+| "c.ellis@usairwaysgroup.com" |
+| "craigellis@yahoo.com"       |
+--------------------------------
+
+
+
+//2017年７月30日
+http://kottas.hatenablog.com/entry/2013/05/21/192100
+にあるサンプルプログラムのコンパイル
+
+jenaのexampleから、importの
+com.hp.hpl
+を
+org.apache
+に変更
+
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
+
+public class TestJena2 {
+
+    public static void main(String[] args) {
+
+ 
+	// クエリを投げるSPARQLエンドポイント
+	String service = "http://ja.dbpedia.org/sparql";
+
+
+	// SPARQLクエリ
+    String queryString = "SELECT distinct ?p " +
+    "WHERE{?s ?p ?o}" +
+	"LIMIT 100";
+
+    Query query = QueryFactory.create(queryString);
+    QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
+    ResultSet results = qe.execSelect();
+    ResultSetFormatter.out(System.out, results, query);
+    qe.close();
+
+    }
+
+}
+
+
+
+.bashrcのclasspathの設定を、jenaのlibの下のjarファイルを全て指定
+
+export PATH=~/bin:/opt/local/bin:/opt/local:/Users/toh/apache-jena-3.4.0/bin:sbin:$PATH
+export CLASSPATH=/Users/toh/apache-jena-3.4.0/lib/collection-0.7.jar:/Users/toh/apache-jena-3.4.0/lib/commons-cli-1.4.jar:/Users/toh/apache-jena-3.4.0/lib/commons-codec-1.10.jar:/Users/toh/apache-jena-3.4.0/lib/commons-csv-1.4.jar:/Users/toh/apache-jena-3.4.0/lib/commons-io-2.5.jar:/Users/toh/apache-jena-3.4.0/lib/commons-lang3-3.4.jar:/Users/toh/apache-jena-3.4.0/lib/httpclient-4.5.3.jar:/Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar:/Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar:/Users/toh/apache-jena-3.4.0/lib/httpcore-4.4.6.jar:/Users/toh/apache-jena-3.4.0/lib/jackson-annotations-2.8.0.jar:/Users/toh/apache-jena-3.4.0/lib/jackson-core-2.8.6.jar:/Users/toh/apache-jena-3.4.0/lib/jackson-databind-2.8.6.jar:/Users/toh/apache-jena-3.4.0/lib/jcl-over-slf4j-1.7.25.jar:/Users/toh/apache-jena-3.4.0/lib/jena-arq-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-base-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-cmds-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-core-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-iri-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-rdfconnection-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-shaded-guava-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-tdb-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jsonld-java-0.10.0.jar:/Users/toh/apache-jena-3.4.0/lib/libthrift-0.9.3.jar:/Users/toh/apache-jena-3.4.0/lib/log4j-1.2.17.jar:/Users/toh/apache-jena-3.4.0/lib/slf4j-api-1.7.25.jar:/Users/toh/apache-jena-3.4.0/lib/slf4j-log4j12-1.7.25.jar:/Users/toh/apache-jena-3.4.0/lib/xercesImpl-2.11.0.jar:/Users/toh/apache-jena-3.4.0/lib/xml-apis-1.4.01.jar  
+export MANPATH=/opt/local/man:$MANPATH
+
+javacでのコンパイルまではエラーなし
+
+javaでの実行に問題
+
+java TestJena2
+エラー: メイン・クラスTestJena2が見つからなかったかロードできませんでした
+
+
+
+java -classpath /Users/toh/apache-jena-3.4.0/lib/collection-0.7.jar:/Users/toh/apache-jena-3.4.0/lib/commons-cli-1.4.jar:/Users/toh/apache-jena-3.4.0/lib/commons-codec-1.10.jar:/Users/toh/apache-jena-3.4.0/lib/commons-csv-1.4.jar:/Users/toh/apache-jena-3.4.0/lib/commons-io-2.5.jar:/Users/toh/apache-jena-3.4.0/lib/commons-lang3-3.4.jar:/Users/toh/apache-jena-3.4.0/lib/httpclient-4.5.3.jar:/Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar:/Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar:/Users/toh/apache-jena-3.4.0/lib/httpcore-4.4.6.jar:/Users/toh/apache-jena-3.4.0/lib/jackson-annotations-2.8.0.jar:/Users/toh/apache-jena-3.4.0/lib/jackson-core-2.8.6.jar:/Users/toh/apache-jena-3.4.0/lib/jackson-databind-2.8.6.jar:/Users/toh/apache-jena-3.4.0/lib/jcl-over-slf4j-1.7.25.jar:/Users/toh/apache-jena-3.4.0/lib/jena-arq-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-base-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-cmds-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-core-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-iri-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-rdfconnection-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-shaded-guava-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jena-tdb-3.4.0.jar:/Users/toh/apache-jena-3.4.0/lib/jsonld-java-0.10.0.jar:/Users/toh/apache-jena-3.4.0/lib/libthrift-0.9.3.jar:/Users/toh/apache-jena-3.4.0/lib/log4j-1.2.17.jar:/Users/toh/apache-jena-3.4.0/lib/slf4j-api-1.7.25.jar:/Users/toh/apache-jena-3.4.0/lib/slf4j-log4j12-1.7.25.jar:/Users/toh/apache-jena-3.4.0/lib/xercesImpl-2.11.0.jar:/Users/toh/apache-jena-3.4.0/lib/xml-apis-1.4.01.jar TestJena2
+エラー: メイン・クラスTestJena2が見つからなかったかロードできませんでした
+
+java -classpath /Users/toh/apache-jena-3.4.0/lib/collection-0.7.jar;/Users/toh/apache-jena-3.4.0/lib/commons-cli-1.4.jar;/Users/toh/apache-jena-3.4.0/lib/commons-codec-1.10.jar;/Users/toh/apache-jena-3.4.0/lib/commons-csv-1.4.jar;/Users/toh/apache-jena-3.4.0/lib/commons-io-2.5.jar;/Users/toh/apache-jena-3.4.0/lib/commons-lang3-3.4.jar;/Users/toh/apache-jena-3.4.0/lib/httpclient-4.5.3.jar;/Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar;/Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar;/Users/toh/apache-jena-3.4.0/lib/httpcore-4.4.6.jar;/Users/toh/apache-jena-3.4.0/lib/jackson-annotations-2.8.0.jar;/Users/toh/apache-jena-3.4.0/lib/jackson-core-2.8.6.jar;/Users/toh/apache-jena-3.4.0/lib/jackson-databind-2.8.6.jar;/Users/toh/apache-jena-3.4.0/lib/jcl-over-slf4j-1.7.25.jar;/Users/toh/apache-jena-3.4.0/lib/jena-arq-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jena-base-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jena-cmds-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jena-core-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jena-iri-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jena-rdfconnection-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jena-shaded-guava-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jena-tdb-3.4.0.jar;/Users/toh/apache-jena-3.4.0/lib/jsonld-java-0.10.0.jar;/Users/toh/apache-jena-3.4.0/lib/libthrift-0.9.3.jar;/Users/toh/apache-jena-3.4.0/lib/log4j-1.2.17.jar;/Users/toh/apache-jena-3.4.0/lib/slf4j-api-1.7.25.jar;/Users/toh/apache-jena-3.4.0/lib/slf4j-log4j12-1.7.25.jar;/Users/toh/apache-jena-3.4.0/lib/xercesImpl-2.11.0.jar;/Users/toh/apache-jena-3.4.0/lib/xml-apis-1.4.01.jar TestJena2
+使用方法: java [-options] class [args...]
+           (クラスを実行する場合)
+   または  java [-options] -jar jarfile [args...]
+           (jarファイルを実行する場合)
+optionsには次のものがあります。
+    -d32	  使用可能な場合は32ビットのデータ・モデルを使用する
+    -d64	    使用可能な場合は64ビットのデータ・モデルを使用する
+    -server	      "server" VMを選択する場合
+                  デフォルトVMはserverです,
+                  これはサーバークラスのマシンで実行しているためです。
+
+
+    -cp <ディレクトリおよびzip/jarファイルのクラス検索パス>
+    -classpath <ディレクトリおよびzip/jarファイルのクラス検索パス>
+                  クラス・ファイルを検索するディレクトリ、
+                  JARアーカイブおよびZIPアーカイブの:で区切られたリストです。
+    -D<name>=<value>
+                  システム・プロパティを設定する
+    -verbose:[class|gc|jni]
+                  詳細な出力を行う
+    -version      製品バージョンを出力して終了する
+    -version:<value>
+                  警告: この機能は非推奨であり、詳細のリリースで
+                  廃止されます。
+                  指定したバージョンを実行に必須にする
+    -showversion  製品バージョンを出力して続行する
+    -jre-restrict-search | -no-jre-restrict-search
+                  警告: この機能は非推奨であり、詳細のリリースで
+                  廃止されます。
+                  ユーザーのプライベートJREをバージョン検索に含める/除外する
+    -? -help      このヘルプ・メッセージを出力する
+    -X            非標準オプションに関するヘルプを出力する
+    -ea[:<packagename>...|:<classname>]
+    -enableassertions[:<packagename>...|:<classname>]
+                  指定した粒度でアサーションを有効にする
+    -da[:<packagename>...|:<classname>]
+    -disableassertions[:<packagename>...|:<classname>]
+                  指定した粒度でアサーションを無効にする
+    -esa | -enablesystemassertions
+                  システム・アサーションを有効にする
+    -dsa | -disablesystemassertions
+                  システム・アサーションを無効にする
+    -agentlib:<libname>[=<options>]
+                  ネイティブ・エージェント・ライブラリ<libname>をロードする。例: -agentlib:hprof
+                  -agentlib:jdwp=helpと-agentlib:hprof=helpも参照
+    -agentpath:<pathname>[=<options>]
+                  フルパス名でネイティブ・エージェント・ライブラリをロードする
+    -javaagent:<jarpath>[=<options>]
+                  Javaプログラミング言語エージェントをロードする。java.lang.instrumentを参照
+    -splash:<imagepath>
+                  指定したイメージでスプラッシュ画面を表示する
+詳細はhttp://www.oracle.com/technetwork/java/javase/documentation/index.htmlを参照してください。
+-bash: /Users/toh/apache-jena-3.4.0/lib/commons-cli-1.4.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/commons-codec-1.10.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/commons-csv-1.4.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/commons-io-2.5.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/commons-lang3-3.4.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/httpclient-4.5.3.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/httpclient-cache-4.5.3.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/httpcore-4.4.6.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jackson-annotations-2.8.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jackson-core-2.8.6.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jackson-databind-2.8.6.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jcl-over-slf4j-1.7.25.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-arq-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-base-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-cmds-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-core-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-iri-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-rdfconnection-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-shaded-guava-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jena-tdb-3.4.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/jsonld-java-0.10.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/libthrift-0.9.3.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/log4j-1.2.17.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/slf4j-api-1.7.25.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/slf4j-log4j12-1.7.25.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/xercesImpl-2.11.0.jar: Permission denied
+-bash: /Users/toh/apache-jena-3.4.0/lib/xml-apis-1.4.01.jar: Permission denied
+
+//2017年7月31日
+山下さんに相談したところ、ネットに接続しようとして失敗しているということなので
+ネットにつないだ環境で試すことにした。
+
+java -cp . TestJena2
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/jena/sparql/core/Prologue
+	  at java.lang.Class.getDeclaredMethods0(Native Method)
+	  at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	  at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
+	  at java.lang.Class.getMethod0(Class.java:3018)
+	  at java.lang.Class.getMethod(Class.java:1784)
+	  at sun.launcher.LauncherHelper.validateMainClass(LauncherHelper.java:544)
+	  at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:526)
+Caused by: java.lang.ClassNotFoundException: org.apache.jena.sparql.core.Prologue
+       at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+       at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+       at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+       at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+       ... 7 more
+
+
+山下さんからの回答
+藤先生
+
+先ほどのclasspath設定の件ですが、
+
+デフォルトは、カレントディレクトリを参照して実行されますが、
+classpathを指定すると、その設定で上書きされてしまいます。
+
+なので、実行時、-cp . にすると、カレントディレクトリだけをみるので、
+bash_profileなどで設定していたjarファイル参照値が、無効となり、
+
+-cp で、bash_profileの設定値を指定すると、カレントが無効になるので、
+
+bash_profileの中で、最初の項目の前にカレント(.)を追加しておくと、
+実行時に、-cp は不要で、動くかと思います。
+
+CLASSPATH=.:<クラスパス1>:<クラスパス2>:  ......
+のようにする
+
+お手すきのときに、試してみていただけますでしょうか。
+
+よろしくお願い致します。
+
+山下
+
+最後のCLASSPATH=.:<クラスパス1>:<クラスパス2>:  ......
+を.bashrcに書き込むことで、オプション無しでjavaで実行できるようになり
+java.lang.NoClassDefFoundError
+は消えた。検索結果も出力されているもよう
+しかし、log4jに関するwarningが出る。
+
+java TestJena2
+log4j:WARN No appenders could be found for logger (Jena).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+---------------------------------------------------------------------------------
+| p                                                                             |
+=================================================================================
+| <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>                             |
+| <http://www.openlinksw.com/schemas/virtrdf#version>                           |
+| <http://www.openlinksw.com/schemas/virtrdf#loadAs>                            |
+| <http://www.openlinksw.com/schemas/virtrdf#item>                              |
+| <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate>                |
+| <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType>                 |
+| <http://www.openlinksw.com/schemas/virtrdf#dialect>                           |
+| <http://www.openlinksw.com/schemas/virtrdf#dialect-exceptions>                |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfName>                           |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl>                      |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl>                       |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl>                     |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl>                       |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl>               |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl>               |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl>             |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl>               |
+| <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl>               |
+| <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl>             |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl>                |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl>              |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl>            |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl>            |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl>                |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl>                 |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl>                 |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl>           |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl>         |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl>              |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl>                |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl>                 |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull>             |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable>                       |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong>              |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef>       |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue>               |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions>       |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats>                   |
+| <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1>                               |
+| <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2>                               |
+| <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3>                               |
+| <http://www.openlinksw.com/schemas/virtrdf#inheritFrom>                       |
+| <http://www.openlinksw.com/schemas/virtrdf#noInherit>                         |
+| <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4>                               |
+| <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5>                               |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl>                  |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl>           |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl>      |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl>        |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl>         |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql>   |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct>                   |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs>               |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl>           |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl>          |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval>                |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval>                 |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl>                   |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl>                   |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype>           |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1>                  |
+| <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage>           |
+| <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap>                        |
+| <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap>                      |
+| <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap>                       |
+| <http://www.openlinksw.com/schemas/virtrdf#qmTableName>                       |
+| <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags>                   |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvTableName>                      |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvATables>                        |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvColumns>                        |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvFormat>                         |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey>                 |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias>                         |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvFText>                          |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvGeo>                            |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias>                         |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName>                     |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName>                   |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex>                     |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias>                        |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvftConds>                        |
+| <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName>                    |
+| <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps>                        |
+| <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap>                      |
+| <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags>                   |
+| <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>                          |
+| <http://www.w3.org/2002/07/owl#equivalentClass>                               |
+| <http://www.w3.org/2002/07/owl#equivalentProperty>                            |
+| <http://www.w3.org/2002/07/owl#inverseOf>                                     |
+| <http://purl.org/dc/terms/created>                                            |
+| <http://purl.org/dc/terms/modified>                                           |
+---------------------------------------------------------------------------------
+
+https://stackoverflow.com/questions/20860222/why-do-i-have-these-warnings-with-jena-2-11-0
+にある記述を参考に次の操作を行った。
+
+apache-jena-3.4.0 フォルダ内に出来ていたjena-log4j.propertiesというファイルを、
+log4j.propertiesに名前を変更（コピー）して、mainを含むクラスのあるディレクトリにおくと、
+warningが出なくなった。
+
+これで、endpointを指定してのSPARQL検索をJavaから実行できると思われる
+TestJena2.java
+を変更して、これまでのSPARQL検索を試してみる。
+
+現在, TestJena2はホームディレクトリにおかれている
+.bashrcのクラスパスの . は、どこにmainを含むクラスをおくかで変更するべきか？
+要検討
+
+現在のTestJena2.java
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.sparql.core.Prologue;
+
+public class TestJena2 {
+
+    public static void main(String[] args) {
+
+ 
+	// クエリを投げるSPARQLエンドポイント
+	String service = "http://ja.dbpedia.org/sparql";
+
+
+	// SPARQLクエリ
+    String queryString = "SELECT distinct ?p " +
+    "WHERE{?s ?p ?o}" +
+	"LIMIT 100";
+
+    Query query = QueryFactory.create(queryString);
+    QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
+    ResultSet results = qe.execSelect();
+    ResultSetFormatter.out(System.out, results, query);
+    qe.close();
+
+    }
+
+}
+
+TestJena3.java
+TestJena2.javaを改変して作成
+SPARQLは http://ja.dbpedia.org/ のSPARQL例からとった
+全国の地域限定ゆるキャラ
+
+SELECT DISTINCT ?mascot ?name
+WHERE {
+  ?areamascots skos:broader <http://ja.dbpedia.org/resource/Category:地域限定のマスコット> ;
+    rdfs:label ?areaname .
+  ?mascot dbpedia-owl:wikiPageWikiLink ?areamascots ;
+    rdfs:label ?name.
+}
+ただし、prefix部分がなく、endpointではこのままで実行可能
+prefix部分でエラーが出たのでprefixは付け足した
+prefixは、http://eo.dbpedia.org/sparql?nsdecl を参照
+
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.sparql.core.Prologue;
+
+public class TestJena3 {
+
+    public static void main(String[] args) {
+
+ 
+	// クエリを投げるSPARQLエンドポイント
+	String service = "http://ja.dbpedia.org/sparql";
+
+
+	// SPARQLクエリ
+    String queryString = "prefix skos: <http://www.w3.org/2004/02/skos/core#> " + 
+    "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> " + 
+	"prefix dbpedia-owl: <http://dbpedia.org/ontology/>" + 
+    "SELECT DISTINCT ?mascot ?name " +
+    "WHERE {" + "?areamascots skos:broader <http://ja.dbpedia.org/resource/Category:地域限定のマスコット> ;" + "rdfs:label ?areaname ." + "?mascot dbpedia-owl:wikiPageWikiLink ?areamascots ;" + "rdfs:label ?name.}";
+
+    Query query = QueryFactory.create(queryString);
+    QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
+    ResultSet results = qe.execSelect();
+    ResultSetFormatter.out(System.out, results, query);
+    qe.close();
+
+    }
+
+}
+
+上で述べた以下の問題を検討
+>現在, TestJena2はホームディレクトリにおかれている
+>.bashrcのクラスパスの . は、どこにmainを含むクラスをおくかで変更するべきか？
+>要検討
+cp TestJena3.java Desktop/.
+cp log4j.properties Desktop/.
+javac TestJena3.java
+java TestJena3
+
+で問題なく実行される
+（log4j.propertiesをコピーし忘れると、warningがでる）
+
+問題点
+
+いくつかのendpointが使用できない？
+endpointの問題なのか、日本語の使用における二重引用符のための
+エスケープシークエンス\"の問題なのか？
+
+TestJena8.java, TestJena9.java
+TestJena8.javaはTestJena10.javaで countを回復
+countは使える。（）で囲む必要がある？
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.sparql.core.Prologue;
+
+public class TestJena8 {
+
+    public static void main(String[] args) {
+
+ 
+	// クエリを投げるSPARQLエンドポイント
+	String service = "http://ja.dbpedia.org/sparql";
+
+
+	// SPARQLクエリ
+    String queryString =
+	"PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>" +
+	"PREFIX prop-ja: <http://ja.dbpedia.org/property/>" + 
+	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+	"PREFIX dbpedia-ja: <http://ja.dbpedia.org/resource/>" +  
+	"PREFIX category-ja: <http://ja.dbpedia.org/resource/Category:>" +
+	//	"select distinct ?s count(?o) AS ?c where {" +
+	"select distinct ?s ?o  where {" +
+	"    ?s rdf:type dbpedia-owl:Place;" +
+	"    dbpedia-owl:wikiPageWikiLink category-ja:日本の都道府県;"+
+	"    prop-ja:隣接都道府県 ?o.  " +
+	"}ORDER BY ?c"  ;
+
+    Query query = QueryFactory.create(queryString);
+    QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
+    ResultSet results = qe.execSelect();
+    ResultSetFormatter.out(System.out, results, query);
+    qe.close();
+
+    }
+
+}
+
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.sparql.core.Prologue;
+
+public class TestJena9 {
+
+    public static void main(String[] args) {
+
+ 
+	// クエリを投げるSPARQLエンドポイント
+	String service = "http://ja.dbpedia.org/sparql";
+
+
+	// SPARQLクエリ
+    String queryString =
+	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+	"PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>" +
+	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+	"PREFIX dbpedia-ja: <http://ja.dbpedia.org/resource/>" +
+	"PREFIX category-ja: <http://ja.dbpedia.org/resource/Category:>" +
+	"select distinct ?pref (count(?s) AS ?c) where {" + 
+	"    ?pref rdf:type dbpedia-owl:Place." +
+	"    ?pref dbpedia-owl:wikiPageWikiLink category-ja:日本の都道府県." +
+	"    ?s rdf:type dbpedia-owl:Person;" +
+	"    dbpedia-owl:wikiPageWikiLink category-ja:日本のアイドル;" +
+	"    dbpedia-owl:birthPlace ?pref." +
+	"}GROUP BY ?pref ORDER BY ?c" ;
+
+    Query query = QueryFactory.create(queryString);
+    QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
+    ResultSet results = qe.execSelect();
+    ResultSetFormatter.out(System.out, results, query);
+    qe.close();
+
+    }
+
+}
+
+
+java TestJena10
+Exception in thread "main" org.apache.jena.query.QueryParseException: Line 1, column 358: Unresolved prefixed name: prop-ja:隣接都道府県
+
+https://stackoverflow.com/questions/42420676/non-group-key-variable-in-select
+の記述に従い、ORDER BY　の前に、GROUP BY ?prefをつけるとうまくいった
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.sparql.core.Prologue;
+
+public class TestJena10 {
+
+    public static void main(String[] args) {
+
+ 
+	// クエリを投げるSPARQLエンドポイント
+	String service = "http://ja.dbpedia.org/sparql";
+
+
+	// SPARQLクエリ
+    String queryString =
+	"PREFIX dbpedia-owl:  <http://dbpedia.org/ontology/>" +
+	"PREFIX prop-ja: <http://ja.dbpedia.org/property/>" +
+	"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+	"PREFIX dbpedia-ja: <http://ja.dbpedia.org/resource/>" +
+	"PREFIX category-ja: <http://ja.dbpedia.org/resource/Category:>" +
+	"select distinct ?pref (count(?o) AS ?c) where {" +
+	"    ?pref rdf:type dbpedia-owl:Place;" +
+	"    dbpedia-owl:wikiPageWikiLink category-ja:日本の都道府県;" +
+	"    prop-ja:隣接都道府県 ?o.  " +
+	"} GROUP BY ?pref ORDER BY ?c" ;
+
+    Query query = QueryFactory.create(queryString);
+    QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
+    ResultSet results = qe.execSelect();
+    ResultSetFormatter.out(System.out, results, query);
+    qe.close();
+
+    }
+
+}
+
+

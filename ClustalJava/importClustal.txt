@@ -1,0 +1,22 @@
+//2017年7月15日
+
+（１）BufferedReaderのreadLineだと、改行だけの行が
+null で長さ０になる
+OSにより処理が異なる可能性あり
+
+readLineでは自動的に改行コードが除去される
+http://takaharukobayashi.blogspot.jp/2013/06/javabufferedbreaderreadline.html
+にある extensionBufferedReader.javaで
+readLineで改行を読めるようにオーバーライドしたものを使い対応
+extendedBufferedReader.java
+
+importFastaなどもextendedBufferedReader に置き換えるべきか？
+
+（２）
+String concatで配列を繋げようとするとエラー
+オリジナルString 変数 = オリジナルString 変数 + 文字列;
+でつなぐ
+
+ただし、この形だとnullが先頭に入るので最初だけ
+オリジナルString 変数 = 文字列;
+

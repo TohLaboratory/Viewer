@@ -1,0 +1,131 @@
+//2017年8月30日
+molmilをローカル環境にインストール
+
+(1)
+https://github.com/gjbekker/molmil/wiki/Integrate-Molmil
+のIntegrate MolmilのDeployment methodsの中から
+Molmil's Hithub Pageをクリック
+
+(2)
+https://github.com/gjbekker/molmil/tree/gh-pages
+にとぶので、そこの Clone or download をクリック
+
+(3)
+ダウンロードフォルダに
+molmil-gh-pages.zip　がダウンロードされる。
+クリックすると、molmil-gh-pagesフォルダがきでる。
+
+(4) molmil-gh-pagesフォルダ中のindex.htmlを
+(1)のIntegrate MolmilのDeployment methodsの記述から
+２カ所を変更
+(4-1)
+<script src="file:///index.htmlと同じディレクトリへのフルパス/molmil.js"></script>
+
+例
+file:///Users/TOHi/Downloads/molmil-gh-pages/molmil.js
+
+(4-2)
+var molmil_settings = {src: "file:///(4-1)とpなじパス/"};
+
+例
+file:///Users/TOHi/Downloads/molmil-gh-pages/
+
+
+(5)　Javaからブラウザを起動する
+http://tototoshi.hatenablog.com/entry/20091214/1260798990
+
+Googleのページを開くサンプルコード
+
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+public class DefaultBrowserLauncher {
+
+       public static void main(String[] args) {
+       	      Desktop desktop = Desktop.getDesktop();
+	      String uriString = "http://www.google.co.jp";
+	      try {
+		　　URI uri = new URI(uriString);
+		　　desktop.browse(uri);
+	　　　} catch (URISyntaxException e) {
+		　　e.printStackTrace();
+	　　　} catch (IOException e) {
+		　　e.printStackTrace();
+	　　　}
+
+       }
+
+} 
+
+
+これを改変して、ローカルに構築したmolmilを開くコードにする
+
+import java.awt.Desktop;
+import java.net.URI;
+
+public class testBrowser3 {
+    public static void main(String ... args)  {
+	String uriString = "file:///Users/TOHi/molmil-gh-pages/index.html";
+        Desktop desktop = Desktop.getDesktop();
+  
+        try {
+	    URI uri = new URI(uriString);
+	    desktop.browse(uri);
+	}
+	catch (Exception e)  {
+	    e.printStackTrace();
+	}
+    }
+}
+
+(6) ウェブ上のmolmilを開く
+
+/*  http://dotnsf.blog.jp/archives/1022900387.html  */
+import java.awt.Desktop;
+import java.net.URI;
+
+public class testBrowser2 {
+    public static void main(String ... args)  {
+	String uriString = "file:///Users/TOHi/molmil.html";
+        Desktop desktop = Desktop.getDesktop();
+  
+        try {
+	    URI uri = new URI(uriString);
+	    desktop.browse(uri);
+	}
+	catch (Exception e)  {
+	    e.printStackTrace();
+	}
+    }
+}
+
+--------------------------------------------------------------
+<html>
+  <head>
+    <script>  
+      var molmil_settings = {src: "http://pdbj.org/molmil/"}, canvas;
+  
+      function initViewer() {
+        if (! window.molmil.configBox || ! molmil.configBox.initFinished) {return setTimeout(initViewer, 100);}
+        canvas = document.getElementById("molmilViewer");
+        canvas = molmil.createViewer(canvas);
+        molmil.loadPDB(canvas.getAttribute("data-pdbid"), null, null, canvas.molmilViewer);
+      }
+    </script>
+  </head>
+  
+  <body onload="initViewer();">
+    <center>
+      <h1 id="mm_title">molmil viewer</h1>
+      <h3>Integration test page</h3>
+      <span class="molmil_UI_container">
+        <canvas id="molmilViewer" data-pdbid="1crn" width="600" height="400" style="display: block; border: 1px solid #DDD;"></canvas>
+      </span>
+    </center>
+  </body>
+  <script src="http://pdbj.org/molmil/molmil.js"></script>
+</html>
+----------------------------------------------------------------------------------------
+

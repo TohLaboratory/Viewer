@@ -1,0 +1,58 @@
+#Mon Dec 19 18:26:13 JST 2011
+/instance/org.eclipse.jdt.ui/tabWidthPropagated=true
+/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+/instance/org.eclipse.jdt.ui/useQuickDiffPrefPage=true
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.editor.tab.width=
+/instance/org.eclipse.ui.ide/platformState=1324262190070
+/instance/org.eclipse.ui.ide/quickStart=false
+file_export_version=3.0
+@org.eclipse.jdt.ui=3.7.1.r371_v20110824-0800
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.templates_migrated=true
+/instance/org.eclipse.core.resources/version=1
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+/instance/org.eclipse.ui.ide/PROBLEMS_FILTERS_MIGRATE=true
+@org.eclipse.jdt.launching=3.6.1.v20110803_r371
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.code_templates_migrated=true
+/instance/org.eclipse.jdt.ui/spelling_locale_initialized=true
+/instance/org.eclipse.debug.ui/preferredTargets=default\:default|
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source=1.7
+/instance/org.eclipse.ui.ide/tipsAndTricks=true
+/instance/org.eclipse.ui.editors/overviewRuler_migration=migrated_3.1
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance=1.7
+@org.eclipse.debug.ui=3.7.101.v20110817_r371
+/instance/org.eclipse.ui/showIntro=false
+/configuration/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
+/configuration/org.eclipse.ui.ide/MAX_RECENT_WORKSPACES=5
+@org.eclipse.jdt.core=3.7.1.v_B76_R37x
+/configuration/org.eclipse.ui.ide/RECENT_WORKSPACES=C\:\\D\\eclipse-SDK-3.7.1-win32-x86_64\\workspace\nC\:\\D\\eclipse-SDK-3.7.1-win32-x86_64\\workspaceJV\nC\:\\D\\eclipse-SDK-3.6-win32-x86_64\\workspace\nC\:\\D\\eclipse-SDK-3.6-win32-x86_64\\workspace_another\nC\:\\D\\eclipse-SDK-3.6-win32-x86_64-Android\\android
+/configuration/org.eclipse.ui.ide/SHOW_WORKSPACE_SELECTION_DIALOG=false
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+/instance/org.eclipse.jdt.ui/proposalOrderMigrated=true
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+@org.eclipse.ui.ide=3.7.0.v20110809-1737
+/instance/org.eclipse.jdt.ui/content_assist_proposals_foreground=0,0,0
+/instance/org.eclipse.jdt.ui/fontPropagated=true
+@org.eclipse.core.resources=3.7.100.v20110510-0712
+/instance/org.eclipse.jdt.ui/content_assist_proposals_background=255,255,255
+@org.eclipse.ui=3.7.0.I20110602-0100
+/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1324262397428" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1324262397428" name\="jre7" path\="C\:\\Program Files\\Java\\jre7"/>\r\n</vmType>\r\n</vmSettings>\r\n
+/instance/jd.ide.eclipse/jd.ide.eclipse.prefs.Setup=true
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+/configuration/org.eclipse.ui.ide/RECENT_WORKSPACES_PROTOCOL=3
+@org.eclipse.ui.workbench=3.7.0.I20110519-0100
+/instance/org.eclipse.ui.workbench/resourcetypes=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<editors version\="3.1">\r\n<info extension\="html" name\="*">\r\n<editor id\="org.eclipse.ui.browser.editorSupport"/>\r\n</info>\r\n<info extension\="htm" name\="*">\r\n<editor id\="org.eclipse.ui.browser.editorSupport"/>\r\n</info>\r\n<info extension\="jardesc" name\="*">\r\n<editor id\="org.eclipse.jdt.ui.JARDescEditor"/>\r\n<defaultEditor id\="org.eclipse.jdt.ui.JARDescEditor"/>\r\n</info>\r\n<info extension\="properties" name\="sample">\r\n<editor id\="org.eclipse.pde.ui.sampleEditor"/>\r\n<defaultEditor id\="org.eclipse.pde.ui.sampleEditor"/>\r\n</info>\r\n<info extension\="jpage" name\="*">\r\n<editor id\="org.eclipse.jdt.debug.ui.SnippetEditor"/>\r\n</info>\r\n<info extension\="shtml" name\="*">\r\n<editor id\="org.eclipse.ui.browser.editorSupport"/>\r\n</info>\r\n<info extension\="class" name\="*">\r\n<editor id\="jd.ide.eclipse.editors.JDClassFileEditor.win32.x86_64"/>\r\n<defaultEditor id\="jd.ide.eclipse.editors.JDClassFileEditor.win32.x86_64"/>\r\n</info>\r\n</editors>
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+@org.eclipse.ui.editors=3.7.0.v20110517-0800
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.javadoclocations.migrated=true
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.formatterprofiles.version=12
+\!/=
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.first_time=false
+/instance/org.eclipse.jdt.ui/content_assist_number_of_computers=13
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands>\r\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+S"/>\r\n<keyBinding commandId\="org.eclipse.ui.file.save" contextId\="org.eclipse.jdt.ui.javaEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="F2"/>\r\n</org.eclipse.ui.commands>
+/instance/org.eclipse.jdt.ui/org.eclipse.jface.textfont=1|Consolas|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+@jd.ide.eclipse=0.1.3
+/instance/org.eclipse.jdt.ui/useAnnotationsPrefPage=true
+@org.eclipse.team.ui=3.6.100.I20110525-0800
+/instance/org.eclipse.ui.workbench/editors=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<editors>\r\n<descriptor id\="org.eclipse.ui.browser.editorSupport" image\="$nl$/icons/obj16/internal_browser.gif" internal\="false" label\="Web Browser" launcher\="org.eclipse.ui.internal.browser.BrowserLauncher" openMode\="4" open_in_place\="false" plugin\="org.eclipse.ui.browser"/>\r\n<descriptor id\="org.eclipse.jdt.ui.JARDescEditor" image\="$nl$/icons/full/obj16/jar_desc_obj.gif" internal\="false" label\="JAR Export Wizard" launcher\="org.eclipse.jdt.internal.ui.jarpackager.OpenJarExportWizardEditorLauncher" openMode\="4" open_in_place\="false" plugin\="org.eclipse.jdt.ui"/>\r\n<descriptor class\="org.eclipse.pde.internal.ui.samples.SampleEditor" id\="org.eclipse.pde.ui.sampleEditor" image\="$nl$/icons/obj16/build_exec.gif" internal\="true" label\="Code Sample Editor" openMode\="1" open_in_place\="false" plugin\="org.eclipse.pde.ui"/>\r\n<descriptor class\="org.eclipse.jdt.internal.debug.ui.snippeteditor.JavaSnippetEditor" id\="org.eclipse.jdt.debug.ui.SnippetEditor" image\="$nl$/icons/full/obj16/jsbook_obj.gif" internal\="true" label\="Scrapbook" openMode\="1" open_in_place\="false" plugin\="org.eclipse.jdt.debug.ui"/>\r\n<descriptor class\="jd.ide.eclipse.editors.JDClassFileEditorWin32X86_64" id\="jd.ide.eclipse.editors.JDClassFileEditor.win32.x86_64" image\="icons/jd_16.png" internal\="true" label\="Class File Editor" openMode\="1" open_in_place\="false" plugin\="jd.ide.eclipse"/>\r\n</editors>

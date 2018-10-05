@@ -1,0 +1,1184 @@
+>tr|E2RSM4|E2RSM4_CANLF Lipocalin 2 OS=Canis lupus familiaris OX=9615 GN=LCN2 PE=3 SV=1
+----------------------------------------------MTQ-V------LLW
+L-G--LALL-GSLQ---VQTQDSTPSLIPAPPPLKV---PLQPDFQ--------------
+HDQF-QGKWYVIGIAGNILK-KE-GHGQLKMYTTTYELKDD--------QSYNVTSTLLR
+--NERCDYWNRDF-V-----PSFQPGQFSLGDIQLYP--GVQSY-LV--QVV-ATNYNQY
+ALVYF--RKVY-K--S-QEYFKITLYGRTKELPLELKKEFIRFAKSIGLTEDHIIFPVPI
+----D-----Q----C---------IDE--------------------------------
+----------------------------------
+>tr|E1B6Z6|E1B6Z6_BOVIN Lipocalin 2 OS=Bos taurus OX=9913 GN=LCN2 PE=1 SV=2
+---------------------------------------------TMSV-G------LLW
+L-G--FTLL-GALH---TQARSSSSRLLRAPPLSRI---PLQPNFQ--------------
+ADQF-QGKWYTVGVAGNAIK-KE-EQDPLKMYSSNYELKED--------GSYNVTSILLK
+--DDLCDYWIRTF-V-----PSSQPGQFTLGNIKSYR--GIRSY-TV--RVV-NTDYNQF
+AIVYF--KKVQ-R--K-KTYFKITLYGRTKELTPEVRENFINFAKSLGLTDDHIVFTVPI
+----D-----R----C---------IDDQ-------------------------------
+----------------------------------
+>tr|W5PMH6|W5PMH6_SHEEP Uncharacterized protein OS=Ovis aries OX=9940 GN=LCN2 PE=3 SV=1
+---------------------------------------------IMSI-G------LLW
+L-G--FTLL-GALH---TQARSSTPRLLRAPPLSRI---PLQPNFQ--------------
+ADQF-QGKWYTVGVAGNAIK-KE-EQDQFKMYTSNYELKED--------GSYNVTSILLR
+--DERCDYWIRTF-V-----PSSRPGQFTLGNIRSFP--GIRSY-TV--RVV-NTDYNQF
+AIVYF--KKVQ-R--K-QGYFKITLYGRTKELTPEVRENFITFAKSLGLTDDHIIFPVPI
+----D-----R----C---------IDAQ-------------------------------
+----------------------------------
+>tr|F6TIR2|F6TIR2_HORSE Lipocalin 2 OS=Equus caballus OX=9796 GN=LCN2 PE=3 SV=1
+----------------------------------------------MAL-G------LLW
+L-G--FTLL-GALQ---TQARDPAPKLIPAPPLDRV---PLQPDFK--------------
+DDQF-QGKWYVVGVAGNAFK-KE-EQGQFTMYTTTYELKED--------HSYNVTSILLR
+--DQNCDHWIRTF-I-----PSSQPGQFNLGDIKRYF--GVQSY-IV--RVA-DTDYNQF
+AIVFF--RKVY-K--N-QEYFKTTLYRRTKELTPELREKFISFAKSLGLTDDHIIFPVPI
+----D-----Q----C---------IDEE-------------------------------
+----------------------------------
+>tr|F1RRX1|F1RRX1_PIG Uncharacterized protein OS=Sus scrofa OX=9823 GN=LCN2 PE=1 SV=2
+----------------------------------------------MAL-S------LLW
+L-G--LTLL-GALQ---TQAQGTIPNWIPAPPLSKV---PLQPNFQ--------------
+ADQF-QGKWYVVGLAGNAVK-KE-EQGRFKMYTTTYELKED--------GSYNVVSTLLR
+--GQLCDNWIRTF-V-----PSLQPGQFKLGDIKKYS--GLQSY-VV--RVV-STNYSQF
+AIVFF--KKVS-N--N-QEYFKTTLYGRTKVLSPELKENFVRFAKSLGLSDDNIIFPVAI
+----D-----Q----C---------IDGQ-------------------------------
+----------------------------------
+>tr|G3TQ27|G3TQ27_LOXAF Uncharacterized protein OS=Loxodonta africana OX=9785 GN=LCN2 PE=3 SV=1
+----------------------------------------------MPL-N------LLW
+L-G--LTLL-GALQ---TQAQTHSPTLIPAPPLLRV---PLQPDFQ--------------
+DDKF-QGKWYVIGLAGNAVE-KK-EQGQFKMYTTTYELKED--------GSYNVTSTLLQ
+-EDGKCSYWIRTF-V-----PSFQPGQFNLGNIKNFP--GLQSY-TV--RVT-ATNYNQF
+AIVFF--KKVS-K--N-GEYFKTTLYGRTKELTPELKERFIRFAKSLGLS-DHIIFPVPI
+----D-----R----C---------IDD--------------------------------
+----------------------------------
+>tr|I3NHN1|I3NHN1_ICTTR Uncharacterized protein OS=Ictidomys tridecemlineatus OX=43179 GN=Lcn2 PE=3 SV=1
+----------------------------------------------MPL-V------LLY
+L-G--LTLL-GALQ---TQAQDSAPNLIPAPRLSRV---PLQQDFQ--------------
+DAQF-QGKWYVVGLAGNAVR-RE-EQGQFKMHSTTYDLKED--------HSYNVTSTLLR
+--DQGCDHWIRTF-V-----PTSPPGRFTLGNISSYP--KIQSY-IV--QVA-ATNYNEF
+AMVYF--KKVS-E--N-REYFKITLYGRTKELTSKRKERFIRLAKSLGLTDDHIIFPVRI
+----D-----Q----C---------IDN--------------------------------
+----------------------------------
+>tr|G1TRW8|G1TRW8_RABIT Uncharacterized protein OS=Oryctolagus cuniculus OX=9986 GN=LCN2 PE=3 SV=1
+----------------------------------------------MPL-G------LLW
+L-G--LTLL-GALH---IQAQDPTPKLIPAPSLRRV---PLQRNFQ--------------
+DEQF-QGKWYVVGLAGNAVQ-KR-EEGQEPMYSTTYELNED--------RSFNVTSTLLR
+--DQRCDHWIRTF-V-----PTSRPGQYNLGNIKSYP--GVKNY-IV--RVV-ATDYSQY
+AMMFF--RKGS-R--N-KQFFKTTLYGRTKELSPELRERFTRFAKSLGLPDDRIVFPTPI
+----D-----Q----C---------IDD--------------------------------
+----------------------------------
+>tr|I0FM65|I0FM65_MACMU Neutrophil gelatinaseassociated lipocalin OS=Macaca mulatta OX=9544 GN=LCN2 PE=2 SV=1
+----------------------------------------------MPL-G------LLW
+L-G--LALL-GALH---AQAQDSSSDLIPAPPLSKV---PLQQNFQ--------------
+DNQF-QGKWYVVGLSGNAVG-RK-DEAPLKMYATIYELKED--------KSYNVTSILFR
+--KEKCDYWIRTF-V-----PGSRPGEFTLGNIQNHP--GLTSY-VV--RVV-STNYKQY
+AMVFF--KKVS-Q--N-KEYFKITLYGRTKELTSELKENFIRFSKSLGLPENHIVFSVPI
+----D-----Q----C---------IDG--------------------------------
+----------------------------------
+>tr|A0A2I3MBS8|A0A2I3MBS8_PAPAN Lipocalin 2 OS=Papio anubis OX=9555 GN=LCN2 PE=3 SV=1
+----------------------------------------------MPL-G------LLW
+L-G--LALL-GALH---AQAQDSSSDLIPAPPLSKV---PLQQNFQ--------------
+DNQF-QGKWYVVGLSGNAVG-RK-DEAPLKMYATIYELKED--------KSYNVTSILFR
+GKAQKCDYWIRTF-V-----PGSQPGEFTLGNIQNHP--GLTSY-VV--RVV-STNYKQY
+AMVFF--KKVS-Q--N-KEYFKITLYGRTKELTSELKENFIRFSKSLGLPENHIVFSVPI
+----D-----Q----C---------IDD--------------------------------
+----------------------------------
+>tr|A0A2K5IEQ8|A0A2K5IEQ8_COLAP Lipocalin 2 OS=Colobus angolensis palliatus OX=336983 GN=LCN2 PE=3 SV=1
+----------------------------------------------MPL-G------LLW
+L-G--LALL-GALH---AQAQDSSSDLIPAPPLSKV---PLQQNFQ--------------
+DNQF-QGKWYVVGLSGNAVR-RE-DKAPLKMYATIYELKED--------KSYNVTSILFR
+GKAQKCDYWIRTF-V-----PGSQPGEFTLGNIQRYP--GITSY-VV--RVV-STNYKQY
+AMVFF--KKVS-Q--N-KEYFKITLYGRTKELTSELKENFIRFSKSLGLPENHIVFSVPI
+----D-----Q----C---------IDG--------------------------------
+----------------------------------
+>tr|G3SEI1|G3SEI1_GORGO Lipocalin 2 OS=Gorilla gorilla gorilla OX=9595 GN=LCN2 PE=3 SV=2
+MPS-----------------SH--------------HSACFLGPEIMPL-G------LLW
+L-G--LALL-GALH---AQAQDSTSDLIPAPPLSKV---PLQQNFQ--------------
+DNQF-QGKWYVVGLAGNAIL-RE-DKDPQKMYATIYELKED--------KSYNVTSVLFR
+--KKKCDYWIRTF-V-----PGSQPGEFTLGNIKSYP--GLTSY-LV--RVV-STNYNQH
+AMVFF--KKVS-Q--N-REYFKITLYGRTKELTSELKENFIRFSKSLGLPENHIVFPVPI
+----D-----Q----C---------IDG--------------------------------
+----------------------------------
+>tr|A0A2J8NBI1|A0A2J8NBI1_PANTR LCN2 isoform 1 OS=Pan troglodytes OX=9598 GN=LCN2 PE=3 SV=1
+----------------------------------------------MPL-G------LLW
+L-G--LALL-GALH---AQAQDSTSDLIPAPPLSKV---PLQQNFQ--------------
+DNQF-QGKWYVVGLAGNAIL-RE-DKDPQKMYATIYELKED--------KSYNVTSVLFR
+--KKKCDYWIRTF-V-----PGRQPGEFTLGNIKSYP--GLTSY-LV--RVV-STNYNQH
+AMVFF--KKVS-Q--N-REYFKITLYGRTKELTSELQENFIRFSKSLGLPENHIVFPVPI
+----D-----Q----C---------IDG--------------------------------
+----------------------------------
+>tr|X6R8F3|X6R8F3_HUMAN Neutrophil gelatinaseassociated lipocalin OS=Homo sapiens OX=9606 GN=LCN2 PE=1 SV=1
+----------------------------------------------MPL-G------LLW
+L-G--LALL-GALH---AQAQDSTSDLIPAPPLSKV---PLQQNFQ--------------
+DNQF-QGKWYVVGLAGNAIL-RE-DKDPQKMYATIYELKED--------KSYNVTSVLFR
+EKAQKCDYWIRTF-V-----PGCQPGEFTLGNIKSYP--GLTSY-LV--RVV-STNYNQH
+AMVFF--KKVS-Q--N-REYFKITLYGRTKELTSELKENFIRFSKSLGLPENHIVFPVPI
+----D-----Q----C---------IDG--------------------------------
+----------------------------------
+>sp|P30152|NGAL_RAT Neutrophil gelatinaseassociated lipocalin OS=Rattus norvegicus OX=10116 GN=Lcn2 PE=1 SV=2
+----------------------------------------------MGL-G------VLC
+L-A--LVLL-GVLQ---SQAQDSTQNLIPAPPLISV---PLQPGFW--------------
+TERF-QGRWFVVGLAGNAVQ-KE-RQSRFTMYSTIYELQED--------NSYNVTSILVR
+--GQGCRYWIRTF-V-----PSSRPGQFTLGNIHSYP--QIQSY-DV--QVA-DTDYDQF
+AMVFF--QKTS-E--N-KQYFKVTLYGRTKGLSDELKERFVSFAKSLGLKDNNIVFSVPT
+----D-----Q----C---------IDN--------------------------------
+----------------------------------
+>sp|P11672|NGAL_MOUSE Neutrophil gelatinaseassociated lipocalin OS=Mus musculus OX=10090 GN=Lcn2 PE=1 SV=1
+----------------------------------------------MAL-S------VMC
+L-G--LALL-GVLQ---SQAQDSTQNLIPAPSLLTV---PLQPDFR--------------
+SDQF-RGRWYVVGLAGNAVQ-KK-TEGSFTMYSTIYELQEN--------NSYNVTSILVR
+DQDQGCRYWIRTF-V-----PSSRAGQFTLGNMHRYP--QVQSY-NV--QVA-TTDYNQF
+AMVFF--RKTS-E--N-KQYFKITLYGRTKELSPELKERFTRFAKSLGLKDDNIIFSVPT
+----D-----Q----C---------IDN--------------------------------
+----------------------------------
+>tr|B5XGC5|B5XGC5_SALSA Lipocalin OS=Salmo salar OX=8030 GN=LIPO PE=2 SV=1
+----------------------------------------------MR---------LSI
+M-G--VLLC-TTLV-----ACV------------DV---MPQKDFN--------------
+LEKM-AGKWWAVGFATNAQWFVK-RKGGMKMGTSIMLPTAG--------GDLDISSAMRK
+-ADGSCWRMTELA-K-----KTDIPGRFTFTSQR-----WNNEN-DM--RVV-AVQYDDF
+ALIHT--IKTK-H--G-VTDVHNKLFSRTPEVSADLLKKFMQFSLDTGILSGNIVILPKN
+----G-----E----C---------AEA--------------------------------
+----------------------------------
+>tr|Q8QGV5|Q8QGV5_DANRE Lipocalintype prostaglandin D synthaselike protein OS=Danio rerio OX=7955 GN=ptgdsb.1 PE=1 SV=1
+----------------------------------------------MTS-V------VVK
+M-L--CLLL-CAVF-----ASA------------DV---MPMTDFD--------------
+LQKV-EGKWYLVGFATNAKWFVS-HKDDMKMGTAMLVPTQE--------GDLDLSYSNLK
+-SDGSCWRMTYLA-K-----KTETPGRFVFYSQR-----WGNDN-DM--RVV-DAKFDEY
+AIFHT--IKTK-G--G-VSEILNKLYSRTPEMVDDLKEKFRQFCLDTGILEENIVMLPQN
+----G-----E----C---------SVAA-------------------------------
+----------------------------------
+>tr|Q8QFM7|Q8QFM7_CHICK Chondrogenesis associated lipocalin OS=Gallus gallus OX=9031 GN=LPGDS PE=2 SV=1
+---------------------------------------------MQAT-L------LSI
+L-G--LALL-GALH-----AQN------------SI---PVQADFQ--------------
+QDKL-AGRWYSIGLASNSNWFKD-KKHLLKMCTTDIAVTAD--------GNMEVTSTYPK
+--GEQCEKRNSLY-I-----RTEQPGRFSYTNPR-----WGSNH-DI--RVV-ETNYDEY
+ALVAT--QISK-S--T-GSSNMVLLYSRTKEVAPQRLERFMQFSQEQGLKDEEILILPQT
+----D-----K----C---------MADAA------------------------------
+----------------------------------
+>tr|A0A151MF27|A0A151MF27_ALLMI ProstaglandinH2 Disomerase OS=Alligator mississippiensis OX=8496 GN=PTGDS PE=3 SV=1
+---------------------------------------------MQAA-L------LSI
+L-G--LALI-GSLC-----AQE------------DV---PVQPDFQ--------------
+PEKF-TGKWYSIGLASNAKWFQD-KKALMKMCTTVIESTPE--------GNLDVTSTYPK
+--SDRCEKRNSLY-I-----KTDQPGRFSYTSQR-----WGSQH-DI--RVV-ETNYDEY
+ALVYT--KKVK-D--T-NTFTMVLLYGRTKELSPERLEKFTQFSKGQGLPEDAILILPKS
+----D-----Q----C---------MEVAV------------------------------
+----------------------------------
+>tr|Q0VFE9|Q0VFE9_XENTR Complement component 8, gamma polypeptide, gene 2 OS=Xenopus tropicalis OX=8364 GN=ptgds PE=2 SV=1
+----------------------------------------------MRI-L-----LALS
+L----VAIC-CSLW-----VGA------------EV---LIQPDFQ--------------
+KEKV-LGKWYGIGLASNSNWFQG-KKNHMKMCTTIITPTAD--------GNMEVTATFPK
+--MDRCEKKTMTY-I-----KTEQPGRFRAKSPR-----YGSEH-DM--RVV-ETNYDEF
+ILMYT--LKTK-G--P-ETNQIVSLFARDKDVRPELLDKFQSFAKAQGLTDENILILPHT
+----D-----Q----C---------MTEA-------------------------------
+----------------------------------
+>tr|Q6DKB2|Q6DKB2_XENLA MGC84695 protein OS=Xenopus laevis OX=8355 GN=ptgds PE=2 SV=1
+---------------------------------------------MMRI-L-----LALS
+L----GVAC-CSLW-----VGA------------EV---PLQPDFQ--------------
+NEKV-LGKWYGIGLASNSNWFKD-RKSHMKMCTTIITPTTD--------GNMDVTATYPK
+--MDRCETKSMTY-F-----KTEQPGRFRAKSPR-----YGSEH-DM--RVV-ETNYDEY
+ILMYT--VKTK-G--S-ETNQIVSLFGRDKDVRPELLDKFQSFAKTQGLTDDNILLLPHT
+----D-----Q----C---------MTEA-------------------------------
+----------------------------------
+>sp|P41222|PTGDS_HUMAN ProstaglandinH2 Disomerase OS=Homo sapiens OX=9606 GN=PTGDS PE=1 SV=1
+---------------------------------------------MATH-H------TLW
+M-G--LALL-GVLGDLQAAPEA------------QV---SVQPNFQ--------------
+QDKF-LGRWFSAGLASNSSWLRE-KKAALSMCKSVVAPATD--------GGLNLTSTFLR
+--KNQCETRTMLL-Q-----PAGSLGSYSYRSPH-----WGSTY-SV--SVV-ETDYDQY
+ALLYS--QGSK-GP-G-EDFRMATLYSRTQTPRAELKEKFTAFCKAQGFTEDTIVFLPQT
+----D-----K----C---------MTEQ-------------------------------
+----------------------------------
+>sp|Q8WNM1|PTGDS_GORGO ProstaglandinH2 Disomerase OS=Gorilla gorilla gorilla OX=9595 GN=PTGDS PE=2 SV=1
+---------------------------------------------MATH-H------TLW
+M-G--LALL-GVLGDLQAAPEA------------QV---SVQPNFQ--------------
+QDKF-LGRWFSAGLASNSSWLRE-KKAALSMCKSVVAPAAD--------GGLNLTSTFLR
+--KNQCETRTMLL-Q-----TAGSLGSYSYRSPH-----WGSTY-SV--SVV-ETDYDQY
+ALLYS--QGSK-GP-G-EDFRMATLYSRTQTPRAELKEKFTAFCKAQGFTEDTIVFLPQT
+----D-----K----C---------LTEQ-------------------------------
+----------------------------------
+>sp|Q9TUI1|PTGDS_MACFU ProstaglandinH2 Disomerase OS=Macaca fuscata fuscata OX=9543 GN=PTGDS PE=2 SV=1
+---------------------------------------------MATH-H------TLW
+M-G--LVLL-GLLGGLQAAPEA------------QV---SVQPNFQ--------------
+PDKF-LGRWFSAGLASNSSWLQE-KKAALSMCKSVVAPATD--------GGLNLTSTFLR
+--KNQCETRTMLL-Q-----PGESLGSYSYGSPH-----WGSTY-SV--SVV-ETDYDHY
+ALLYS--QGSK-GP-G-EDFRMATLYSRTQTPRAELKEKFSAFCKAQGFTEDSIVFLPQT
+----D-----K----C---------MTEQ-------------------------------
+----------------------------------
+>tr|I3NER4|I3NER4_ICTTR Uncharacterized protein OS=Ictidomys tridecemlineatus OX=43179 GN=Ptgds PE=3 SV=1
+---------------------------------------------MATL-R------MLW
+M-E--LVLL-GILGVLQT--QA------------QV---SVQPDFQ--------------
+QDKF-LGRWFSAGLASNSSWFRE-KKSMLSMCKSVVTPTAD--------GGLNLTSTFLR
+--KNQCETRTMLL-Q-----PTGNPGSYSYLSPH-----WGSTH-AV--SVV-ETNYKEY
+ALLFS--QGTK-GP-G-QDFHMATLYSRTQTPRAELKEKFADFCKAHGFTENDIVFLPQN
+----D-----K----C---------LKEQE------------------------------
+----------------------------------
+>sp|O02853|PTGDS_BOVIN ProstaglandinH2 Disomerase OS=Bos taurus OX=9913 GN=PTGDS PE=1 SV=1
+---------------------------------------------MATP-N------RLW
+M-A--LLLL-GVLGVLQTPAPA------------QA---ALQPNFE--------------
+EDKF-LGRWFTSGLASNSSWFLE-KKKVLSMCKSVVAPAAD--------GGLNLTSTFLR
+--KDQCETRTLLL-R-----PAGPPGCYSYTSPH-----WSSTH-EV--SVA-ETDYETY
+ALLYT--EGVR-GP-G-QDFRMATLYSRSQNPRAEVKEHFTTFAKSLGFTEEGIVFLPKT
+----D-----K----C---------MEEHP------------------------------
+----------------------------------
+>sp|Q9XSM0|PTGDS_SHEEP ProstaglandinH2 Disomerase OS=Ovis aries OX=9940 GN=PTGDS PE=1 SV=1
+---------------------------------------------MATP-N------RPW
+M-G--LLLL-GVLGVLQTPAPT------------EA---ALQPNFE--------------
+EDKF-LGRWFTSGLASNSSWFLE-KRKVLSMCKSEVAPAAD--------GGLNVTSTFLR
+--KDQCETRTLLL-R-----PAGPPGCYSYTSPH-----WSSTH-EV--SVA-ETDYETY
+ALLYT--ESVR-GP-G-PDSLMATLYSRTQTPRAEVKEKFTTFARSLGFTEEGIVFLPKT
+----D-----K----C---------MEVRT------------------------------
+----------------------------------
+>sp|O97921|PTGDS_HORSE ProstaglandinH2 Disomerase OS=Equus caballus OX=9796 GN=PTGDS PE=1 SV=1
+---------------------------------------------MAAS-H------TLW
+M-G--LVLL-GVLGVLQTRAQA------------QP---SLQPNFQ--------------
+QDKF-LGRWFTSGLASNSSWFRE-KKKVLSMCTSVVAPTAD--------GGFNLTSTFLR
+--KDQCETRTLLL-Q-----PAGPPGCYSYTSPH-----WGMVH-EV--SVV-ETDYEEY
+ALLYTHAESTK-GLGG-QDFRMATLYSRVQSPRPEVKEKFSTFAKAQGFTEDAIVFLPQT
+----D-----K----C---------MEEHN------------------------------
+----------------------------------
+>sp|Q9XS65|PTGDS_CANLF ProstaglandinH2 Disomerase OS=Canis lupus familiaris OX=9615 GN=PTGDS PE=2 SV=1
+---------------------------------------------MGAL-C------TLW
+L-G--LVLL-GVLGALQTSAQA------------QV---SLQPNFQ--------------
+QDKF-LGRWFTSGLASNSSWFRE-KKNVLSMCMSVVAPTAD--------GGLNLTSTFLR
+--KDQCETRTLLL-R-----PAGTPGCYSYTSPH-----WGSTH-DV--WVV-ATNYEEY
+ALLYT--AGSK-GL-G-QDFHMATLYSRTQTPKAEIKEKFSTFAKTQGFTEDAIVFLPQT
+----D-----K----C---------MEENK------------------------------
+----------------------------------
+>sp|Q29562|PTGDS_URSAR ProstaglandinH2 Disomerase OS=Ursus arctos OX=9644 GN=PTGDS PE=2 SV=1
+---------------------------------------------MAAL-H------TLW
+M-G--LVLL-GVLGVLQTQAQV------------QV---SLQPNFQ--------------
+QDKF-LGRWFTSGLASNSSWFRE-KKKVLSMCVSVVAPSAD--------GGLNLTSTFLR
+--KEQCETRTLLL-R-----PAGTPGCYSYTSPH-----WGSTH-DV--WVA-MTDYDEY
+ALLYT--TGTK-GL-G-QDFHMATLYSRTQTPRAEIKEKFTTFAKTQGFTEDAIVFLPQT
+----D-----K----C---------MEEHK------------------------------
+----------------------------------
+>tr|G1M411|G1M411_AILME Uncharacterized protein OS=Ailuropoda melanoleuca OX=9646 GN=PTGDS PE=3 SV=1
+---------------------------------------------MAAL-H------TLW
+M-G--LVLL-GVLGVLQTGAQA------------QV---SLQPNFQ--------------
+QDKF-LGRWFTSGLASNSSWFRE-KKKVLSVCVSVVAPSAD--------GGLNLTSTFLR
+--KEQCETRSMLL-R-----PAGPPGCYSYTSPH-----WGSTH-DV--WVA-MTDYDEY
+ALLYT--TGTK-GL-G-QDFHMATLYSRTQTPRAEIKEKFTTFAKTQGFTEDAIVFLPQT
+----D-----K----C---------MEEHK------------------------------
+----------------------------------
+>sp|Q29487|PTGDS_FELCA ProstaglandinH2 Disomerase OS=Felis catus OX=9685 GN=PTGDS PE=2 SV=1
+---------------------------------------------MAAL-H------TLW
+M-G--LVLL-GVLGVLQTRAQA------------QV---SRQPNFQ--------------
+QDKF-LGRWFTSGLASNSSWFRE-KKNALSMCISVVAPSAE--------GGLNLTTTFLR
+--KDQCETRTLLL-R-----PAETPGCYSYTSPH-----WGSTH-DV--WVV-ATDYEEY
+ALLYT--AGTK-SP-G-QDFHMATLYSRTQTPRAEVKEKFSTFAKTRGFTEDAIVFLPKT
+----E-----R----C---------MEEHR------------------------------
+----------------------------------
+>sp|Q29095|PTGDS_PIG ProstaglandinH2 Disomerase OS=Sus scrofa OX=9823 GN=PTGDS PE=1 SV=1
+---------------------------------------------MATP-S------SLW
+L-G--LALL-GTLGVLQTPAQA-----------------SLQPNFQ--------------
+EDKF-LGRWFTSGLASNSSWFLE-KKKVLSMCKSLVAPAPD--------GGFNLTSTFLR
+--KDQCVTRTLML-R-----PAGPPGCYSYTSPH-----GGSNL-EV--SVV-ETDYKNY
+ALLHT--ESGP-SP-G-PAFRMATLYSRSQAPGAAVREKFTAFAKARGFTEDGIVFLPRN
+----E-----K----C---------LEEHE------------------------------
+----------------------------------
+>sp|P22057|PTGDS_RAT ProstaglandinH2 Disomerase OS=Rattus norvegicus OX=10116 GN=Ptgds PE=1 SV=2
+---------------------------------------------MAAL-P------MLW
+T-G--LVLL-GLLGFPQTPAQG------------HD---TVQPNFQ--------------
+QDKF-LGRWYSAGLASNSSWFRE-KKELLFMCQTVVAPSTE--------GGLNLTSTFLR
+--KNQCETKVMVL-Q-----PAGVPGQYTYNSPH-----WGSFH-SL--SVV-ETDYDEY
+AFLFS--KGTK-GP-G-QDFRMATLYSRAQLLKEELKEKFITFSKDQGLTEEDIVFLPQP
+----D-----K----C---------IQE--------------------------------
+----------------------------------
+>sp|O09114|PTGDS_MOUSE ProstaglandinH2 Disomerase OS=Mus musculus OX=10090 GN=Ptgds PE=1 SV=1
+---------------------------------------------MAAL-R------MLW
+M-G--LVLL-GLLGFPQTPAQG------------HD---TVQPNFQ--------------
+QDKF-LGRWYSAGLASNSSWFRE-KKAVLYMCKTVVAPSTE--------GGLNLTSTFLR
+--KNQCETKIMVL-Q-----PAGAPGHYTYSSPH-----SGSIH-SV--SVV-EANYDEY
+ALLFS--RGTK-GP-G-QDFRMATLYSRTQTLKDELKEKFTTFSKAQGLTEEDIVFLPQP
+----D-----K----C---------IQE--------------------------------
+----------------------------------
+>tr|A0A1S3GVC8|A0A1S3GVC8_DIPOR prostaglandinH2 Disomerase OS=Dipodomys ordii OX=10020 GN=Ptgds PE=3 SV=1
+---------------------------------------------MAAR-N------MLW
+V-G--LVLL-GVLG---TQAND------------PN---SAQPHFL--------------
+IDKF-LGPWYSVGLASNASWFLE-KKNTLSMCKTTVVPSGD--------GGLNLTSTFLR
+--KNQCETRVVLL-Q-----PTAHPGQYTYHSPH-----WGSVH-SV--SVV-ETNYEEY
+AMLFS--KGLD-GP-H-QDFRMASLYSRTQTPKAELKEDFAAFCKSQGLTEDTIVFLPQP
+----D-----K----C---------INEQE------------------------------
+----------------------------------
+>tr|G3W419|G3W419_SARHA Uncharacterized protein OS=Sarcophilus harrisii OX=9305 GN=PTGDS PE=3 SV=1
+---------------------------------------------MMAM-G------LLW
+M-G--LALL-QALE---TQGQSQESPQ-------EI---PVQPDFL--------------
+EDKF-VGTWYSVGLASTFPWFLK-KKAELMMCKTVLTPEAD--------GTVNFTATFVS
+--NNQCETRTSLL-R-----KTQQPGHYVYKSIK-----WGSEH-NI--FVV-ETNYEEY
+SLLYT--TKTK-G--N-SNFNMATLYSRTKDVRPELKERFISFAKSHGFTEDTIVILPKT
+----D-----Q----C---------INEKP------------------------------
+----------------------------------
+>tr|F6S436|F6S436_MONDO Uncharacterized protein OS=Monodelphis domestica OX=13616 GN=PTGDS PE=3 SV=2
+----------------------------------------------MGS-G-------SW
+A-G--SAVP-YG-G---TTGQG------------E----PLLRSRLVWRLIAPLACHKGA
+ALQF-IGAWYSVGLASTFPWFLK-KKAELTMCKSVLTPEAD--------GTVNLTATFIR
+--NNQCESRTSLL-R-----KTEEPGHYVYKSIK-----WESDH-NV--YVV-ETNYEEY
+ALLYT--SKTK-G--N-SHFNMATLYSRTKDVKTELKERFIRFAKSHGFTEDTIVILPKT
+----D-----H----C---------IDEK-------------------------------
+----------------------------------
+>tr|Q0P3U6|Q0P3U6_DANRE Lipocalin 15 OS=Danio rerio OX=7955 GN=lcn15 PE=2 SV=1
+----------------------------------------------MT----------LA
+L-A--LLFG-LFLG-----THSFNTPD-------PI---GPQPNFD--------------
+LEKF-AGEWYRLGLADESQFFAM-FKSHLKVSKGLLVPDTS--------GNVNLTMWTMR
+--PYGCSISVYSY-E-----KTDVPGEFTYFSKR-----NQITK-DV--TIV-ETNYTDY
+SLVLK--YKTM----N-KEYTQVALYGRSSTLRPDLIDKFRSFALSLGFSEEAVITPTDI
+----D-----P----C---------PNLEPSL-----------------LWSETLGYIYS
+LLLRVWGTVFVFTQTVIGEMQQYYIFNVTQAVLH
+>tr|H2TI84|H2TI84_TAKRU Prostaglandin D2 synthase a OS=Takifugu rubripes OX=31033 GN=lcn2 PE=3 SV=1
+----------------------------------------------MK----------AS
+V-V--VVMM-CVTL-----AHA------------NV---KPQKDFN--------------
+ISRF-AGRWYRVGLAYDSAHFAP-YRDKLKVSMGVITVLPN--------GSVNLSMWEPT
+--PLGCVNQVYQY-I-----KTSTAGQFTYFSRRK----HNMVK-DI--TVV-DTNYNEY
+ALVLK--HKVF----H-REYTQVALYGRSQTLKNSIIQKFKAFALSQSFPRESILTPPPA
+AHT-E-----N----C---------PPSGS------------------------------
+------G---------------------------
+>tr|A0A2I4AV18|A0A2I4AV18_9TELE neutrophil gelatinaseassociated lipocalin isoform X1 OS=Austrofundulus limnaeus OX=52670 GN=lcn2 PE=3 SV=1
+----------------------------------------------MRT-T------VVS
+V-A--MVMX-CVMM-----VHA------------SV---KPQKDFN--------------
+LQKF-AGKWYRVGFAYDSAGFVP-VRDRVKISMGIVTPLPN--------GNVNLTMWEAL
+--PVGCLTQFYKY-D-----KTNVPGQFTYFSIR-----HNMVK-DI--TVV-DTNYNEY
+ALVVK--HKVF----N-REFTQVALYGRSQRLRVEVIQKFKALALSCGFPRQSILTPPPA
+GASRQ-----ETGQTC---------RTVGQEDQ---------------DLWLK-------
+----------------------------------
+>tr|A0A1S3KR13|A0A1S3KR13_SALSA neutrophil gelatinaseassociated lipocalin isoform X1 OS=Salmo salar OX=8030 GN=lcn2 PE=3 SV=1
+----------------------------------------------MRI-T------FVT
+M-A--TAMV-CLMG-----VHG------------DV---QPQRDFD--------------
+LQRF-AGKWYRVGLAYDSPGFTALYRDKLRVSMGILNPQTN--------GNVNLTMWTQR
+--SSGCRSKLYTY-E-----KTAIPGAFTYFSTR-----HNKVK-DI--TVV-ETNYNEY
+ALVLK--HKKM----D-REYTQVALYGRSQKVKPEVIQKFRDFATSHGFPKDAILTPPPA
+GSSLK-----N----C---------PPSGR------------------------------
+----------------------------------
+>tr|A0A1W5A1F4|A0A1W5A1F4_9TELE neutrophil gelatinaseassociated lipocalin isoform X1 OS=Scleropages formosus OX=113540 GN=lcn2 PE=3 SV=1
+----------------------------------------------MRT-A------VLT
+F----TVML-LALS-----IHA------------DV---QPQKDFD--------------
+LRRF-AGKWYRVGLAYDSPGFVR-YRSKMRISMGILTPQLN--------GDANLTMWEMS
+--PLGCHPLSYVY-E-----KTSVPGQFKYFSTR-----HNRTK-DI--MVV-ETNYNEY
+ALVLK--HKKM----D-KEFTQVALYGRSQKLRTELLDKFREFALSRGFSRESILTPPAA
+A---D-----D----C---------PPA--------------------------------
+----------------------------------
+>tr|A0A2D0SPV9|A0A2D0SPV9_ICTPU neutrophil gelatinaseassociated lipocalin OS=Ictalurus punctatus OX=7998 GN=lcn2 PE=3 SV=1
+M-------------------KF-------FILSQGAQTFALTRISMMKI-T------LVS
+I-T--VTIA-LLLE-----VHA------------DV---LPQKNFD--------------
+LKRF-AGRWYRVGLAYNSPGFAR-HRNKLTICMGVVEPKEN--------GDVMMTVWKTK
+--SSICQKEVYRY-E-----KTAVPGVFTYFSTR-----HSRVK-DI--TVV-ETNYSEF
+AVIYK--HRKF----N-REFSQVSLYSRSQKLRPEVIEKFKKYATQHGFPEESIVIPPPA
+----D-----N----C---------PLARH------------------------------
+----------------------------------
+>sp|Q95182|ALL1_HORSE Major allergen Equ c 1 OS=Equus caballus OX=9796 PE=1 SV=1
+----------------------------------------------MKL-L------LLC
+L-G--LILV-CAQQ-----EEN------------SD---VAIRNFD--------------
+ISKI-SGEWYSIFLASDVKEKIE-ENGSMRVFVDVIRALDN--------SSLYAEYQTKV
+--NGECTEFPMVF-D-----KTEEDGVYSLN--------YDGYN-VF--RIS-EFENDEH
+IILYL--VNFD-K--D-RPFQLFEFYAREPDVSPEIKEEFVKIVQKRGIVKENIIDLTKI
+----D-----R----C---------FQLRGNGV---------------------------
+------------AQA-------------------
+>tr|F1SN92|F1SN92_PIG Salivary lipocalin OS=Sus scrofa OX=9823 GN=SAL1 PE=3 SV=1
+----------------------------------------------MKL-L-----FLLC
+L-G--LTLA-SSHK-----EAG------------QD---VVTSNFD--------------
+ASKI-AGEWYSILLASDAKENIE-ENGSMRVFVEHIRVLDN--------SSLAFKFQRKV
+--NGECTDFYAVC-D-----KVGD-GVYTVA--------YYGEN-KF--RLL-EVNYSDY
+VILHL--VNVN-G--D-KTFQLMEFYGRKPDVEPKLKDKFVEICQQYGIIKENIIDLTKI
+----D-----R----C---------FQLRGSGG---------------------------
+------------VQESSAE---------------
+>tr|H2B3G5|H2B3G5_CANLF LipocalinCan f 6 allergen OS=Canis lupus familiaris OX=9615 GN=lcn PE=1 SV=1
+----------------------------------------------MKL-L------LLC
+L-G--LILV-HAHE-----EEN------------D----VVKGNFD--------------
+ISKI-SGDWYSILLASDIKEKIE-ENGSMRVFVKDIEVLSN--------SSLIFTMHTKV
+--NGKCTKISLIC-N-----KTEKDGEYDVV--------HDGYN-LF--RII-ETAYEDY
+IIFHL--NNVN-Q--E-QEFQLMELYGRKPDVSPKVKEKFVRYCQGMEIPKENILDLTQV
+----D-----R----C---------LQARQSEA---------------------------
+------------AQVSSAE---------------
+>sp|Q5FW60|MUP20_MOUSE Major urinary protein 20 OS=Mus musculus OX=10090 GN=Mup20 PE=1 SV=1
+----------------------------------------------MKL-LV----LLLC
+L-G--LTLV-CVHA-----EEA------------S----SMERNFN--------------
+VEKI-NGEWYTIMLATDKREKIE-EHGSMRVFVEYIHVLEN---------SLALKFHIII
+--NEECSEIFLVA-D-----KTEKAGEYSVT--------YDGSN-TF--TIL-KTDYDNY
+IMIHL--INKK-D--G-ETFQLMELYGREPDLSSDIKEKFAQLSEEHGIVRENIIDLTNA
+----N-----R----C---------LEARE------------------------------
+----------------------------------
+>tr|A2CEK7|A2CEK7_MOUSE Major urinary protein 12 OS=Mus musculus OX=10090 GN=Mup14 PE=3 SV=1
+----------------------------------------------MKM-L-----LLLC
+L-G--LTLV-CVHA-----EEA------------S----STGRNFN--------------
+VEKI-NGEWHTIILASDKREKIE-DNGNFRLFLEQIRVLEN---------SLVLKFHTVR
+--DEECSELSMVA-D-----KTEKAGEYSVT--------YDGFN-TF--TIP-KTDYDNF
+LMAHL--INEK-D--G-ETFQLMGLYGREPDLSSDIKERFAQLCEEHGILRENIIDLSNA
+----N-----R----C---------LQARE------------------------------
+----------------------------------
+>tr|A2CEK6|A2CEK6_MOUSE Major urinary protein 11 OS=Mus musculus OX=10090 GN=Mup13 PE=3 SV=1
+----------------------------------------------MKM-L-----LLLC
+L-G--LTLV-CVHA-----EEA------------S----STGRNFN--------------
+VEKI-NGEWHTIILASDKREKIE-EHGNFRLFLEQIHVLEN---------SLVLKVHTVR
+--DEECSELSMVA-D-----KTEKAGKYSVT--------YDGFN-TF--TIP-KTDYDNF
+LMAHL--INEK-D--G-ETFQLMGLYGREPDLSSDIKERFAQLCEEHGILRENIIDLSNA
+----N-----R----C---------LQARE------------------------------
+----------------------------------
+>tr|A9C497|A9C497_MOUSE Major urinary protein 19 OS=Mus musculus OX=10090 GN=Mup19 PE=3 SV=1
+----------------------------------------------MKM-L-----LLLC
+L-G--LTLV-CVHA-----EEA------------S----STGRNFN--------------
+VEKI-NGEWHTIILASDKREKIE-DNGNFRLFLEQIHVLEN---------SLVLKFHTVR
+--DEECSELSMVA-D-----KTEKAGEYSVT--------YDGFN-TF--TIP-KTDYDNF
+LMAHL--INEK-D--G-ETFQLMGLYGREPDLSSDIKERFAQLCEEHGILRENIIDLSNA
+----S-----K----SGFSY-----FSHPEYLS---------------------------
+----------------------------------
+>tr|A9R9V7|A9R9V7_MOUSE MCG132777 OS=Mus musculus OX=10090 GN=Mup21 PE=2 SV=1
+----------------------------------------------MKL-LL----LLLC
+L-G--LTIV-CIQA-----EEY------------S----SMGRNFN--------------
+VEQI-SGYWFSIAEASDEREKIE-EHGSMRAFVENITVLEN---------SLVFKFHFIV
+--NEECTEMTLIG-E-----ETEKAGIYYLN--------YDGFN-TF--TIL-KTDYDNY
+IMIYL--INEK-D--G-ETFQLMELYGREPDLSLDIKEKFAKLCEEHGIIRENIIDLTNV
+----N-----R----C---------LEARE------------------------------
+----------------------------------
+>tr|F8WFF8|F8WFF8_RAT Major urinary protein 4 OS=Rattus norvegicus OX=10116 GN=LOC298111 PE=3 SV=3
+----------------------------------------------MKL-LL----LLLC
+L-G--LTLV-CGHA-----EEA------------S----FERGNLD--------------
+VDKL-NGDWFSIVVASNKREKIE-ENGSMRVFMQHIDVLEN---------SLGFKFRIKE
+--NGVCTEFSLVA-Y-----KTAKNGEYFVE--------YDGGN-TF--TIL-KTDYDRY
+VMFHL--VNFK-N--G-ETFQLMELYGRTKDLSSDIKEKFEKLCVAHGITRDNIIDLTKT
+----D-----R----C---------LKARG------------------------------
+----------------------------------
+>tr|M0R620|M0R620_RAT Major urinary proteinlike OS=Rattus norvegicus OX=10116 GN=LOC100912565 PE=3 SV=2
+----------------------------------------------MKL-LL----LLLR
+L-G--LNLV-CGHA-----EEA------------S----FERGNLD--------------
+VDKL-NGDWFSIVVASNKREKIE-ENGSMRVFMQHIDVLEN---------FLGFKFRIKV
+--NGECRELYMVA-Y-----RTPKDGEYFVE--------FDGGN-TV--NIL-KTDYYKY
+LILQI--INYK-N--G-RTYLVTKLWGRTKYLSSDIKEKFEKLCVAHGITRDNIIDLTKT
+----D-----R----C---------LQA--------------------------------
+----------------------------------
+>tr|A0A0H4SQI0|A0A0H4SQI0_MESAU Major urinary proteinlike lipocalin 2 OS=Mesocricetus auratus OX=10036 GN=LOC101827005 PE=2 SV=1
+----------------------------------------------MKL-LL----LLLV
+L-GLELTLV-CVHA-----EEK------------TS---LTGKNFN--------------
+PEKI-VGKWHSILLASDKREMIE-EYGSMRMFMEYIRLFKN--------SSLAVKFHTIA
+--NEECTELYLVC-D-----KTEKGGVYDAK--------YDGYN-RF--TIL-DTDYNDY
+IITHL--RNIK-N--G-ETFQLMKLCGRKPKLSSNIKKKFGDLCQKHGIVKENIIDLTEA
+----D-----H----C---------LKTQVEIV---------------------------
+------------A---------------------
+>sp|Q28388|UCAL_HORSE Uterocalin OS=Equus caballus OX=9796 PE=1 SV=1
+----------------------------------------------MNL-L------LLA
+M-G--LILP-RRPH-----ALH------------MG---PGDPNFD--------------
+EKLV-KGKWFSVALASNEPKFIA-KDTDMKFFIHKIQVTPE---------SLQFHFHRKV
+--RGMCVPTMMTA-H-----KTKKKFQYTVN--------HSGHK-TI--FLE-KVDPKHF
+VIFCA--HSMK-H--G-KETVVVTLFSRTPTVSPDVMWMFKKYCKTHGIHTSNIVDLTQT
+----D-----R----C---------LHARH------------------------------
+----------------------------------
+>tr|F1PE45|F1PE45_CANLF Uncharacterized protein OS=Canis lupus familiaris OX=9615 PE=3 SV=1
+---------------------------------------------HHVI-T------LLV
+P-I--LTPL-SGPQ-----ALY------------EG---P--QNFN--------------
+ENLV-NGNWFSTAQASDDLELLQ-EDSDMMFFIHKIHVILQ---------TIEFHIHRRI
+--KGMCVPIIITA-S-----KTEGNFSIRST--------DAGHN-MI--FLK-DVGPHRF
+AIFCA--HSNW-H--G-KKRVVVNALSWTPPVSCDVMQRFKNYCKSHRISPANTISLTGT
+----D-----R---TC---------VTEN-------------------------------
+----------------------------------
+>sp|P09465|APHR_CRICR Aphrodisin OS=Cricetus cricetus OX=10034 PE=1 SV=3
+---------------------------------------------MVKI-L------LLA
+L-V--FSLA-HAQ--------------------------------D--------------
+FAEL-QGKWYTIVIAADNLEKIE-EGGPLRFYFRHIDCYKN-------CSEMEITFYVIT
+--NNQCSKTTVIG-Y-----LKGNG-TYQTQ--------FEGNN-IF--QPL-YITSDKI
+FFTNK--NMDR-A--G-QETNMIVVAGKGNALTPEENEILVQFAHEKKIPVENILNILAT
+----D-----T----CPE------------------------------------------
+----------------------------------
+>sp|Q9Z1I7|APHR_MESAU Aphrodisin OS=Mesocricetus auratus OX=10036 PE=2 SV=1
+---------------------------------------------MVKI-L------VLA
+L-V--FSLA-HAQ--------------------------------D--------------
+FAEL-QGKWYTIVIAADNLEKIE-EGGPLRFYFRHIDCYKN-------CSEMEITFYVIT
+--NNQCSKTTVIG-Y-----LKGNG-TYQTQ--------FEGNN-IF--QPL-YITSDKI
+FFTNK--NMDR-A--G-QETNMIVVAGKGNALTPEENEILVQFAHEKKIPVENILNILAT
+----D-----T----CPE------------------------------------------
+----------------------------------
+>sp|A2AEP0|OBP1B_MOUSE Odorantbinding protein 1b OS=Mus musculus OX=10090 GN=Obp1b PE=1 SV=1
+--------------------------------------------MMVKF-L------LLA
+L-V--FGLA-HVHA-----HD---------------------------------------
+HPEL-QGQWKTTAIMADNIDKIE-TSGPLELFVREITCDEG-------CQKMKVTFYVKQ
+--NGQCSLTTVTG-Y-----KQEDGKTFKNQ--------YEGEN-NY--KLL-KATSENL
+VFYDE--NVDR-A--S-RKTKLLYILGKGEALTHEQKERLTELATQKGIPAGNLRELAHE
+----D-----T----CPE------------------------------------------
+----------------------------------
+>tr|F0UZ11|F0UZ11_CAVPO Allergen lipocalin Cav p 2.0101 OS=Cavia porcellus OX=10141 GN=lcncavp2 PE=2 SV=1
+---------------------------------------------MMQI-L------LLA
+L-A--VSLA-CAD------------------------------SID--------------
+YSKV-PGNWRTIAIAADHVEKIE-VNGELRAYFRQVDCTEG-------CDKISITFYTNT
+--DGVCTEHTVVG-A-----RNGENDVYTVD--------YAGEN-TF--QIL-CNSDDAF
+VIGSV--NTDQ-N--G-QTTKEVAIAAKRNFLTPEQEQKFQKAVQNAGIPLENIRYVIET
+----D-----T----CPD------------------------------------------
+----------------------------------
+>sp|P08937|OBP_RAT Odorantbinding protein OS=Rattus norvegicus OX=10116 GN=Obp1f PE=1 SV=1
+---------------------------------------------MVKF-L------LIV
+L-A--LGVS-CAHH-----ENL---------------------DIS--------------
+PSEV-NGDWRTLYIVADNVEKVA-EGGSLRAYFQHMECGDE-------CQELKIIFNVKL
+--DSECQTHTVVG-Q-----KHEDG-RYTTD--------YSGRN-YF--HVL-KKTDDII
+FFHNV--NVDE----S-GRRQCDLVAGKREDLNKAQKQELRKLAEEYNIPNENTQHLVPT
+----D-----T----CNQ------------------------------------------
+----------------------------------
+>sp|Q9QXU1|MSP_MESAU Malespecific submandibular salivary gland protein OS=Mesocricetus auratus OX=10036 GN=MSP PE=1 SV=2
+---------------------------------------------MVKF-L------LLA
+L-A--LGVS-CAQH-----QNL---------------------EVS--------------
+PSEV-DGKWHSLYIAADNKSKVS-EGGPLRVYVKHLECSDE-------CQTFTIKFYTKV
+--ENVCQEHRVVG-R-----KGKDG-KYITD--------FSGQN-YF--HVV-EKADDTM
+TFHNV--NVDD----S-GKTNVILVVGKGESSSIEQKQRFEKTAEKYDIPKENIEHLVTT
+----D-----T----CNQ------------------------------------------
+----------------------------------
+>sp|Q99MG7|FLP_MESAU Femalespecific lacrimal gland protein OS=Mesocricetus auratus OX=10036 GN=FLP PE=1 SV=1
+---------------------------------------------MVKF-L------LLA
+L-A--LGVS-CAHY-----QNL---------------------EVS--------------
+PSEV-DGKWYSLYIAADNKEKVS-EGGPLRAYIKNVECIDE-------CQTLKITFYTKV
+--EGVCQEHTIVG-R-----KGEDG-KYITD--------FSGQN-YF--HIV-EKSDDTM
+TFHNV--NVDD----S-GKTNVILVVGRGESSSIEQKQRFEKTAEEYDIPKENIEDLVPT
+----D-----N----CDQ------------------------------------------
+----------------------------------
+>sp|Q28133|ALL2_BOVIN Allergen Bos d 2 OS=Bos taurus OX=9913 PE=1 SV=1
+----------------------------------------------MKA-V------FLT
+L-L--FGLV-CTAQ-------------------------ETPAEID--------------
+PSKI-PGEWRIIYAAADNKDKIV-EGGPLRNYYRRIECIND-------CESLSITFYLKD
+--QGTCLLLTEVA-K-----RQEGY-VYVLE--------FYGTN-TL--EVI-HVSENML
+VTYVE--NYDG----E-RITKMTEGLAKGTSFTPEELEKYQQLNSERGVPNENIENLIKT
+----D-----N----CPP------------------------------------------
+----------------------------------
+>sp|P15399|PBAS_RAT Probasin OS=Rattus norvegicus OX=10116 GN=Pbsn PE=1 SV=1
+----------------------------------------------MRV-I------LLL
+L-T--LDVL-GVSS-----MMT--------------------DKNL--------------
+KKKI-EGNWRTVYLAASSVEKIN-EGSPLRTYFRRIECGKR-------CNRINLYFYIKK
+--GAKCQQFKIVG-R-----RSQD--VYYAK--------YEGST-AF--MLK-TVNEKIL
+LFDYF--NRNR-R--N-DVTRVAGVLAKGRQLTKDEMTEYMNFVEEMGIEDENVQRVMDT
+----D-----T----CPNK------IRIR-------------------------------
+----------------------------------
+>sp|P07435|OBP_BOVIN Odorantbinding protein OS=Bos taurus OX=9913 PE=1 SV=2
+------------------------------------------------------------
+-----------AQE-----EEA---------------------EQN--------------
+LSEL-SGPWRTVYIGSTNPEKIQ-ENGPFRTYFRELVFDDE-------KGTVDFYFSVKR
+--DGKWKNVHVKA-T-----KQDDG-TYVAD--------YEGQN-VF--KIV-SLSRTHL
+VAHNI--NVDK-H--G-QTTELTELFVK-LNVEDEDLEKFWKLTEDKGIDKKNVVNFLEN
+----E-----D----HPHP-----------------------------------------
+------------------E---------------
+>sp|Q9NPH6|OBP2B_HUMAN Odorantbinding protein 2b OS=Homo sapiens OX=9606 GN=OBP2B PE=2 SV=1
+----------------------------------------------MKT-L------FLG
+V-T--LGLA-AALS----------------------------FTLE--------------
+EEDI-TGTWYVKAMVVDKDFPED-RR-PRKVSPVKVTALGG--------GKLEATFTFMR
+--EDRCIQKKILM-R-----KTEEPGKYSA---------YGGRK-LM--YLQ-ELPRRDH
+YIFYC--KDQH-H--G-GLLHMGKLVGRNSDTNREALEEFKKLVQRKGLSEEDIFTPLQT
+----G-----S----C---------VPEH-------------------------------
+----------------------------------
+>sp|Q8K1H9|OBP2A_MOUSE Odorantbinding protein 2a OS=Mus musculus OX=10090 GN=Obp2a PE=2 SV=1
+----------------------------------------------MKS-L------LLT
+ILL--LGLV-AVLK-----AQE-----------------APPD--D--------------
+LVDY-SGIWYAKAMVHNGTLPSH-KI-PSIVFPVRIIALEE--------GDLETTVVFWN
+--NGHCREFKFVM-K-----KTEEPGKYTA---------FHNTK-VI--HVE-KTSVNEH
+YIFYC--EGRH-N--GTSSFGMGKLMGRDSGENPEAMEEFKNFIKRMNLRLENMFVPEIG
+----D-----K----C---------V-ESD------------------------------
+----------------------------------
+>tr|B3EY84|B3EY84_RAT Lipocalin 13 OS=Rattus norvegicus OX=10116 GN=Obp2a PE=2 SV=1
+----------------------------------------------MKS-L------LLT
+VLL--LELV-AVLK-----AQE-----------------LLLD--D--------------
+QEDY-SGTWYPKAMVHNGSLPHC-KL-PTRVFPVKVIALED--------GDLEATVTVWK
+--DDRCHEFKFVM-R-----KTKEPGIYST---------FHGKK-TV--HVE-KTSVEGH
+YIFYC--EGLH-N--G-KSFGMGKLMGRNPEENPEAMEEFKKFIQRMELQEENMFVPEIR
+----D-----E----C---------VNESD------------------------------
+----------------------------------
+>tr|A0A287B057|A0A287B057_PIG Lipocalin1 OS=Sus scrofa OX=9823 GN=LCN1 PE=3 SV=1
+---------------------------------------------DDEG-L------LLA
+I-G--LGLV-AALQ-----AQE-----------------FPAVGQP--------------
+LQDA-VGRWYLKAMTSDPEIPGK-K--PESVTPLILKALEG--------GDLEAQITFLI
+--DGQCQDVTLLL-K-----KTNQPFTFTA---------YDGKR-VV--YIL-PSKVKDH
+YILYC--EGEL-D--G-QEVRMAKLVGRDPENNPEALEEFKEVARAKGLNLD-IVRPQQS
+----E-----T----C---------SPGGN------------------------------
+----------------------------------
+>sp|O18873|ALL1_CANLF Major allergen Can f 1 OS=Canis lupus familiaris OX=9615 PE=1 SV=1
+----------------------------------------------MKT-L------LLT
+I-G--FSLI-AILQ-----AQD-----------------TPALGKD--------------
+TVAV-SGKWYLKAMTADQEVPEK----PDSVTPMILKAQKG--------GNLEAKITMLT
+--NGQCQNITVVL-H-----KTSEPGKYTA---------YEGQR-VV--FIQ-PSPVRDH
+YILYC--EGEL-H--G-RQIRMAKLLGRDPEQSQEALEDFREFSRAKGLNQE-ILELAQS
+----E-----T----C---------SPGGQ------------------------------
+----------------------------------
+>tr|M3YKR2|M3YKR2_MUSPF Lipocalin 1 OS=Mustela putorius furo OX=9669 GN=LCN1 PE=3 SV=1
+---------------------------------------------EMAN-L------LLT
+V-G--LSLI-AVLR-----AQD-----------------PPASEEY--------------
+PVDL-SGKWYLKAMTADQDLPEI-T--LESVTPMILTVLDG--------GDLEAKITLLI
+--NGQCQDMEVVL-Q-----KTSEPGRYTT---------YNSKR-VV--YIL-PSPAKDH
+YVLYC--SGDF-N--G-KQVQMAKLVGRDPETNQEALENFQKFVKAKGLNQD-ILEPTQS
+----E-----T----C---------SSRGD------------------------------
+----------------------------------
+>tr|F6WIP4|F6WIP4_HORSE Lipocalin 1 OS=Equus caballus OX=9796 GN=LCN1 PE=3 SV=1
+----------------------------------------------MKT-L------LLT
+I-G--LSLI-AALQ-----AKD-----------------PLALGEE--------------
+TPDV-SGKWYLKAVTADQEIPGE-K--PELVTPMILTVLEG--------GNLEAKATVKV
+--RGQCQETKLVL-E-----KTNEPGKYTA---------DEGRR-VV--HIS-PSNVMDH
+YVLYC--EGEL-R--G-KQIRMAKLVGRDAENNQGALEDFKTFARDKGFDPEKIFTLTRH
+----E-----T----C---------SPGSD------------------------------
+----------------------------------
+>tr|G3QM49|G3QM49_GORGO Lipocalin 1 OS=Gorilla gorilla gorilla OX=9595 GN=LCN1 PE=3 SV=2
+----------------------------------------------MKP-L------LLA
+V-S--LGLI-AALQ-----AHH-----------------LLASGEE--------------
+IQDV-SGTWYLKAMTVDREFPEM-N--LESVTPMTLTTLEG--------GNLEAKVTMLI
+--SGRCQEVKAVL-E-----KTDEPGKYTA---------DGGKH-VA--YII-RSHVKDH
+YIFYC--EGEL-H--G-KPVRGVKLVGRDPENNLEALEDFEKAAGARGLSTDSILIPRQS
+----E-----T----C---------SPGSD------------------------------
+----------------------------------
+>tr|A0A096NRP4|A0A096NRP4_PAPAN Lipocalin 1 OS=Papio anubis OX=9555 GN=LCN1 PE=3 SV=2
+----------------------------------------------MKA-L------LLA
+V-S--LSLI-AALQ-----AHH-----------------LLASDDE--------------
+IQDV-SGTWYLKAMTVDRELPEM-N--LESVTPMTLTILEG--------GNLEAKATMLI
+--SGQCQEVKVIL-E-----KTDEPGKYTA---------NGGKH-VT--YII-RSHVKDH
+YIFYC--EGEL-H--G-KPIRGVKLVGRDPENNLEALEDFEKATGARGLSTESILIPRQS
+----E-----T----C---------SPGSD------------------------------
+----------------------------------
+>tr|A0A2K5YQQ6|A0A2K5YQQ6_MANLE Lipocalin 1 OS=Mandrillus leucophaeus OX=9568 GN=LCN1 PE=3 SV=1
+----------------------------------------------MKA-L------LLA
+V-S--LSLI-AALQ-----AHH-----------------LLASDDE--------------
+IQDV-SGTWYLKAMTVDRELPEV-N--LESVTPMTLTILEG--------GNLEAKATMLI
+--SGQCQEVKVVL-E-----KTDEPGKYTA---------NGGKH-VT--YII-RSHVKDH
+YIFYC--EGEL-H--G-KPIRGVKLVGRDPENNLEALEDFEKAVGARGLSTESILIPRQS
+----E-----T----C---------SPGSD------------------------------
+----------------------------------
+>tr|A0A2K5LBK8|A0A2K5LBK8_CERAT Lipocalin 1 OS=Cercocebus atys OX=9531 GN=LCN1 PE=3 SV=1
+----------------------------------------------MKA-L------LLA
+V-S--LSLI-AALQ-----AHH-----------------LLVSDDE--------------
+IQDV-SGTWYLKAMTVDRELPEM-N--LESVTPMTLTILEG--------GNLEAKATMLI
+--SGQCQEVKVVL-E-----KTDEPGKYTA---------DGGKH-VT--YII-RSHVKDH
+YIFYC--EGEL-H--G-KPIRGVKLVGRDPENNLEALEDFEKAVGARRLSTESILIPRQS
+----E-----T----C---------SPGSD------------------------------
+----------------------------------
+>tr|A0A2K5KGN9|A0A2K5KGN9_COLAP Lipocalin 1 OS=Colobus angolensis palliatus OX=336983 GN=LCN1 PE=3 SV=1
+----------------------------------------------MKA-L------LLA
+I-S--LSLI-AALQ-----AHH-----------------LLASDEE--------------
+IQDV-SGTWYLKAMIVDREFPEM-N--LESVTPMTLTILEG--------GNLEAKATMLI
+--NGQCQEVKFVL-E-----KTDEPGKYTA---------DGGKH-VT--YII-SSHVKDH
+YIFYC--EGEL-H--G-KPIRGVKLVGRDPENNLEALEDFEKAAGARGLSSESILIPRQS
+----E-----T----C---------SPGSD------------------------------
+----------------------------------
+>tr|A0A2K6GDI1|A0A2K6GDI1_PROCO Lipocalin 1 OS=Propithecus coquereli OX=379532 GN=LCN1 PE=3 SV=1
+----------------------------------------------MKT-L------FLA
+I-S--LGLI-AALQ-----AQD-----------------LSAADEE--------------
+SEDV-SGKWYVKAVTTDKEIPGK-M--LESVTPLTLAALEG--------GNLEVTVATLV
+--NGQCEEVKIIL-E-----KTDEPGKYSA---------FGGKH-TV--YII-RSSVKDH
+YILYC--EGEL-H--G-TQIRMAKLVGRDTGNNQEALEDFKEVTGARGLSSEHLVIPKQS
+----E-----T----C---------SPGSD------------------------------
+----------------------------------
+>tr|F1MS23|F1MS23_BOVIN Lipocalin 1 OS=Bos taurus OX=9913 GN=LCN1 PE=3 SV=2
+----------------------------------------------MRA-L------LLT
+-----LGLV-ASLQ-----AQD-----------------TLVSDSW--------------
+TEDV-SGKWYLKAVTTDQDVPGK-N--QESVTAMTFSVLEG--------GDLEAKVTSRV
+--DGQCQETSLVL-E-----QTNDPGRYTA---------YGGKR-EV--LVL-PLRAQDH
+FILYC--DGEL-D--G-RQIRVARLLGRNQENSPEAWEEFTEFAKAKGLNLE-IFRPLQS
+----E-----T----C---------SPGESS-----------------------------
+------------DPRV------------------
+>tr|W5NUS5|W5NUS5_SHEEP Lipocalin 1 OS=Ovis aries OX=9940 GN=LCN1 PE=3 SV=1
+---------------------------------------------EMRA-L------LLT
+-----LGLV-ASLQ-----AQD-----------------ALVLDSW--------------
+TEDV-SGKWYLKAVTTDQDVPGK-N--QESVTAMTFSVLEG--------GDLEAKVTLRV
+--DGQCQETGLVL-E-----QTNDPGRYTA---------YGGKR-EV--FIL-PLRAQDH
+FILYC--EGEL-G--G-RQIRVARLLGRNPENSPEAWEEFTEFAKAKKLNLK-IFRPLQS
+----E-----T----C---------SPRGN------------------------------
+----------------------------------
+>sp|P20289|VEGP1_RAT von Ebner gland protein 1 OS=Rattus norvegicus OX=10116 GN=Vegp1 PE=2 SV=1
+----------------------------------------------MKA-L------LLT
+F-G--LSLL-AALQ-----AQA-----------------FPTT-EE--------------
+NQDV-SGTWYLKAAAWDKEIPDK-KFGSVSVTPMKIKTLEG--------GNLQVKFTVLI
+--AGRCKEMSTVL-E-----KTDEPAKYTA---------YSGKQ-VL--YII-PSSVEDH
+YIFYY--EGKI-H--R-HHFQIAKLVGRDPEINQEALEDFQSVVRAGGLNPDNIFIPKQS
+----E-----T----C---------PLGSN------------------------------
+----------------------------------
+>tr|G3TP48|G3TP48_LOXAF Lipocalin 1 OS=Loxodonta africana OX=9785 GN=LCN1 PE=3 SV=1
+----------------------------------------------MQT-L------FLT
+L-V--LGLI-AILQ-----AQA-----------------NPDL-----------------
+YKNV-LGRWYLKAEIADKDVSEK-N--VEVVGPMTITALEG--------GNLEAKNTILM
+--NGQCQEVKLVL-E-----KTHEPRKFTA---------YGGER-HV--FIE-RTHVKDH
+YILYC--EGQL-K--G-QQVRMAKLVGRDSESNEEALEEFRKFVEDTGFNPEKIFIPEQK
+----E-----A----C---------TPEEV------------------------------
+----------------------------------
+>tr|L8Y9P3|L8Y9P3_TUPCH Lipocalin1 OS=Tupaia chinensis OX=246437 GN=TREES_T100011213 PE=3 SV=1
+----------------------------------------------MRA-L------LLT
+V-G--LGLI-AALQ-----AQA-----------------PLASDKE--------------
+TQDV-SGMWYLKAMAADKEIPGE-K--PKFVTPVTLTVLEG--------GNIEVRVTMLV
+--NEQCQELRAVL-E-----KTDEPGRYTA---------HEGKR-VV--HIF-KSQSGGA
+LILHC--SGEL-Q--G-QEVHMAKLLERDLDNDQEAFEEFKKSLSSSGLDAEKIFFPNQR
+----GRKALCA----C---------PPRPGTSVVALAPSRGRPWWHSWAPWPCP------
+------GSVLPGSPEVLSE---------------
+>sp|P20462|LLPA_MACEU Late lactation protein A OS=Macropus eugenii OX=9315 GN=LLPA PE=1 SV=1
+----------------------------------------------MRV-L------FLT
+I-S--LSLF-SIIH-----ADD-----------------FAFSE----------------
+FKPS-EGTYYVQVIAVDKEFPED-EI-PRDISPLTITYLNN--------GKMEAKFTVKK
+--DNNCEEINLTL-E-----KIDEPRKITT---------TRHLHHIC--DTV-RTSEEKY
+WILSC--VREF-Q--G-TQIREAELVGPNTDENPKALEDFYRFINRERFVERRIITPRQT
+----E-----A----C---------TSENA------------------------------
+----------------------------------
+>sp|Q29144|LLP_TRIVU Late lactation protein OS=Trichosurus vulpecula OX=9337 PE=2 SV=1
+----------------------------------------------MKV-L------FFT
+I-A--LSLF-SILH-----ADD-----------------VAFSA----------------
+FTPS-EGTYYVQVIAVDKEFPEE-EI-PRDMSPLTIMYLDD--------GKMEARFTMKK
+--DDNCEEINIML-E-----KTADPRKITM---------NRRLRYTC--AAV-RTSKQKH
+WILVC--PREF-Q--G-ETIRMAKLVGPNTDKNPKALEDFYRFIYRERFDKRRIITPKQT
+----E-----A----C---------APEHA------------------------------
+----------------------------------
+>sp|Q8SQ30|LLPB_MACEU Late lactation protein B OS=Macropus eugenii OX=9315 GN=LLPB PE=2 SV=1
+----------------------------------------------MKV-L------FLT
+I-A--LSLF-SILQ-----AQD-----------------SSSS-----------------
+EEQF-EGTYFVKAIVTDSEFFEK-NK-PKALSPLTVTHLSN--------GDLEAKFTTNM
+--NGICEEIKMKF-E-----KTDKPGIFST---------NDGSR-QV--LIE-KTSVRDH
+WILFC--EGEL-H--G-MQVRIAKLLGPHTDENPKAFQEFKKFVSLKRFNEEKINIPRQT
+----E-----T----C---------IPEHV------------------------------
+----------------------------------
+>tr|Q14AJ3|Q14AJ3_MOUSE Lipocalin 3 OS=Mus musculus OX=10090 GN=Lcn3 PE=2 SV=1
+M-------------------QT----------------------LEMRA-L------LLI
+I-S--FCLV-AVLQ-----AQD-----------------SSFLAFN--------------
+NGNF-SGKWFLKALVSEDDIPIN------KVSPMLILVLNN--------GDIELSITHMI
+--YDQCLEVTTIL-E-----KTDVPGQYLA---------FEGKT-HL--QVQ-LSSVKGH
+YMLYC--DGEI-E--G-MRFLMTQLIGRDPQENLEALEEFKVFTQIKGLVAENLVILEQM
+----E-----K----C---------EPESFYE----------------------------
+------------LPSRPSE---------------
+>tr|D3ZK46|D3ZK46_RAT Lipocalin 3 OS=Rattus norvegicus OX=10116 GN=Lcn3 PE=3 SV=3
+M-------------------QT----------------------LEMKA-L------LLT
+V-S--LCLV-AALQ-----AQD-----------------SSFLAFN--------------
+NVNF-SGKWFNKAMVSEDEFPIS------KVSPIFILVLNN--------GDLEFSVTFMM
+--YGQCFEVTIIL-E-----KTDVPGQYTA---------FEGKT-HLKVQVQ-PSSVKGH
+YMLYC--EGDV-E--E-MSFTMTQLMGKDPQEDLEALEEFKEFTQLKRLVPENLLIPEQM
+------------------------------------------------------------
+----------------------------------
+>sp|Q62472|VNS2_MOUSE Vomeronasal secretory protein 2 OS=Mus musculus OX=10090 GN=Lcn4 PE=2 SV=1
+----------------------------------------------MKS-L------LLT
+V-TL-SSLV-ATLQ-----TYD-----------------DLPFISE--------------
+EDKL-SGVWFIKATVSQRREVEG-E--TLVAFPIKFTCPEE--------GTLELRHTLAS
+--KGECINVGIRL-Q-----RTEEPGQYSA---------FWGHT-LF--YIY-DLPVKDH
+YIIYC--ESHP-F--Q-KISQFGYLIGKYPEENQDTLEVFKEFIQHKGFLQEKIGVPEQR
+----D-----R----C---------IPIHDSAHQD----------HKC------------
+----------------------------------
+>tr|D3ZFU1|D3ZFU1_RAT RCG64269 OS=Rattus norvegicus OX=10116 GN=LOC681385 PE=3 SV=1
+----------------------------------------------MKY-L------LLT
+V-LL-FGLL-AILQ-----AQD-----------------DLPFLSD--------------
+EKKL-SGIWFLKATVSQRRQTGE-Q--TVVAFPHSLTCPEE--------GILEIRNTFMS
+--GGQCIKILLRM-Q-----KTEEPGQYSN---------FFRHN-LF--YIY-ELPVKDH
+YIFYM--ESIP-F--E-KKFQEGHLIGKCPKENLEALEEFKEFIQRKGLLQENIIVPEQR
+----E-----R----C---------VPIHDGAHKN----------HKC------------
+----------------------------------
+>tr|Q5BM07|Q5BM07_MACMU Placental protein 14 OS=Macaca mulatta OX=9544 GN=PAEP PE=2 SV=1
+----------------------------------------------MPC-L------LLT
+L-G--VALV-CSVQ-----ATD------------MP---QTKQNLE--------------
+LPKL-AGTWHSMAMATNNVSLMVMVKSALRVHVTSLWPTPE--------DHLEIVLHRWE
+--NNSCVEKKVLG-E-----KTENPKKFKIN--------YMGAN-EA--MLL-DTDYDNF
+LFLCL--TDTT-T--R-IQCLMCQYLARVLVEDDEIMKGFIRAFRPLHKRLWYLLDLRKT
+E---E-----P----CHF------------------------------------------
+----------------------------------
+>sp|P02754|LACB_BOVIN Betalactoglobulin OS=Bos taurus OX=9913 GN=LGB PE=1 SV=3
+----------------------------------------------MKC-L------LLA
+-----LALT-CGAQ-----ALI------------VT---QTMKGLD--------------
+IQKV-AGTWYSLAMAASDISLLDAQSAPLRVYVEELKPTPE--------GDLEILLQKWE
+--NGECAQKKIIA-E-----KTKIPAVFKID--------ALNEN-KV--LVL-DTDYKKY
+LLFCM--ENSA-E--P-EQSLACQCLVRTPEVDDEALEKFDKALKALPMHIRLSFNPTQL
+E---E-----Q----CHI------------------------------------------
+----------------------------------
+>sp|P02755|LACB_BUBBU Betalactoglobulin OS=Bubalus bubalis OX=89462 GN=LGB PE=1 SV=2
+----------------------------------------------MKC-L------LLA
+L-G--LALA-CAAQ-----AII------------VT---QTMKGLD--------------
+IQKV-AGTWYSLAMAASDISLLDAQSAPLRVYVEELKPTPE--------GDLEILLQKWE
+--NGECAQKKIIA-E-----KTKIPAVFKID--------ALNEN-KV--LVL-DTDYKKY
+LLFCM--ENSA-E--P-EQSLACQCLVRTPEVDDEALEKFDKALKALPMHIRLSFNPTQL
+E---E-----Q----CHV------------------------------------------
+----------------------------------
+>sp|P02756|LACB_CAPHI Betalactoglobulin OS=Capra hircus OX=9925 GN=LGB PE=1 SV=2
+----------------------------------------------MKC-L------LLA
+L-G--LALA-CGIQ-----AII------------VT---QTMKGLD--------------
+IQKV-AGTWYSLAMAASDISLLDAQSAPLRVYVEELKPTPE--------GNLEILLQKWE
+--NGECAQKKIIA-E-----KTKIPAVFKID--------ALNEN-KV--LVL-DTDYKKY
+LLFCM--ENSA-E--P-EQSLACQCLVRTPEVDKEALEKFDKALKALPMHIRLAFNPTQL
+E---G-----Q----CHV------------------------------------------
+----------------------------------
+>sp|P67976|LACB_SHEEP Betalactoglobulin1/B OS=Ovis aries OX=9940 PE=1 SV=1
+----------------------------------------------MKC-L------LLA
+L-G--LALA-CGVQ-----AII------------VT---QTMKGLD--------------
+IQKV-AGTWHSLAMAASDISLLDAQSAPLRVYVEELKPTPE--------GNLEILLQKWE
+--NGECAQKKIIA-E-----KTKIPAVFKID--------ALNEN-KV--LVL-DTDYKKY
+LLFCM--ENSA-E--P-EQSLACQCLVRTPEVDNEALEKFDKALKALPMHIRLAFNPTQL
+E---G-----Q----CHV------------------------------------------
+----------------------------------
+>sp|P33685|LACB1_CANLF Betalactoglobulin1 OS=Canis lupus familiaris OX=9615 GN=LGB1 PE=1 SV=1
+------------------------------------------------------------
+--------------------IV------------VP---RTMEDLD--------------
+LQKV-AGTWHSMAMAASDISLLDSETAPLRVYIQELRPTPQ--------DNLEIVLRKWE
+--DGRCAEQKVLA-E-----KTEVPAEFKIN--------YVEEN-QI--FLL-DTDYDNY
+LFFCE--MNAD-A--P-QQSLMCQCLARTLEVDNEVMEKFNRALKTLPVHMQLL-NPTQA
+E---E-----Q----CLI------------------------------------------
+----------------------------------
+>sp|P33687|LACB1_FELCA Betalactoglobulin1 OS=Felis catus OX=9685 GN=LGB1 PE=1 SV=1
+------------------------------------------------------------
+--------------------AT------------VP---LTMDGLD--------------
+LQKV-AGMWHSMAMAASDISLLDSETAPLRVYVQELRPTPR--------DNLEIILRKWE
+--DNRCVEKKVLA-E-----KTECAAKFNIN--------YLDEN-EL--IVL-DTDYENY
+LFFCL--ENAD-A--P-DQNLVCQCLTRTLKADNEVMEKFDRALQTLPVHVRLFFDPTQV
+A---E-----Q----CRI------------------------------------------
+----------------------------------
+>sp|P19647|LACB2_EQUAS Betalactoglobulin2 OS=Equus asinus OX=9793 GN=LGB2 PE=1 SV=1
+------------------------------------------------------------
+--------------------TD------------IP---QTMQDLD--------------
+LQEV-AGRWHSVAMVASDISLLDSESAPLRVYVEELRPTPE--------GNLEIILREGA
+--NHVCVERNIVA-Q-----KTEDPAVFTVN--------YQGER-KI--SVL-DTDYAHY
+MFFCV--GPCLPS--A-EHGMVCQYLARTQKVDEEVMEKFSRALQPLPGHVQIIQDPSGG
+Q---E-----R----CGF------------------------------------------
+----------------------------------
+>sp|P21664|LACB2_FELCA Betalactoglobulin2 OS=Felis catus OX=9685 GN=LGB2 PE=1 SV=1
+------------------------------------------------------------
+--------------------AT------------LP---PTMEDLD--------------
+IRQV-AGTWHSMAMAASDISLLDSETAPLRVYVQELRPTPR--------DNLEIILRKRE
+--NHACIEGNIMA-Q-----RTEDPAVFMVD--------YQGEK-KI--SVL-DTDYTHY
+MFFCM--EAPAPG--T-ENGMMCQYLARTLKADNEVMEKFDRALQTLPVHIRIILDLTQG
+K---E-----Q----CRV------------------------------------------
+----------------------------------
+>sp|P02758|LACB1_HORSE Betalactoglobulin1 OS=Equus caballus OX=9796 GN=LGB1 PE=1 SV=3
+----------------------------------------------MKC-L------LLA
+L-G--LALM-CGIQ-----ATN------------IP---QTMQDLD--------------
+LQEV-AGKWHSVAMAASDISLLDSESAPLRVYIEKLRPTPE--------DNLEIILREGE
+--NKGCAEKKIFA-E-----KTESPAEFKIN--------YLDED-TV--FAL-DTDYKNY
+LFLCM--KNAA-T--P-GQSLVCQYLARTQMVDEEIMEKFRRALQPLPGRVQIVPDLTRM
+A---E-----R----CRI------------------------------------------
+----------------------------------
+>sp|P11944|LACB_MACGI Betalactoglobulin OS=Macropus giganteus OX=9317 GN=LGB PE=1 SV=1
+------------------------------------------------------------
+--------------------VE------------NI---RSKNDLG--------------
+VEKF-VGSWYLREAAKTMEFSIP----LFDMDIKEVNLTPE--------GNLELVLLEK-
+--TDRCVEKKLLL-K-----KTKKPTEFEIYISS-----ES-SY-TF--CVM-ETDYDSY
+FLFCL--YNIS-D----REKMACAHYVRRIE-ENKGMNEFKKILRTLAMPYTVIEVRTRD
+----------M----CHV------------------------------------------
+----------------------------------
+>sp|Q29146|LACB_TRIVU Betalactoglobulin OS=Trichosurus vulpecula OX=9337 GN=LGB PE=2 SV=1
+----------------------------------------------MKF-L------LLT
+V-G--LTSI-CAIQ-----AIE------------NI---HSKEELV--------------
+VEKL-IGPWYRVEEAKAMEFSIP----LFDMNIKEVNRTPE--------GNLELIVLEQ-
+--TDSCVEKKFLL-K-----KTEKPAEFEIYIPS-----ESASY-TL--SVM-ETDYDNY
+ILGCL--ENVN-Y----REKMACAHYERRIE-ENKGMEEFKKIVRTLTIPYTMIEAQTRE
+----------M----CRV------------------------------------------
+----------------------------------
+>sp|P02763|A1AG1_HUMAN Alpha1acid glycoprotein 1 OS=Homo sapiens OX=9606 GN=ORM1 PE=1 SV=1
+----------------------------------------------MAL-S-----WVLT
+V----LSLL-PLLE-----AQIPLCANLV-----PV----PITNAT--------------
+LDQI-TGKWFYIASAFRNEEYNK-SVQEIQATFFYFTPNKT-------EDTIFLREYQTR
+--QDQCIYNTTYL-N-----VQRENGTISR---------YVGGQEHF-AHLLILRDTKTY
+MLAFD-----V-N--D-EKNWGLSVYADKPETTKEQLGEFYEALDCLRIPKSDVVYTDWK
+K---D-----K----CEP-------LEKQH------------------------------
+------------EKERKQEEGES-----------
+>sp|P25227|A1AG_RABIT Alpha1acid glycoprotein OS=Oryctolagus cuniculus OX=9986 GN=ORM1 PE=2 SV=1
+----------------------------------------------MAL-P-----WALA
+V----LSLL-PLLH-----AQDPACANFS-----TS----PITNAT--------------
+LDQL-SHKWFFTASAFRNPKYKQ-LVQHTQAAFFYFTAIKE-------EDTLLLREYITT
+--NNTCFYNSSIV-R-----VQRENGTLSK---------HDGIRNSV-ADLLLLRDPGSF
+LLVFF-----A-G--K-EQDKGMSFYTDKPKASPEQLEEFYEALTCLGMNKTEVVYTDWT
+K---D-----L----CEP-------LEKQH------------------------------
+------------EEERKKEKAES-----------
+>sp|Q3SZR3|A1AG_BOVIN Alpha1acid glycoprotein OS=Bos taurus OX=9913 GN=ORM1 PE=2 SV=1
+----------------------------------------------MAL-L-----WALA
+V----LSHL-PLLD-----AQSPECANLM-----TV---APITNAT--------------
+MDLL-SGKWFYIGSAFRNPEYNK-SARAIQAAFFYLEPRHA-------EDKLITREYQTI
+--EDKCVYNCSFI-K-----IYRQNGTLSK---------VESDREHF-VDLLLSKHFRTF
+MLAAS-----W-N--G-TKNVGVSFYADKPEVTQEQKKEFLDVIKCIGIQESEIIYTDEK
+K---D-----A----CGP-------LEKQH------------------------------
+------------EEERKKETEAS-----------
+>sp|Q63805|A1AG3_MOUSE Alpha1acid glycoprotein 3 OS=Mus musculus OX=10090 GN=Orm3 PE=3 SV=1
+----------------------------------------------MEL-H-----TVLI
+M----LSLL-PLLE-----AQNPEHAINI-----GD----PITNET--------------
+LSWL-SGKWFLIAVADSDPDYRQ-EIQKVQTIFFYLTLNKI-------NDTMELREYHTK
+--DDHCVYNSNLL-G-----FQRENGTLFK---------YEGEVENP-SHLRVLEKHGAI
+MLFFD-----L-K--D-EKKRGLSLSARRPDIPPELREVFQKAVTHVGMDESEIIFVDWK
+K---D-----R----CSE-------QEKKHLE----------------------------
+-----------LEKETKKDPEESQA---------
+>sp|P23593|APOD_RAT Apolipoprotein D OS=Rattus norvegicus OX=10116 GN=Apod PE=1 SV=1
+----------------------------------------------MAT-ML----LLLA
+T-L--AGLF-TTTE-----GQSFHLGKCP-----SP---PVQENFD--------------
+VKKY-LGRWYEIEKIPVS------FE-KGNCIQANYSLMEN--------GNIKVLNKELR
+-PDGTLNQVEGEA-K---QSNMSEPAKLEVQFFS-----LMPPA-PY--WIL-ATDYESY
+ALVYS-CTTFF-WF---FHVDYVWILGRNPYLPPETITYLKYILTSNDIDIAKITTKDQA
+----N----------CPDFL----------------------------------------
+----------------------------------
+>tr|M0R4S2|M0R4S2_RAT Apolipoprotein D OS=Rattus norvegicus OX=10116 GN=Apod PE=3 SV=1
+----------------------------------------------MAT-ML----LLLA
+T-L--AGLF-TTTE-----GQSFHLGKCP-----SP---PVQENFD--------------
+VKKY-LGRWYEIEKIPVS------FE-KGNCIQANYSLMEN--------GNIKVLNKELR
+-PDGTLNQVEGEA-K---QSNMSEPAKLEVQFFS-----LMPPA-PY--WIL-ATDYESY
+ALVYS-CTTFF-WF---FHVDYVWILGRNPYLPPETITYLKYILTSNDIDIAKITTTDQA
+----N----------CPDFL----------------------------------------
+----------------------------------
+>sp|P51910|APOD_MOUSE Apolipoprotein D OS=Mus musculus OX=10090 GN=Apod PE=1 SV=1
+----------------------------------------------MVT-ML----MFLA
+T-L--AGLF-TTAK-----GQNFHLGKCP-----SP---PVQENFD--------------
+VKKY-LGRWYEIEKIPAS------FE-KGNCIQANYSLMEN--------GNIEVLNKELS
+-PDGTMNQVKGEA-K---QSNVSEPAKLEVQFFP-----LMPPA-PY--WIL-ATDYENY
+ALVYS-CTTFF-WL---FHVDFVWILGRNPYLPPETITYLKDILTSNGIDIEKMTTTDQA
+----N----------CPDFL----------------------------------------
+----------------------------------
+>tr|G1TIF8|G1TIF8_RABIT Apolipoprotein D OS=Oryctolagus cuniculus OX=9986 GN=APOD PE=3 SV=2
+MKLINNVGEASHQESYLTSDEFVDITLFL--VKKKAPGSGAAAGPQMAPTLL----LLLP
+A-L--AGLI-SVAQ-----GQAFHLGRCP-----TP---PVQENFD--------------
+VHKY-LGRWYEIEKIPVS------FE-KGNCIQANYSLMEN--------GNIKVLNQELR
+-PDGTVNQIEGQA-T---QSNLTEPAKLGVKFFQ-----LMPTA-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHMDHVWILGRNRYLPPETVTYLKDILTANNIDIEKMTVTDQA
+------------------------------------------------------------
+----------------------------------
+>sp|P51909|APOD_CAVPO Apolipoprotein D OS=Cavia porcellus OX=10141 GN=APOD PE=2 SV=1
+----------------------------------------------MGM-ML----LLLS
+M-L--AGLV-AEAE-----GQAFHFGKCP-----NP---PVQENFD--------------
+LNKY-LGRWYEIEKIPVS------FE-KGNCIQANYSLKEN--------GRVKVLNQELR
+-PDGTVNQIEGEA-T---HSNITEPAKLGVKFFQ-----LMPSA-PY--WVL-ATDYDNY
+ALVYS-CTNII-WL---FHVDHIWILGRNRYLPQETVTYLKDILTSNNIDIEKMTLTDQA
+----N----------CPDFL----------------------------------------
+----------------------------------
+>tr|E3VX36|E3VX36_HETGA Apolipoprotein D OS=Heterocephalus glaber OX=10181 GN=GW7_00081 PE=2 SV=1
+----------------------------------------------MVT-ML----LLLS
+A-L--AGLV-AEAE-----GQAFHLGKCP-----TP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVS------FE-KGNCIQANYSVKEN--------GNIKVLNQELR
+-SDGTVNQIEGEA-T---QSNITDPAKLGVKFFQ-----LMPSA-PY--WVL-ATDYDNY
+ALVYS-CTNII-WL---FHIDHVWILGRNRYLPPETVTYLKDILTSNSIDIEKMTITDQV
+----N----------CPDFL----------------------------------------
+----------------------------------
+>tr|F1MS32|F1MS32_BOVIN Apolipoprotein D OS=Bos taurus OX=9913 GN=APOD PE=3 SV=2
+----------------------------------------------MVP-VL----LLLP
+A-L--AGLF-GAAE-----GQAFHLGKCP-----HP---PVQENFD--------------
+VNKY-LGKWYEIEKIPVS------FE-KGSCIQANYSLKEN--------GNVKVINKELR
+-ADGTVNQIEGEA-T---PENITEPAKLAVKFFW-----FMPSA-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHMDHVWILGRNPYLPPETVTYLKDILTSNNIEVEKMTITDQV
+----N----------CPESM----------------------------------------
+----------------------------------
+>tr|Q2Q1M5|Q2Q1M5_CEREL Apolipoprotein D OS=Cervus elaphus OX=9860 GN=APOD PE=2 SV=1
+MIL------------------RVETAF-I--SIKKVR--LQTPSPKMVP-AL----LLLP
+A-L--AGLF-GAAE-----GQAFHLGKCP-----NP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLKEN--------GNVKVINKELR
+-ADGTVNQIEGEA-T---QENITEPAKLGVKFFW-----FMPSA-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHMDHVWILGRNPYLPPETVTYLKDILTSNNIEVEKMTITDQV
+----N----------CPEYM----------------------------------------
+----------------------------------
+>tr|W5QGP4|W5QGP4_SHEEP Apolipoprotein D OS=Ovis aries OX=9940 GN=APOD PE=3 SV=1
+MIL------------------RAETAF-T--SIKKVR--LQPPSPKMVPALL----LLLP
+A-L--AGLF-GAAE-----GQAFHLGKCP-----NP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLKEN--------GNVKVINKELR
+-ADGTVNQIEGEA-T---QENITEPAKLGVKFFW-----FMPSA-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHMDHVWILGRNPYLPPETVTYLKDILTSNNIEVEKMTITDQV
+----N----------CPESM----------------------------------------
+----------------------------------
+>tr|F1SQX9|F1SQX9_PIG Apolipoprotein D OS=Sus scrofa OX=9823 GN=APOD PE=1 SV=3
+----------------------------------------------MVP-TL----LLLP
+A-L--AGLL-GVAE-----GQAFHLGKCP-----NP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLKEN--------GNIKVINKELR
+-ADGTVNQIEGEA-T---PDNITEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHLDHVWILGRNPYLPPETVTYLKDILTSNDIDIEKMTITDQV
+----N----------CPEYLQ---------------------------------------
+----------------------------------
+>tr|F6XM13|F6XM13_HORSE Apolipoprotein D OS=Equus caballus OX=9796 GN=APOD PE=3 SV=1
+MIF------------------ACGNCLHL--DKKRFH--RQPPNARMVM-AL----LLLP
+A-L--AGLF-GTAE-----GQAFHLGRCP-----TP---PVQENFD--------------
+VTKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLKEN--------GNVKVINKELR
+-SDGTVNQIEGEA-T---QSNLTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHLDHVWILGRNPYLPPETVTYLKDILTANDIDIEKMTITDQV
+----N----------CPESL----------------------------------------
+----------------------------------
+>tr|E2RNM1|E2RNM1_CANLF Apolipoprotein D OS=Canis lupus familiaris OX=9615 GN=APOD PE=3 SV=1
+MSL------------------HVETAF-I--LTKKVE--LCPPQPRMLT-AL----LLLP
+A-L--AGLL-PAAD-----GQAFHLGRCP-----TP---PVQENFD--------------
+VHKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLMEN--------GNIKVINQELR
+-SDGTVNQIEGEA-T---QGNLTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTIV-WL---FHMDHVWILGRNPYLPPETVTYLKDILTSNDIDIEKMTITDQV
+----N----------CPESL----------------------------------------
+----------------------------------
+>tr|M3XXD1|M3XXD1_MUSPF Apolipoprotein D OS=Mustela putorius furo OX=9669 GN=APOD PE=3 SV=1
+----------------------------------------------MVT-AL----LLLS
+A-L--ASLF-SAAS-----GQAFHLGKCP-----TP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLMEN--------GNIKVVNQELR
+-SDGTVNQIEGEA-T---QGNLTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTIV-WL---FHMDHVWILGRNPYLPPETVTYLKDILTSNDIDIEKMTITDQV
+----N----------CPESL----------------------------------------
+----------------------------------
+>tr|M3X8P7|M3X8P7_FELCA Apolipoprotein D OS=Felis catus OX=9685 GN=APOD PE=3 SV=2
+MSL------------------HVETAF-I--LTEKV---CSIQSPKMMT-AL----LLFS
+A-L--ASLF-SAAD-----GQAFHLGKCP-----TP---PVQENFD--------------
+VHKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLMEN--------GNIKVINQELR
+-PDGTMNQIEGEA-T---QANLTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTIV-WL---FHMDHVWILGRNPYLPPETVTYLKDILTSNEIDIEKMTITDQV
+----N----------CPEPL----------------------------------------
+----------------------------------
+>tr|G1LS67|G1LS67_AILME Apolipoprotein D OS=Ailuropoda melanoleuca OX=9646 GN=APOD PE=3 SV=1
+------------------------SCF-V-SPDSRLH-----PSPKMVS-VL----LLLS
+A-L--AGLF-SAAD-----GQDFHLGKCP-----AP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVS------FE-TGSCIQANYSLMEN--------GNIKVINQELR
+-SDGTVNQIEGEA-T---QGNLTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTIV-WL---FHMDHVWILGRNPYLPPETVTYLKDILTSNDIDIEKMTITDQV
+----N----------CPE------------------------------------------
+----------------------------------
+>tr|G1NVV7|G1NVV7_MYOLU Apolipoprotein D OS=Myotis lucifugus OX=59463 GN=APOD PE=3 SV=1
+VVL------------------HLETAF-I--LIKRIR--MKATSPKMVT-AL----LLLS
+A-L--AGLF-RAAE-----GQAFHLGKCP-----TP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLMEN--------GNIKVINQELR
+-SDGTVNQIEGEA-S---QSNFTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTIV-WL---FHVDHVWILGRNPYLPPETVTHLKDILTSNNIDIEKMTITDQG
+----N----------CPEFL----------------------------------------
+----------------------------------
+>tr|G3T8L4|G3T8L4_LOXAF Apolipoprotein D OS=Loxodonta africana OX=9785 GN=APOD PE=3 SV=1
+----------------------------------------------MVP-ML----LLLS
+T-L--AGLFVDVAQ-----GQAFHPGKCP-----NP---PVQENFD--------------
+VNKY-LGRWYEIEKIPVT------FE-KGSCIQANYSLMEN--------GNIKVINQEVR
+-PDGTLNQIEGEA-T---QANLTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTFI-WL---FHMDHVWILGRNPFLPPETVTYLKDILTSNDIAIDKMTITDQV
+----N----------CPEFL----------------------------------------
+----------------------------------
+>tr|E3VX35|E3VX35_9HYST Apolipoprotein D OS=Fukomys anselli OX=261002 PE=2 SV=1
+----------------------------------------------MAT-ML----LLLS
+M-L--AGLV-AQAE-----GQAFHLGKCP-----TP---PVQENFE--------------
+VNKY-LGRWYEIEKIPAS------FE-KGNCNQANYSLKGN--------GHIKVLKQELR
+-SDGTVNQIEGEASS---QSNITESAKLEVKFFQ-----LMPSA-PY--WVL-ATDYDNY
+ALVYS-CTNII-WL---FHVDFVWILGRNHYLPSETVNYLKDILTSNSIDVKKMAVTDQV
+----N----------CPDFL----------------------------------------
+----------------------------------
+>tr|H0X2F5|H0X2F5_OTOGA Apolipoprotein D OS=Otolemur garnettii OX=30611 GN=APOD PE=3 SV=1
+----------------------------------------------MAM-ML----LLLS
+V-L--AGLV-AVAE-----GQTFHLGQCP-----TP---SVQENFD--------------
+VNKY-LGKWYEIEKIPVS------FE-KGSCIQANYSLMEN--------GNIKVINKELR
+-QDGTVNQIEGEA-T---QVNLTEPAKLGVKFFW-----WTPSS-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHMEHAWILGRHPYLPPETVTYLKDMLTSNNIDHEKMTVTDQV
+----N----------CPDFL----------------------------------------
+----------------------------------
+>tr|I3NB19|I3NB19_ICTTR Apolipoprotein D OS=Ictidomys tridecemlineatus OX=43179 GN=APOD PE=3 SV=2
+----------------------------------------------MTK-ML----LLLS
+A-L--LGLF-STAR-----GQTFHLGKCP-----TP---PVQEYFD--------------
+VTKY-LGRWYEIEKIPVS------FE-KGKCIQANYSLMET--------GKIKVLNQELR
+-YDGTVNQIEGEA-I---VYNLTEPAKLGVKFSQ-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTII-WL---FHLDHVWILGRNPYLPQETVTYLKSILTSNNISIEKMTKTDQE
+----N----------CPEFLGRGS------------------------------------
+----------------------------------
+>sp|P05090|APOD_HUMAN Apolipoprotein D OS=Homo sapiens OX=9606 GN=APOD PE=1 SV=1
+----------------------------------------------MVM-LL----LLLS
+A-L--AGLF-GAAE-----GQAFHLGKCP-----NP---PVQENFD--------------
+VNKY-LGRWYEIEKIPTT------FE-NGRCIQANYSLMEN--------GKIKVLNQELR
+-ADGTVNQIEGEA-T---PVNLTEPAKLEVKFSW-----FMPSA-PY--WIL-ATDYENY
+ALVYS-CTCII-QL---FHVDFAWILARNPNLPPETVDSLKNILTSNNIDVKKMTVTDQV
+----N----------CPKLS----------------------------------------
+----------------------------------
+>tr|G3QHM6|G3QHM6_GORGO Apolipoprotein D OS=Gorilla gorilla gorilla OX=9595 GN=APOD PE=3 SV=2
+----------------------------------------------MVM-LL----LLLS
+A-L--AGLF-GAAE-----GQAFHLGKCP-----KP---PVQENFD--------------
+VNKY-LGRWYEIEKIPTT------FE-NGRCIQANYSLTEN--------GKIKVLNQELR
+-ADGTVNQIEGEA-T---PVNLTEPAKLEVKFSW-----FMPSA-PY--WIL-ATDYENY
+ALVYS-CTSVI-QL---FHVDFAWILARNPNLPPETVDSLKNILTSNNIDVKKMTVTDQV
+----N----------CPKLS----------------------------------------
+----------------------------------
+>tr|G1RAG0|G1RAG0_NOMLE Apolipoprotein D OS=Nomascus leucogenys OX=61853 GN=APOD PE=3 SV=1
+----------------------------------------------MVV-LL----LLLP
+A-L--AGLF-GVAE-----GQAFHLGKCP-----TP---PVQENFD--------------
+VNKY-LGRWYEIEKIPTI------FE-NGRCIQANYSLMEN--------GKIKVLNQELR
+-ADGTVNQIEGEA-T---PVNLTEPAKLEVKFSW-----FMPSA-PY--WVL-ATDYENY
+ALVYS-CTTII-QL---FHVDFAWILARNSYLPPETVDSLKNNLTANNIDVKKMTVTDQV
+----N----------CPEFS----------------------------------------
+----------------------------------
+>tr|F7FST1|F7FST1_MACMU Apolipoprotein D OS=Macaca mulatta OX=9544 GN=APOD PE=2 SV=1
+----------------------------------------------MVM-LL----LLLS
+A-L--AGLF-GAAE-----GQEFRLGKCT-----SP---PVQENFD--------------
+PNKY-FGRWYEIEKIPTT------FE-KGRCIQANYSLKEN--------GKIKVLNQELR
+-ADGTVNQIEGEA-S---PVNITEPAKLEVKFFW-----FMPSA-PY--WVL-ATDYENY
+ALVYS-CVSII-NL---FRVDYAWILARNRHLPSETVDFLKNILTSNNIDVKKMTVTDQE
+----N----------CPEFS----------------------------------------
+----------------------------------
+>tr|G3W424|G3W424_SARHA Apolipoprotein D OS=Sarcophilus harrisii OX=9305 GN=APOD PE=3 SV=1
+----------------------------------------------EMV-TL----LLLS
+V-L--VGLS-SVAD-----GQGVHLGWCP-----EP---PVQENFD--------------
+TLKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLKEN--------GKIKVLNQEIR
+-PDGSVNQVEGEA-A---PTNLTEPAKLGVKFFW-----LMPTS-PY--WVL-ATDYENY
+ALVYS-CTTFI-WL---FHMDYAWILARRPYLPPAIVSQLKGILSANGIDIEKMVPTDQM
+----N----------CPEFL----------------------------------------
+----------------------------------
+>tr|H9H7H2|H9H7H2_MONDO Apolipoprotein D OS=Monodelphis domestica OX=13616 GN=APOD PE=3 SV=2
+-----------------------------------------------MA-LL----LLLS
+V-L--VGLS-GMAE-----GQGVHLGWCP-----EP---PVQENFD--------------
+INKY-LGRWYEIEKIPVS------FE-KGSCIQANYSLKEN--------GKIKVLNQEIR
+-PDGSVNQVEGEA-A---QANLTEPAKLGVKFFW-----LMPSA-PY--WVL-ATDYENY
+ALVYS-CTTFV-WL---FHVDYAWVLARHPHLPRAVLSQLKGILSASGIDVERMTPTDQM
+----N----------CPEFL----------------------------------------
+----------------------------------
+>tr|Q5G8Y9|Q5G8Y9_CHICK Apolipoprotein D OS=Gallus gallus OX=9031 GN=ApoD PE=2 SV=1
+----------------------------------------------MLG-TA----AQLS
+V-L--LSLL-GLGN-----AQMFHMGPCP-----DP---PVQQDFD--------------
+INKY-LGKWYEIEKLPSN------FE-KGSCVQANYSLKEN--------GKFKVINKEML
+-SSGKINAIEGEI-M---HTDVKEPAKLGVRFNW-----FMPSA-PY--WVI-STDYENY
+SLVYS-CTNIL-WL---FHFDYAWIMSRSPDMHPDTVEHLKSMLRTYKIDTDKMMPTDQL
+----N----------CPAEM----------------------------------------
+----------------------------------
+>tr|G1N591|G1N591_MELGA Apolipoprotein D OS=Meleagris gallopavo OX=9103 GN=APOD PE=3 SV=1
+-------------------------------------------STAMLG-TA----VQLS
+V-L--LGLL-GLGN-----AQMFHMGPCP-----DP---PVQQNFD--------------
+INKY-LGKWYEIEKLPSN------FE-KGSCVQANYSLKEN--------GKFKVINKEML
+-SSGKINEIEGEI-M---HTDVKEPAKLGVRFNW-----FMPSA-PY--WVI-STDYENY
+SLVYS-CTNIL-WL---FHFDYAWIMSRAPDMHPDTVEHLKSMLQSYKIDTDKMMPTDQL
+----N----------CPAEM----------------------------------------
+----------------------------------
+>tr|U3ICE2|U3ICE2_ANAPL Apolipoprotein D OS=Anas platyrhynchos OX=8839 GN=APOD PE=3 SV=1
+AHL-----------------SH--------FSPSQVS--HLHPGTAMLG-TA----VRLS
+V-L--LGLL-GFGK-----GQMFHMGPCP-----DP---PVQENFD--------------
+ISKY-LGKWYEIEKLPSN------FE-KGSCIQANYSLKEN--------GKFKVINKELL
+-SSGKVNEVEGEI-M---HTDVKEPAKLSVRFNW-----FMPSA-PY--WVI-STDYENY
+SLVYS-CTNIL-WI---FHIDYAWIMSRTPDMHPETVEHLKSVLQSYKIDTEKMMPTDQL
+----N----------CPAEM----------------------------------------
+----------------------------------
+>tr|H0ZFA1|H0ZFA1_TAEGU Apolipoprotein D OS=Taeniopygia guttata OX=59729 GN=APOD PE=3 SV=1
+----------------------------------------------MLG-PA----VRLS
+V-L--LSLF-SIGK-----GQMFHMGPCP-----DP---SVQEEFD--------------
+INKY-LGKWYEIEKLPST------FE-KGSCIQANYSLKEN--------GKFKVVNKEML
+-ANGKINEAEGEL-M---HMDVKQPAKLGVRFNW-----FMPAA-PY--WVI-STDYENY
+SLVYS-CTNIL-WL---FHMDYAWILSRAPDMHPETVEHLKSVLESYKISTEKMMPTDQA
+----N----------CPAEM----------------------------------------
+----------------------------------
+>tr|U3JXG3|U3JXG3_FICAL Apolipoprotein D OS=Ficedula albicollis OX=59894 GN=APOD PE=3 SV=1
+----------------------------------------------MLG-TA----VRLS
+V-L--LSLF-GIGK-----GQIFHMGPCP-----DP---SVQEEFD--------------
+INQY-LGKWYEIEKLPST------FE-KGSCIQANYSLKEN--------GKFKVINKEML
+-ANGKINEAEGEL-M---HMDVKQPAKLGVRFNW-----FMPAA-PY--WVI-STDYENY
+SLVYS-CTNIL-WL---FHMDYAWILSRAPDMHPETVEQLKSVLQSYKIDTDKMMPTDQA
+----N----------CPAEM----------------------------------------
+----------------------------------
+>tr|K7G6U9|K7G6U9_PELSI Apolipoprotein D OS=Pelodiscus sinensis OX=13735 GN=APOD PE=3 SV=1
+----------------------------------------------MPA-TV----VLLS
+V-L--FGLL-RTSE-----GQTFRLGRCP-----EA---PVQENFD--------------
+VSKY-VGKWYEIEKLPAS------FE-KGICIQTNYALMDN--------GKIKVQNQELR
+-SDGTIHQIAGEA-T---QAD-DEPAKLKVRFSQ-----FMPSA-PY--WVL-STDYGNY
+SVVYS-CTNFI-SF---FHVEYAWILSRTRQLQPETVERLKGLLRSYNINTETMKPAVQM
+----N----------CPPEK----------------------------------------
+----------------------------------
+>tr|Q8SXR1|Q8SXR1_DROME Neural lazarillo, isoform A OS=Drosophila melanogaster OX=7227 GN=NLaz PE=1 SV=1
+M-------------------NH-----------------------HSSSHLL----LLIS
+V-V--FGAV-WVAH-----AQVPFPGKCP-----DV---KLLDTFD--------------
+AEAY-MGVWYEYAAYPFA------FEIGKKCIYANYSLIDN--------STVSVVNAAIN
+RFTGQPSNVTGQA-------KVLGPGQLAVAFYPTQ---PLTKA-NY--LVL-GTDYESY
+AVVYS-CTSVT-PL---ANFKIVWILTRQREPSAEAVDAARKILEDNDVSQAFLIDTVQK
+----N----------CPRLDGNGTGLAGEDGLD---------------------------
+--------VDDFVSTTVPNAIEK-------A---
+>tr|Q9NAZ4|Q9NAZ4_DROME Neural Lazarillo OS=Drosophila melanogaster OX=7227 GN=NLaz PE=2 SV=1
+M-------------------NH-----------------------HSSSHLL----LLIS
+V-V--FGAV-WVAH-----AQVPFPGKCP-----DV---KLLDTFD--------------
+AEAY-MGVWYEYAAYPFA------FEIGKKCIYANYSLIDN--------STVSVVNAAIN
+RFTGQPSNVTGQA-------KVLGPGQLAVAFYPTQ---PLTKA-NY--LVL-GTDYESY
+AVVYS-CTSVT-PL---ANFKIVWILTRQREPSAEAVDAARKILEDNDVSQAFLIDTVQK
+----N----------CPRLDGNGTGLTGEDGLD---------------------------
+--------VDDFVSTTVPNAIEK-------A---
+>tr|I4DKT9|I4DKT9_PAPXU Apolipoprotein D neural lazarillo OS=Papilio xuthus OX=66420 PE=2 SV=1
+----------------------------------------------MSV-LR-AIAVFLC
+G----FLSL-RICR-----AQIVFPGTCP-----DV---EAMKNFD--------------
+AERY-LGRWYEVEKYFAF------FELGGRCITADYGQKDD---------LITVTNKQIN
+NITGSTNEIKGYA-T--KESGEADEAKLSVYFPK-MP--INIAA-PY--WIV-GTDYDSY
+SVIWS-CYEFG-TL---FNTRNAWILTRQRNPPKSVLKAAYKVTKEKNIDQSYFTKTDQT
+----N----------CTV-------IEDED------------------------------
+----------------------------------
+>tr|I4DMT9|I4DMT9_PAPPL Apolipoprotein D neural lazarillo OS=Papilio polytes OX=76194 PE=2 SV=1
+----------------------------------------------MSV-LR-AIAVFLC
+G----FLSL-RLCR-----AQVVFPGTCP-----DV---EAMKNFD--------------
+RARY-LGRWYEAEKYFAF------FELGGRCITADYGFKDD---------LITVTNKQIN
+NITGSINQIKGYA-T--IESGEAEEAKLSVYFPK-MP--INIAA-PY--WVV-GTDYDSY
+SVVWS-CYEFG-TL---FNTRNAWILTRQRNPPESVLKKAYKVIEDNKIDQSYFTKTDQT
+----N----------CTV-------VEDED------------------------------
+----------------------------------
+>sp|P49291|LAZA_SCHAM Lazarillo protein OS=Schistocerca americana OX=7009 PE=1 SV=1
+---------------------------------------------MIRR-GL----LSVT
+A-A--LVLL-SVSC-----SAQETMG-CA-----DR---TAINDFN--------------
+ATLY-MGKWYEYAKM----GSMP-YEEGGVCVTAEYSMSSN---------NITVVNSMKD
+NTTHEVNTTTGWA-E-FAS-ELHTDGKLSVHF-PNSP----SVG-NY--WIL-STDYDNY
+SIVWS-CVKRPDSA---ASTEISWILLRSRNSSNMTLERVEDELKNLQLDLNKYTKTEQS
+----A-----K---YCAGAE----------------------------------------
+----------HVVGAMLSVAIASLF-----ALLH
+>tr|A0A023EJJ1|A0A023EJJ1_AEDAL Putative apolipoprotein d/lipocalin OS=Aedes albopictus OX=7160 PE=2 SV=1
+----------------------------------------------MSV-LM---TLLLS
+A-G--LLLL-TSTG---IASQRIVQQPCP-----DPETRPIVKNFN--------------
+LDRYISGKWYEILRYDQ-----Y-FEKDCDCGYATYTLKRL--------NTIKVENCCER
+LPNTSVHCTIGKA-VVSFPDAVPLEAKLNVTFGG-----PPNNS-NY--WIM-DTDYDNY
+AIIYS-CKNLS-D--N-KSAEAAWVLSKQRTIKPEVRSKVDQLVDKYLVRADMRVTEQSQ
+----S-----K----CKYDE-----MPGQN------------------------------
+----------------------------------
+>tr|Q9NAZ3|Q9NAZ3_DROME Glial Lazarillo OS=Drosophila melanogaster OX=7227 GN=GLaz PE=2 SV=1
+---------------------------------------------MMSGQPLGSRVWLLS
+G----VLLV-TSAG-----TDAYGFGRCP-----NY---PSMPKFN--------------
+MSRV-LGHWYEVERSFYLPEIAS------GCTTFQFEPYNKGEQSKFSNSKLAVAIKNIN
+RITGNPNVNIGYA-TPENSRSSIMDFKFTTRFPDVIARLLPGSG-KY--QVL-YTDYENF
+AILWS-CGSIG-SL---GHSDQIWILGRDRDFEVDIRSKVYDVLKRLSLDPERLIISKNK
+----Q----------CPEAL----------------------------------------
+----------------------------------
