@@ -1,0 +1,4 @@
+https://sparql.uniprot.org/sparql
+https://integbio.jp/rdf/sparql
+https://integbio.jp/rdf/mirror/uniprot/sparql
+

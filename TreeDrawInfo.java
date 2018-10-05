@@ -1,0 +1,409 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+import java.util.Comparator;
+import java.lang.Integer;
+import java.lang.Math;
+
+public class TreeDrawInfo {
+    private double[] angleInfo;
+    private double[] lengthInfo;
+    private double[] x1;
+    private double[] y1;
+    private double[] x2;
+    private double[] y2;
+    private int[][] DescendantNodes;
+    private int[]   AncestralNodes;
+    private double [] BranchLength2AncestralNode;
+    private double [] AverageDistance;
+    private int [] SizeOfSubcluster;
+    private int nodeNumber;
+    private char[] nodeColor;
+    private ArrayList<nodeID_Angle> IDListOrderedByAngle;
+    private int noClusters;
+    private ArrayList<Integer> clusterList;
+    private njtreeBuilder tb;
+
+    TreeDrawInfo(njtreeBuilder tb, int startNode, int NumberOfClusters)  {
+	nodeNumber = tb.getleafNumber()*2-1;
+        angleInfo = new double[tb.getleafNumber()*2-1];
+        lengthInfo = new double[tb.getleafNumber()*2-1];
+	DescendantNodes = tb.getDescendantNodes();
+        AncestralNodes = tb.getAncestralNodes();
+        BranchLength2AncestralNode = tb.getBranchLength2AN();
+        AverageDistance = tb.getAverageDistnce();
+        SizeOfSubcluster = tb.getSizeOfCluster();
+	noClusters = NumberOfClusters;
+	this.tb = tb;    
+        double angle = 0.0;
+        double incr = 360.0/tb.getleafNumber();
+	int  mode = 1;
+        int state = 2*tb.getleafNumber()-2;
+        char[]  chk = new char [2*tb.getleafNumber()-1];
+	for (int i = 0 ; i < 2*tb.getleafNumber()-1 ; ++i)  chk[i] = ' ';
+        nodeColor = new char[nodeNumber];
+	for (int i = 0 ; i < nodeNumber ; ++i)  nodeColor[i] = 'W';
+
+	int[] chkO = new int [tb.getleafNumber()];
+        int   chkI = 0;
+
+	/* 1. leafに描画の角度を与える */
+	//        while (angle <= 360.0 -incr)   {
+	int numnd = 0;
+        while (numnd < tb.getleafNumber())   {
+	    System.out.println("t state = " + state + ", angle = " + angle);
+
+	    if (mode == 1)  {
+		if (DescendantNodes[state][0] != -1 )  {
+		    //		    System.out.print("state = " + state + " mode = " + mode);
+		    state = DescendantNodes[state][0]-1;
+		    //		    System.out.println(" to State = " + state + " mode = " + mode);
+		}
+		else {
+		    //		    System.out.print("state = " + state + " mode = " + mode);
+		    angleInfo[state] = angle;
+		    chkO[state] = ++chkI;  /* TEST */
+		    angle += incr;		    
+		    numnd++;
+		    mode = 2;
+		    //		    System.out.println(" to mode = " + mode);
+		    //		    if (state == 27)  System.out.println(" angle = " + angle);
+		}
+	    }      
+	    else if (mode == 2)  {
+		//		System.out.print("state = " + state + " mode = "  + mode);
+		state = AncestralNodes[state]-1;
+		chk[state] = 'X';
+		mode = 3;
+				System.out.println("to state = " + state + " X: mode = " + mode);
+	    }
+	    else if (mode == 3)  {
+		//		System.out.print("state = " + state + " mode = " + mode);
+		state = DescendantNodes[state][1]-1;
+		if (DescendantNodes[state][1] == -1)  {
+		    angleInfo[state] = angle;
+		    chkO[state] = ++chkI;  /* TEST */
+		    angle = angle +incr;
+		    numnd++;
+		    mode = 4;
+		    //  		    System.out.println(" to state = " + state + " mode = " + mode);
+		}
+		else  {
+		    mode = 1;
+		    //		    System.out.println(" to state = " + state + " mode = " + mode);		    
+		}
+	    }
+	    else if (mode == 4)  {
+		//		System.out.print("state = " + state + " mode = " + mode);
+		state = AncestralNodes[state]-1;
+		if (chk[state] == ' ')  {
+		    mode = 3;
+		    chk[state] = 'X';
+		    //		    System.out.print(" X: ");
+		}
+		//		System.out.println(" to state = " + state + " mode = " + mode);
+	    }
+	    //System.out.println("b state = " + state + ", angle = " + angle);	    
+       	}
+
+	/* 2. internal nodeに描画の角度を与える */
+	angle4InternalNode(2*tb.getleafNumber()-2);
+	/*	
+	for (int i = 0 ; i < 2*tb.getleafNumber()-2 ; ++i)  {
+	    System.out.println(" angle  of " + i + " =  " + angleInfo[i] + ", order = " + chkO[i] + ", expAngle = " + (chkO[i]-1)*incr);
+	}
+	*/
+
+	/* 2.5. 角度に基づきクラスターの描画の色を決定する */
+	//	ArrayList<Integer> clusterList = tb.ClusteringFromASpecifiedNode(12,3);
+	//System.out.println("0#$%&");
+
+	clusterList = tb.ClusteringFromASpecifiedNode(startNode,NumberOfClusters);
+
+        GenerateColorCode(clusterList);
+	/*
+        int  colorChk = 0;
+        if (clusterList.size() % 2 != 0) colorChk = 1;
+	IDListOrderedByAngle = new ArrayList<nodeID_Angle>();
+
+	for (int i = 0 ; i < clusterList.size() ; ++i)  {
+	    int id = clusterList.get(i).intValue();
+	    IDListOrderedByAngle.add(new nodeID_Angle(id, angleInfo[id]));
+	}
+
+	IDListBubbleSort idL = new IDListBubbleSort(IDListOrderedByAngle);
+	
+	for (int i = 0 ; i < IDListOrderedByAngle.size() ; ++i) {
+            char colorCode;
+	    if (colorChk == 0)  {
+		if ( (i % 2) == 0)  {
+		    colorCode = 'B';
+		}
+		else {
+		    colorCode = 'R';
+		} 
+	    }
+	    else {
+		if ( (i % 3) == 0)  {
+		    colorCode = 'B';
+		}
+		else if ( ( i % 3) == 1) {
+		    colorCode = 'R';
+		}
+		else {
+		    colorCode = 'Y';
+		}
+	    }
+	    ArrayList<Integer> Members = new ArrayList<Integer>();
+	    tb.getMembers(IDListOrderedByAngle.get(i).get_id(),Members);
+	    Members.add(IDListOrderedByAngle.get(i).get_id());
+	    for (int j = 0 ; j < Members.size() ; ++j)  {
+		nodeColor[Members.get(j).intValue()] = colorCode;
+	    }
+	}
+	*/
+	System.out.println("Inial Color Code");
+	for (int i = 0 ; i < tb.getleafNumber() ; ++i)  {
+	    System.out.println(i + " : " + nodeColor[i]);
+	}
+
+	/* 3. nodeの座標を計算する  */
+	/* 3-1. 中心から各節までの長さを求める */
+	length4Node(2*tb.getleafNumber()-2);
+	/*	
+	for (int i = 0 ; i < 2*tb.getleafNumber()-2 ; ++i)  {
+	    System.out.println(" length of " + i + " = " + lengthInfo[i]);
+	}
+	*/
+	/* 3-2. 3-1の長さをもとに枝を描く座標を計算 */
+	x1 = new double [2*tb.getleafNumber()-2]; 
+	y1 = new double [2*tb.getleafNumber()-2]; 
+	x2 = new double [2*tb.getleafNumber()-2]; 
+	y2 = new double [2*tb.getleafNumber()-2];
+	for (int i = 0 ; i < 2*tb.getleafNumber()-2 ; ++i)  {
+	    double rad = Math.toRadians(angleInfo[i]);
+	    x1[i] = Math.cos(rad)*lengthInfo[i];
+	    y1[i] = -Math.sin(rad)*lengthInfo[i];
+            int nodeid = AncestralNodes[i]-1;
+	    if (i == -1) {
+		x2[i] = 0.0;
+		y2[i] = 0.0;
+	    }
+	    else {
+		x2[i] = Math.cos(rad)*lengthInfo[nodeid];
+		y2[i] = -Math.sin(rad)*lengthInfo[nodeid];
+	    }		
+	}	
+    }
+
+
+    int getSizeOfClusters()  {
+	return  IDListOrderedByAngle.size();
+    }
+
+    int getIDOfClusters(int i) {
+	return IDListOrderedByAngle.get(i).get_id();
+    }
+
+    void  length4Node(int nodeid)  {
+
+	if (AncestralNodes[nodeid] == 0) lengthInfo[nodeid] = 0;
+	else  lengthInfo[nodeid] = lengthInfo[AncestralNodes[nodeid]-1]+(BranchLength2AncestralNode[nodeid] >= 0.0 ? BranchLength2AncestralNode[nodeid] : 0.0);
+	int x = DescendantNodes[nodeid][0]-1;
+	int y = DescendantNodes[nodeid][1]-1;
+	if (x == -2 && y == -2)  return;
+	else  {
+	    length4Node(x);
+	    length4Node(y);
+	    return;
+	}
+    }
+
+    double  angle4InternalNode(int nodeid)  {
+	//	System.out.println("noteid = " +  nodeid);
+	int x = DescendantNodes[nodeid][0]-1;
+	int y = DescendantNodes[nodeid][1]-1;
+        if (x == -2 && y == -2)  return  angleInfo[nodeid];
+	else  {
+	    angleInfo[nodeid] = (angle4InternalNode(x) + angle4InternalNode(y))/2.0;
+	    return  angleInfo[nodeid];
+	}
+    }
+
+    double  getMaxLength()  {
+	double max = 0.0;
+
+	for (int i = 0 ; i < nodeNumber ; ++i)  {
+	    if (max < lengthInfo[i])  max = lengthInfo[i];
+	}
+
+	return max;
+    }
+
+    double getX1(int i)  {
+	return x1[i];
+    }
+    double getY1(int i)  {
+	return y1[i];
+    }
+    double getX2(int i)  {
+	return x2[i];
+    }
+    double getY2(int i)  {
+	return y2[i];
+    }
+
+    double getAngle(int i)  {
+	return angleInfo[i];
+    }
+
+    double getLength(int i)  {
+	return lengthInfo[i];
+    }
+
+    char  getnodeColor(int idx)  {
+	return nodeColor[idx];
+    }
+
+    char[]  getnodeColorArray() {
+	return  nodeColor;
+    }
+
+    /*
+    public class IDListComparator implements Comparator<nodeID_Angle>  {
+	@Override
+	public int compare(nodeID_Angle nodeid_angle1, nodeID_Angle nodeid_angle2)  {
+	    return nodeid_angle1.get_Angle() < nodeid_angle2.get_Angle() ? -1 : 1;
+	} 
+    }
+    */
+
+    public class nodeID_Angle {
+	private int   nodeid;
+        private double angle;
+
+	nodeID_Angle(int id, double agl)  {
+	    this.nodeid = id;
+	    this.angle = agl;
+	}
+
+        int get_id()  {
+	    return this.nodeid;
+	}
+
+	double get_Angle()  {
+	    return this.angle;
+	}
+
+    }
+
+    public class IDListBubbleSort  {
+	IDListBubbleSort(ArrayList<nodeID_Angle> idl)  {
+	    for (int i = idl.size()-1 ; i > 0 ; i--)  {
+		for (int j = 0 ; j < i ; ++j)  {
+		    if (idl.get(j).get_Angle() < idl.get(j+1).get_Angle())  {
+			nodeID_Angle tmp = idl.get(j);
+			idl.set(j, idl.get(j+1));
+			idl.set(j+1, tmp);
+		    }
+		}
+	    } 
+	}
+    }
+
+    int getNoOfClusters()  {
+	return noClusters;
+    }
+
+    /*    
+    public class IDListQuickSort  {
+	private ArrayList<nodeID_Angle> idList;
+
+	IDListQuickSort(ArrayList<nodeID_Angle> idl)  {
+	    idList = idl;
+	    quick_sort(0, idList.size()-1);
+	}
+    
+	void quick_sort(int left, int right)  {
+	    double p = idList.get((left+right)/2).get_Angle();
+	    int l = left, r = right;
+	    nodeID_Angle tmp;
+	    while(l <= r)  {
+		while(idList.get(l).get_Angle() < p) { l++; }
+		while(idList.get(r).get_Angle() > p) { r--; }
+		if (l <= r)  {
+		    tmp = idList.get(l);
+		    idList.set(l, idList.get(r));
+		    idList.set(r, tmp);
+		    l++;
+		    r--;
+		} 
+	    }
+	    quick_sort(left, r);
+	    quick_sort(l, right);
+	}
+    }
+    */
+
+    //    void  GenerateColorCode(ArrayList<Integer> clusterList, njtreeBuilder tb)  {
+    void  GenerateColorCode(ArrayList<Integer> clusterList)  {
+        int  colorChk = 0;
+
+	//	System.out.println("000 " + clusterList.size());
+
+        if (clusterList.size() % 2 != 0) colorChk = 1;
+	IDListOrderedByAngle = new ArrayList<nodeID_Angle>();
+
+	for (int i = 0 ; i < clusterList.size() ; ++i)  {
+	    int id = clusterList.get(i).intValue();
+	    IDListOrderedByAngle.add(new nodeID_Angle(id, angleInfo[id]));
+	}
+
+	IDListBubbleSort idL = new IDListBubbleSort(IDListOrderedByAngle);
+	
+	for (int i = 0 ; i < IDListOrderedByAngle.size() ; ++i) {
+            char colorCode;
+	    if (colorChk == 0)  {
+		if ( (i % 2) == 0)  {
+		    colorCode = 'B';
+		}
+		else {
+		    colorCode = 'R';
+		} 
+	    }
+	    else {
+		if ( (i % 3) == 0)  {
+		    colorCode = 'B';
+		}
+		else if ( ( i % 3) == 1) {
+		    colorCode = 'R';
+		}
+		else {
+		    colorCode = 'Y';
+		}
+	    }
+	    ArrayList<Integer> Members = new ArrayList<Integer>();
+	    tb.getMembers(IDListOrderedByAngle.get(i).get_id(),Members);
+	    Members.add(IDListOrderedByAngle.get(i).get_id());
+	    for (int j = 0 ; j < Members.size() ; ++j)  {
+		nodeColor[Members.get(j).intValue()] = colorCode;
+	    }
+	}
+    }
+
+    void setclusterList(ArrayList<Integer> cllist)  {
+	clusterList.clear();
+	for (int i = 0 ; i < cllist.size() ; ++i)  {
+	    clusterList.add(cllist.get(i));
+	}
+    }
+
+    ArrayList<Integer> getclusterList() {
+	return clusterList;
+    }
+
+    char getColorCode(int nodeidx) {
+	return nodeColor[nodeidx];
+    }
+
+}

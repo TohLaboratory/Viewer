@@ -1,0 +1,8 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox>
+ <children>
+   <Label text="ラベル" prefWidth="80.0"  />
+ </children>
+</HBox>

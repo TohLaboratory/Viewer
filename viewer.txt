@@ -1,0 +1,674 @@
+//2018/09/04
+Viewer実行時に、jdbcのみクラスパスを設定すると、jsonのparseがうまくいかない
+
+javac -classpath ".:/Users/toh/Desktop/Viewer/sqlite-jdbc-3.23.1.jar:/Users/toh/Desktop/Viewer/lib/jackson-core-2.9.0.jar" Viewer.java
+
+java -classpath ".:/Users/toh/Desktop/Viewer/sqlite-jdbc-3.23.1.jar:/Users/toh/Desktop/Viewer/lib/jackson-core-2.9.0.jar" Viewer
+
+問題点: Psurferを使う時、lib内の全てのjarへのクラスパスを設定する必要があるか?
+
+
+                     gop = new GOParse("output.json");
+
+                      /* (sub)species のデータを入手 */
+                      ArrayList<String> academicName = gop.getAcademicName();
+                      String[][] Taxonomy = new String[academicName.size()][8];
+                      for (int i = 0 ; i < academicName.size() ; ++i)  {
+                          Taxonomy[i][0] = academicName.get(i);
+                          System.out.println(Taxonomy[i][0]);
+                      }
+                      try {
+                          Class.forName("org.sqlite.JDBC");
+                      }
+                      catch(ClassNotFoundException e) {
+                          e.printStackTrace();
+                      }
+                      catch(Exception e) {
+                          e.printStackTrace();
+                      }
+
+                      Connection connection = null;
+                      Statement statement = null;
+                      try {
+                          connection = DriverManager.getConnection("jdbc:sqlite:/Users/toh/Desktop/Viewer/taxonomy");
+                          statement = connection.createStatement();
+                          statement.setQueryTimeout(30);
+                          for (int i = 0 ; i < academicName.size() ; ++i) {
+                              String str = academicName.get(i).split(" ")[0];
+                              String sql = "select * from tol where genus = \"" + str + "\" limit 1; ";
+                              //                              System.out.println(sql);                                                                                                                             
+                              ResultSet rs = statement.executeQuery(sql);
+                              ResultSetMetaData rsmd = rs.getMetaData();
+                              Taxonomy[i][1] = rs.getString("genus");
+                              Taxonomy[i][2] = rs.getString("family");
+                              Taxonomy[i][3] = rs.getString("order");
+                              Taxonomy[i][4] = rs.getString("class");
+                              Taxonomy[i][5] = rs.getString("phylum");
+                              Taxonomy[i][6] = rs.getString("kingdom");
+                              Taxonomy[i][7] = rs.getString("superkingdom");
+                              /*                                                                                                                                                                                   
+                              for (int j = 0 ; j < 8 ; ++j)  {                                                                                                                                                     
+                                  System.out.print(Taxonomy[i][j]);                                                                                                                                                
+                                  if (j < 7) System.out.print("|");                                                                                                                                                
+                                  else System.out.println("");                                                                                                                                                     
+                              }                                                                                                                                                                                    
+                              */
+                          }
+                      }  catch (SQLException e) {
+                          System.err.println(e.getMessage());
+                      }
+
+※ selectでlimit 1とし, genusだけで検索することで高速化できる
+
+HashSetを使って出現する分類名をユニークにする（色分けに使う）
+
+                      gop = new GOParse("output.json");
+
+                      /* (sub)species のデータを入手 */
+                      ArrayList<String> academicName = gop.getAcademicName();
+                      String[][] Taxonomy = new String[academicName.size()][8];
+
+                      List<String> genusList = new ArrayList<String>();
+                      List<String> familyList = new ArrayList<String>();
+                      List<String> orderList = new ArrayList<String>();
+                      List<String> classList = new ArrayList<String>();
+                      List<String> phylumList = new ArrayList<String>();
+                      List<String> kingdomList = new ArrayList<String>();
+                      List<String> superkingdomList = new ArrayList<String>();
+
+                      List<String> genusUniqueList;
+                      List<String> familyUniqueList;
+                      List<String> orderUniqueList;
+                      List<String> classUniqueList;
+                      List<String> phylumUniqueList;
+                      List<String> kingdomUniqueList;
+                      List<String> superkingdomUniqueList;
+                      for (int i = 0 ; i < academicName.size() ; ++i)  {
+                          Taxonomy[i][0] = academicName.get(i);
+                          System.out.println(Taxonomy[i][0]);
+                      }
+                      try {
+                          Class.forName("org.sqlite.JDBC");
+                      }
+                      catch(ClassNotFoundException e) {
+                          e.printStackTrace();
+                      }
+                      catch(Exception e) {
+                          e.printStackTrace();
+                      }
+
+                      Connection connection = null;
+                      Statement statement = null;
+
+                      try {
+                          connection = DriverManager.getConnection("jdbc:sqlite:/Users/toh/Desktop/Viewer/taxonomy");
+                          statement = connection.createStatement();
+                          statement.setQueryTimeout(30);
+                          String[] genus = new String[academicName.size()];
+                          String[] family = new String[academicName.size()];
+                          String[] order = new String[academicName.size()];
+                          String[] gclass = new String[academicName.size()];
+                          String[] phylum = new String[academicName.size()];
+                          String[] kingdom = new String[academicName.size()];
+                          String[] superkingdom = new String[academicName.size()];
+
+                          for (int i = 0 ; i < academicName.size() ; ++i) {
+                              String str = academicName.get(i).split(" ")[0];
+                              String sql = "select * from tol where genus = \"" + str + "\" limit 1; ";
+                              //                              System.out.println(sql);                                                                                
+                              ResultSet rs = statement.executeQuery(sql);
+                              ResultSetMetaData rsmd = rs.getMetaData();
+                              Taxonomy[i][1] = rs.getString("genus");
+                              genus[i] = Taxonomy[i][1];
+                              Taxonomy[i][2] = rs.getString("family");
+                              family[i] = Taxonomy[i][2];
+                              Taxonomy[i][3] = rs.getString("order");
+                              order[i] = Taxonomy[i][3];
+                              Taxonomy[i][4] = rs.getString("class");
+                              gclass[i] = Taxonomy[i][4];
+                              Taxonomy[i][5] = rs.getString("phylum");
+                              phylum[i] = Taxonomy[i][5];
+                              Taxonomy[i][6] = rs.getString("kingdom");
+                              kingdom[i] = Taxonomy[i][6];
+                              Taxonomy[i][7] = rs.getString("superkingdom");
+                              superkingdom[i] = Taxonomy[i][7];
+                          }
+                          genusList = new ArrayList<String>(Arrays.asList(genus));
+                          genusUniqueList = new ArrayList<String>(new HashSet<>(genusList));
+                          familyList = new ArrayList<String>(Arrays.asList(family));
+                          familyUniqueList = new ArrayList<String>(new HashSet<>(familyList));
+                          orderList = new ArrayList<String>(Arrays.asList(order));
+                          orderUniqueList = new ArrayList<String>(new HashSet<>(orderList));
+                          classList = new ArrayList<String>(Arrays.asList(gclass));
+                          classUniqueList = new ArrayList<String>(new HashSet<>(classList));
+                          phylumList = new ArrayList<String>(Arrays.asList(phylum));
+                          phylumUniqueList = new ArrayList<String>(new HashSet<>(phylumList));
+                          kingdomList = new ArrayList<String>(Arrays.asList(kingdom));
+                          kingdomUniqueList = new ArrayList<String>(new HashSet<>(kingdomList));
+                          superkingdomList = new ArrayList<String>(Arrays.asList(superkingdom));
+                          superkingdomUniqueList = new ArrayList<String>(new HashSet<>(superkingdomList));
+                          System.out.println("genus : " + genus.length + ":" + genusUniqueList.size());
+                          System.out.println("family : " + family.length + ":" + familyUniqueList.size());
+                          System.out.println("order : " + order.length + ":" + orderUniqueList.size());
+                          System.out.println("class : " + gclass.length + ":" + classUniqueList.size());
+                          System.out.println("phylum : " + phylum.length + ":" + phylumUniqueList.size());
+                          System.out.println("kingdom : " + kingdom.length + ":" + kingdomUniqueList.size());
+                          System.out.println("superkingdom : " + superkingdom.length + ":" + superkingdomUniqueList.size());
+                      }  catch (SQLException e) {
+                          System.err.println(e.getMessage());
+                      }
+                  }
+
+
+//2018/09/11
+
+java -classpath ".:/Users/toh/Desktop/Viewer/sqlite-jdbc-3.23.1.jar:/Users/toh/Desktop/Viewer/lib/collection-0.7.jar:/Users/toh/Desktop/Viewer/lib/commons-cli-1.4.jar:/Users/toh/Desktop/Viewer/lib/commons-codec-1.11.jar:/Users/toh/Desktop/Viewer/lib/commons-csv-1.5.jar:/Users/toh/Desktop/Viewer/lib/commons-io-2.6.jar:/Users/toh/Desktop/Viewer/lib/commons-lang3-3.4.jar:/Users/toh/Desktop/Viewer/lib/httpclient-4.5.3.jar:/Users/toh/Desktop/Viewer/lib/httpclient-cache-4.5.3.jar:/Users/toh/Desktop/Viewer/lib/httpcore-4.4.6.jar:/Users/toh/Desktop/Viewer/lib/jackson-annotations-2.9.0.jar:/Users/toh/Desktop/Viewer/lib/jackson-core-2.9.0.jar:/Users/toh/Desktop/Viewer/lib/jackson-databind-2.9.0.jar:/Users/toh/Desktop/Viewer/lib/jcl-over-slf4j-1.7.25.jar:/Users/toh/Desktop/Viewer/lib/jena-arq-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-base-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-cmds-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-core-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-base-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-index-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-trans-data-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-transaction-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-iri-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-rdfconnection-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-shaded-guava-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-tdb-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-tdb2-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jsonld-java-0.11.1.jar:/Users/toh/Desktop/Viewer/lib/libthrift-0.10.0.jar:/Users/toh/Desktop/Viewer/lib/log4j-1.2.17.jar:/Users/toh/Desktop/Viewer/lib/slf4j-api-1.7.25.jar:/Users/toh/Desktop/Viewer/lib/slf4j-log4j12-1.7.25.jar:/Users/toh/Desktop/Viewer/lib/xercesImpl-2.11.0.jar:/Users/toh/Desktop/Viewer/lib/xml-apis-1.4.01.jar"  Viewer
+
+
+
+
+
+//2018/09/17
+
+Airでは動くがDesktopでは次のエラーで動かない
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderContent(NGCanvas.java:604)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2072)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderContent(NGGroup.java:270)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGRegion.renderContent(NGRegion.java:578)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2072)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderContent(NGGroup.java:270)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGRegion.renderContent(NGRegion.java:578)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2072)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderContent(NGGroup.java:270)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGRegion.renderContent(NGRegion.java:578)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.renderForClip(NGNode.java:2313)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.renderRectClip(NGNode.java:2207)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.renderClip(NGNode.java:2233)
+			    at javafx.graphics/com.sun.javafx.sg.prism.CacheFilter.renderNodeToCache(CacheFilter.java:683)
+			    at javafx.graphics/com.sun.javafx.sg.prism.CacheFilter.render(CacheFilter.java:587)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.renderCached(NGNode.java:2377)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2063)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderContent(NGGroup.java:270)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGRegion.renderContent(NGRegion.java:578)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2072)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderContent(NGGroup.java:270)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGRegion.renderContent(NGRegion.java:578)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2072)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderContent(NGGroup.java:270)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGRegion.renderContent(NGRegion.java:578)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2072)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderContent(NGGroup.java:270)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGRegion.renderContent(NGRegion.java:578)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.doRender(NGNode.java:2072)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGNode.render(NGNode.java:1964)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.doPaint(ViewPainter.java:479)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:321)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+java.lang.RuntimeException: Requested texture dimensions (19800x400) require dimensions (0x400) that exceed maximum texture size (16384)
+			    at javafx.graphics/com.sun.prism.es2.ES2RTTexture.create(ES2RTTexture.java:220)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:157)
+			    at javafx.graphics/com.sun.prism.es2.ES2ResourceFactory.createRTTexture(ES2ResourceFactory.java:153)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas$RenderBuf.validate(NGCanvas.java:211)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.initCanvas(NGCanvas.java:641)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGCanvas.renderForcedContent(NGCanvas.java:625)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.sg.prism.NGGroup.renderForcedContent(NGGroup.java:232)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.ViewPainter.paintImpl(ViewPainter.java:330)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.PresentingPainter.run(PresentingPainter.java:91)
+			    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+			    at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+			    at javafx.graphics/com.sun.javafx.tk.RenderJob.run(RenderJob.java:58)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)
+			    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+			    at javafx.graphics/com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run(QuantumRenderer.java:125)
+			    at java.base/java.lang.Thread.run(Thread.java:844)
+
+//2018/09/18
+
+java -classpath ".:/Users/toh/Desktop/Viewer/sqlite-jdbc-3.23.1.jar:/Users/toh/Desktop/Viewer/lib/collection-0.7.jar:/Users/toh/Desktop/Viewer/lib/commons-cli-1.4.jar:/Users/toh/Desktop/Viewer/lib/commons-codec-1.11.jar:/Users/toh/Desktop/Viewer/lib/commons-csv-1.5.jar:/Users/toh/Desktop/Viewer/lib/commons-io-2.6.jar:/Users/toh/Desktop/Viewer/lib/commons-lang3-3.4.jar:/Users/toh/Desktop/Viewer/lib/httpclient-4.5.3.jar:/Users/toh/Desktop/Viewer/lib/httpclient-cache-4.5.3.jar:/Users/toh/Desktop/Viewer/lib/httpcore-4.4.6.jar:/Users/toh/Desktop/Viewer/lib/jackson-annotations-2.9.0.jar:/Users/toh/Desktop/Viewer/lib/jackson-core-2.9.0.jar:/Users/toh/Desktop/Viewer/lib/jackson-databind-2.9.0.jar:/Users/toh/Desktop/Viewer/lib/jcl-over-slf4j-1.7.25.jar:/Users/toh/Desktop/Viewer/lib/jena-arq-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-base-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-cmds-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-core-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-base-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-index-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-trans-data-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-dboe-transaction-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-iri-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-rdfconnection-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-shaded-guava-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-tdb-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jena-tdb2-3.6.0.jar:/Users/toh/Desktop/Viewer/lib/jsonld-java-0.11.1.jar:/Users/toh/Desktop/Viewer/lib/libthrift-0.10.0.jar:/Users/toh/Desktop/Viewer/lib/log4j-1.2.17.jar:/Users/toh/Desktop/Viewer/lib/slf4j-api-1.7.25.jar:/Users/toh/Desktop/Viewer/lib/slf4j-log4j12-1.7.25.jar:/Users/toh/Desktop/Viewer/lib/xercesImpl-2.11.0.jar:/Users/toh/Desktop/Viewer/lib/xml-apis-1.4.01.jar" -Dprism.order=sw Viewer
+
+texture dimensionの問題は解消された
+
+Exception in thread "JavaFX Application Thread" java.lang.IndexOutOfBoundsException: Index -1 out-of-bounds for length 208
+	  at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	  at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	  at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	  at java.base/java.util.Objects.checkIndex(Objects.java:372)
+	  at java.base/java.util.ArrayList.get(ArrayList.java:440)
+	  at readSeq.getName(readSeq.java:37)
+	  at Viewer.lambda$start$8(Viewer.java:810)
+	  at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	  at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	  at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	  at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	  at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	  at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	  at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	  at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+	  at javafx.controls/javafx.scene.control.MenuItem.fire(MenuItem.java:465)
+	  at javafx.controls/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1380)
+	  at javafx.controls/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1333)
+	  at javafx.base/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	  at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	  at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	  at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	  at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	  at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	  at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	  at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	  at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	  at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	  at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	  at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	  at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	  at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	  at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	  at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+	  at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3876)
+	  at javafx.graphics/javafx.scene.Scene$MouseHandler.access$1300(Scene.java:3604)
+	  at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1874)
+	  at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2613)
+	  at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:397)
+	  at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	  at java.base/java.security.AccessController.doPrivileged(Native Method)
+	  at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:434)
+	  at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	  at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:433)
+	  at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:556)
+	  at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:942)
+	  at javafx.graphics/com.sun.glass.ui.mac.MacView.notifyMouse(MacView.java:127)
+
+しかし、PSurferのところでエラー
+このエラーはAirでは出ていない。
+
+再度Airで計算してみる。
+エラーがAirで出ない場合
+プログラムの問題か、入力データの問題か？
+
+lipoc.aln.148.faはうまくいく
+lipoc.aln.208.faで上のエラーを出す
+
+Airでも208本ではエラーが出る
+
+//2018/09/30
+
+ta.setOnMouseClicked
+
+(1) コメントアウトしていた部分を復活
+(2) ラムダ式内のローカル変数はfinalというコンパイルエラーが出る変数を
+　privateにする
+(3) 分類名だけでなく分類群の名前も検索用語に加える
+
+とりあえずこれでGoogle検索が可能になった
+
+

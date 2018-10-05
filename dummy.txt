@@ -1,0 +1,576 @@
+
+All-to-all alignment.
+    0 / 87    1 / 87    2 / 87    3 / 87    4 / 87    5 / 87    6 / 87    7 / 87    8 / 87    9 / 87   10 / 87   11 / 87   12 / 87   13 / 87   14 / 87   15 / 87   16 / 87   17 / 87   18 / 87   19 / 87   20 / 87   21 / 87   22 / 87   23 / 87   24 / 87   25 / 87   26 / 87   27 / 87   28 / 87   29 / 87   30 / 87   31 / 87   32 / 87   33 / 87   34 / 87   35 / 87   36 / 87   37 / 87   38 / 87   39 / 87   40 / 87   41 / 87   42 / 87   43 / 87   44 / 87   45 / 87   46 / 87   47 / 87   48 / 87   49 / 87   50 / 87   51 / 87   52 / 87   53 / 87   54 / 87   55 / 87   56 / 87   57 / 87   58 / 87   59 / 87   60 / 87   61 / 87   62 / 87   63 / 87   64 / 87   65 / 87   66 / 87   67 / 87   68 / 87   69 / 87   70 / 87   71 / 87   72 / 87   73 / 87   74 / 87   75 / 87   76 / 87   77 / 87   78 / 87   79 / 87   80 / 87   81 / 87   82 / 87   83 / 87   84 / 87   85 / 87tbfast-pair (aa) Version 7.313 alg=L, model=BLOSUM62, 2.00, -0.10, +0.10, noshift, amax=0.0
+0 thread(s)
+
+Loading 'hat3.seed' ... 
+done.
+Writing hat3 for iterative refinement
+Gap Penalty = -1.53, +0.00, +0.00
+treein = 0
+compacttree = 0
+Constructing a UPGMA tree ... 
+    0 / 87   10 / 87   20 / 87   30 / 87   40 / 87   50 / 87   60 / 87   70 / 87   80 / 87
+done.
+
+Progressive alignment ... 
+STEP     1 /86 cSTEP     2 /86 cSTEP     3 /86 cSTEP     4 /86 cSTEP     5 /86 cSTEP     6 /86 cSTEP     7 /86 cSTEP     8 /86 cSTEP     9 /86 cSTEP    10 /86 cSTEP    11 /86 cSTEP    12 /86 cSTEP    13 /86 cSTEP    14 /86 cSTEP    15 /86 cSTEP    16 /86 cSTEP    17 /86 cSTEP    18 /86 cSTEP    19 /86 cSTEP    20 /86 cSTEP    21 /86 cSTEP    22 /86 cSTEP    23 /86 cSTEP    24 /86 cSTEP    25 /86 cSTEP    26 /86 cSTEP    27 /86 cSTEP    28 /86 cSTEP    29 /86 cSTEP    30 /86 cSTEP    31 /86 cSTEP    32 /86 cSTEP    33 /86 cSTEP    34 /86 cSTEP    35 /86 cSTEP    36 /86 cSTEP    37 /86 cSTEP    38 /86 cSTEP    39 /86 cSTEP    40 /86 cSTEP    41 /86 cSTEP    42 /86 cSTEP    43 /86 cSTEP    44 /86 cSTEP    45 /86 cSTEP    46 /86 cSTEP    47 /86 cSTEP    48 /86 cSTEP    49 /86 cSTEP    50 /86 cSTEP    51 /86 cSTEP    52 /86 cSTEP    53 /86 cSTEP    54 /86 cSTEP    55 /86 cSTEP    56 /86 cSTEP    57 /86 cSTEP    58 /86 cSTEP    59 /86 cSTEP    60 /86 cSTEP    61 /86 cSTEP    62 /86 cSTEP    63 /86 cSTEP    64 /86 cSTEP    65 /86 cSTEP    66 /86 cSTEP    67 /86 cSTEP    68 /86 cSTEP    69 /86 cSTEP    70 /86 cSTEP    71 /86 cSTEP    72 /86 cSTEP    73 /86 cSTEP    74 /86 cSTEP    75 /86 cSTEP    76 /86 cSTEP    77 /86 cSTEP    78 /86 cSTEP    79 /86 cSTEP    80 /86 c
+Reallocating..done. *alloclen = 1460
+STEP    81 /86 cSTEP    82 /86 cSTEP    83 /86 cSTEP    84 /86 cSTEP    85 /86 cSTEP    86 /86 c
+done.
+tbfast (aa) Version 7.313 alg=A, model=BLOSUM62, 1.53, -0.00, -0.00, noshift, amax=0.0
+0 thread(s)
+
+minimumweight = 0.000010
+autosubalignment = 0.000000
+nthread = 0
+randomseed = 0
+blosum 62 / kimura 200
+poffset = 0
+niter = 16
+sueff_global = 0.100000
+Loading 'hat3' ... done.
+
+    0 / 87   10 / 87   20 / 87   30 / 87   40 / 87   50 / 87   60 / 87   70 / 87   80 / 87
+Segment   1/  1    1- 291
+STEP 001-001-0  identical.   STEP 001-001-1  identical.   STEP 001-002-0  identical.   STEP 001-002-1  identical.   STEP 001-003-0  identical.   STEP 001-003-1  identical.   STEP 001-004-0  identical.   STEP 001-004-1  identical.   STEP 001-005-0  identical.   STEP 001-005-1  identical.   STEP 001-006-0  identical.   STEP 001-006-1  identical.   STEP 001-007-0  identical.   STEP 001-007-1  identical.   STEP 001-008-0  identical.   STEP 001-008-1  identical.   STEP 001-009-0  identical.   STEP 001-009-1  identical.   STEP 001-010-0  identical.   STEP 001-010-1  identical.   STEP 001-011-0  identical.   STEP 001-011-1  identical.   STEP 001-012-0  identical.   STEP 001-012-1  identical.   STEP 001-013-0  identical.   STEP 001-013-1  identical.   STEP 001-014-0  identical.   STEP 001-014-1  identical.   STEP 001-015-0  identical.   STEP 001-015-1  identical.   STEP 001-016-0  identical.   STEP 001-016-1  identical.   STEP 001-017-0  identical.   STEP 001-017-1  identical.   STEP 001-018-0  identical.   STEP 001-018-1  identical.   STEP 001-019-0  identical.   STEP 001-019-1  identical.   STEP 001-020-0  identical.   STEP 001-020-1  identical.   STEP 001-021-0  identical.   STEP 001-021-1  accepted.STEP 001-022-0  identical.   STEP 001-022-1  identical.   STEP 001-023-0  identical.   STEP 001-023-1  identical.   STEP 001-024-0  identical.   STEP 001-024-1  identical.   STEP 001-025-0  identical.   STEP 001-025-1  identical.   STEP 001-026-0  identical.   STEP 001-026-1  identical.   STEP 001-027-0  identical.   STEP 001-027-1  identical.   STEP 001-028-0  identical.   STEP 001-028-1  identical.   STEP 001-029-0  identical.   STEP 001-029-1  identical.   STEP 001-030-0  identical.   STEP 001-030-1  identical.   STEP 001-031-0  identical.   STEP 001-031-1  rejected.STEP 001-032-0  identical.   STEP 001-032-1  identical.   STEP 001-033-0  identical.   STEP 001-033-1  identical.   STEP 001-034-0  identical.   STEP 001-034-1  identical.   STEP 001-035-0  identical.   STEP 001-035-1  identical.   STEP 001-036-0  identical.   STEP 001-036-1  identical.   STEP 001-037-0  identical.   STEP 001-037-1  identical.   STEP 001-038-0  identical.   STEP 001-038-1  identical.   STEP 001-039-0  identical.   STEP 001-039-1  identical.   STEP 001-040-0  identical.   STEP 001-040-1  identical.   STEP 001-041-0  identical.   STEP 001-041-1  identical.   STEP 001-042-0  identical.   STEP 001-042-1  identical.   STEP 001-043-0  identical.   STEP 001-043-1  identical.   STEP 001-044-0  identical.   STEP 001-044-1  identical.   STEP 001-045-0  identical.   STEP 001-045-1  identical.   STEP 001-046-0  identical.   STEP 001-046-1  identical.   STEP 001-047-0  identical.   STEP 001-047-1  rejected.STEP 001-048-0  identical.   STEP 001-048-1  identical.   STEP 001-049-0  identical.   STEP 001-049-1  identical.   STEP 001-050-0  accepted.STEP 001-050-1  identical.   STEP 001-051-0  identical.   STEP 001-051-1  identical.   STEP 001-052-0  identical.   STEP 001-052-1  identical.   STEP 001-053-0  identical.   STEP 001-053-1  identical.   STEP 001-054-0  identical.   STEP 001-054-1  identical.   STEP 001-055-0  identical.   STEP 001-055-1  identical.   STEP 001-056-0  identical.   STEP 001-056-1  identical.   STEP 001-057-0  identical.   STEP 001-057-1  identical.   STEP 001-058-0  identical.   STEP 001-058-1  identical.   STEP 001-059-0  identical.   STEP 001-059-1  rejected.STEP 001-060-0  identical.   STEP 001-060-1  accepted.STEP 001-061-0  identical.   STEP 001-061-1  identical.   STEP 001-062-0  identical.   STEP 001-062-1  identical.   STEP 001-063-0  identical.   STEP 001-063-1  identical.   STEP 001-064-0  identical.   STEP 001-064-1  identical.   STEP 001-065-0  identical.   STEP 001-065-1  identical.   STEP 001-066-0  identical.   STEP 001-066-1  identical.   STEP 001-067-0  identical.   STEP 001-067-1  identical.   STEP 001-068-0  rejected.STEP 001-068-1  accepted.STEP 001-069-0  rejected.STEP 001-069-1  rejected.STEP 001-070-0  identical.   STEP 001-070-1  rejected.STEP 001-071-0  rejected.STEP 001-071-1  identical.   STEP 001-072-0  identical.   STEP 001-072-1  identical.   STEP 001-073-0  accepted.STEP 001-073-1  identical.   STEP 001-074-0  identical.   STEP 001-074-1  accepted.STEP 001-075-0  rejected.STEP 001-075-1  accepted.STEP 001-076-0  accepted.STEP 001-076-1  accepted.STEP 001-077-0  identical.   STEP 001-077-1  rejected.STEP 001-078-0  identical.   STEP 001-078-1  rejected.STEP 001-079-0  identical.   STEP 001-079-1  identical.   STEP 001-080-0  accepted.STEP 001-080-1  accepted.STEP 001-081-0  identical.   STEP 001-081-1  rejected.STEP 001-082-0  identical.   STEP 001-082-1  accepted.STEP 001-083-0  accepted.STEP 001-083-1  rejected.STEP 001-084-0  identical.   STEP 001-084-1  accepted.STEP 001-085-0  identical.   STEP 001-085-1  identical.   STEP 001-086-1  accepted.STEP 002-086-1  identical.   STEP 002-085-0  identical.   STEP 002-085-1  identical.   STEP 002-084-0  identical.   STEP 002-084-1  identical.   STEP 002-083-0  identical.   STEP 002-083-1  rejected.STEP 002-082-0  identical.   STEP 002-082-1  identical.   STEP 002-081-0  identical.   STEP 002-081-1  rejected.STEP 002-080-0  identical.   STEP 002-080-1  identical.   STEP 002-079-0  identical.   STEP 002-079-1  rejected.STEP 002-078-0  identical.   STEP 002-078-1  accepted.STEP 002-077-0  identical.   STEP 002-077-1  rejected.STEP 002-076-0  rejected.STEP 002-076-1  identical.   STEP 002-075-0  rejected.STEP 002-075-1  identical.   STEP 002-074-0  rejected.STEP 002-074-1  identical.   STEP 002-073-0  identical.   STEP 002-073-1  identical.   STEP 002-072-0  identical.   STEP 002-072-1  identical.   STEP 002-071-0  rejected.STEP 002-071-1  identical.   STEP 002-070-0  identical.   STEP 002-070-1  rejected.STEP 002-069-0  rejected.STEP 002-069-1  rejected.STEP 002-068-0  rejected.STEP 002-068-1  accepted.STEP 002-067-0  identical.   STEP 002-067-1  identical.   STEP 002-066-0  identical.   STEP 002-066-1  identical.   STEP 002-065-0  identical.   STEP 002-065-1  identical.   STEP 002-064-0  identical.   STEP 002-064-1  identical.   STEP 002-063-0  identical.   STEP 002-063-1  identical.   STEP 002-062-0  identical.   STEP 002-062-1  identical.   STEP 002-061-0  identical.   STEP 002-061-1  identical.   STEP 002-060-0  identical.   STEP 002-060-1  identical.   STEP 002-059-0  identical.   STEP 002-059-1  rejected.STEP 002-058-0  identical.   STEP 002-058-1  identical.   STEP 002-057-0  identical.   STEP 002-057-1  identical.   STEP 002-056-0  identical.   STEP 002-056-1  identical.   STEP 002-055-0  identical.   STEP 002-055-1  accepted.STEP 002-054-0  identical.   STEP 002-054-1  identical.   STEP 002-053-0  identical.   STEP 002-053-1  identical.   STEP 002-052-0  identical.   STEP 002-052-1  rejected.STEP 002-051-0  identical.   STEP 002-051-1  identical.   STEP 002-050-0  identical.   STEP 002-050-1  identical.   STEP 002-049-0  identical.   STEP 002-049-1  identical.   STEP 002-048-0  identical.   STEP 002-048-1  identical.   STEP 002-047-0  identical.   STEP 002-047-1  rejected.STEP 002-046-0  rejected.STEP 002-046-1  identical.   STEP 002-045-0  identical.   STEP 002-045-1  identical.   STEP 002-044-0  identical.   STEP 002-044-1  identical.   STEP 002-043-0  identical.   STEP 002-043-1  identical.   STEP 002-042-0  identical.   STEP 002-042-1  identical.   STEP 002-041-0  identical.   STEP 002-041-1  identical.   STEP 002-040-0  identical.   STEP 002-040-1  identical.   STEP 002-039-0  identical.   STEP 002-039-1  identical.   STEP 002-038-0  identical.   STEP 002-038-1  identical.   STEP 002-037-0  identical.   STEP 002-037-1  identical.   STEP 002-036-0  identical.   STEP 002-036-1  identical.   STEP 002-035-0  identical.   STEP 002-035-1  identical.   STEP 002-034-0  identical.   STEP 002-034-1  identical.   STEP 002-033-0  identical.   STEP 002-033-1  identical.   STEP 002-032-0  identical.   STEP 002-032-1  identical.   STEP 002-031-0  identical.   STEP 002-031-1  rejected.STEP 002-030-0  identical.   STEP 002-030-1  identical.   STEP 002-029-0  identical.   STEP 002-029-1  identical.   STEP 002-028-0  identical.   STEP 002-028-1  identical.   STEP 002-027-0  identical.   STEP 002-027-1  identical.   STEP 002-026-0  identical.   STEP 002-026-1  identical.   STEP 002-025-0  identical.   STEP 002-025-1  identical.   STEP 002-024-0  identical.   STEP 002-024-1  identical.   STEP 002-023-0  identical.   STEP 002-023-1  identical.   STEP 002-022-0  identical.   STEP 002-022-1  identical.   STEP 002-021-0  identical.   STEP 002-021-1  rejected.STEP 002-020-0  identical.   STEP 002-020-1  identical.   STEP 002-019-0  identical.   STEP 002-019-1  identical.   STEP 002-018-0  identical.   STEP 002-018-1  identical.   STEP 002-017-0  identical.   STEP 002-017-1  identical.   STEP 002-016-0  identical.   STEP 002-016-1  identical.   STEP 002-015-0  identical.   STEP 002-015-1  identical.   STEP 002-014-0  identical.   STEP 002-014-1  identical.   STEP 002-013-0  identical.   STEP 002-013-1  identical.   STEP 002-012-0  identical.   STEP 002-012-1  identical.   STEP 002-011-0  identical.   STEP 002-011-1  identical.   STEP 002-010-0  identical.   STEP 002-010-1  identical.   STEP 002-009-0  identical.   STEP 002-009-1  identical.   STEP 002-008-0  identical.   STEP 002-008-1  identical.   STEP 002-007-0  identical.   STEP 002-007-1  identical.   STEP 002-006-0  identical.   STEP 002-006-1  identical.   STEP 002-005-0  identical.   STEP 002-005-1  identical.   STEP 002-004-0  identical.   STEP 002-004-1  identical.   STEP 002-003-0  identical.   STEP 002-003-1  identical.   STEP 002-002-0  identical.   STEP 002-002-1  identical.   STEP 002-001-0  identical.   STEP 002-001-1  identical.   STEP 003-001-0  identical.   STEP 003-001-1  identical.   STEP 003-002-0  identical.   STEP 003-002-1  identical.   STEP 003-003-0  identical.   STEP 003-003-1  identical.   STEP 003-004-0  identical.   STEP 003-004-1  identical.   STEP 003-005-0  identical.   STEP 003-005-1  identical.   STEP 003-006-0  identical.   STEP 003-006-1  identical.   STEP 003-007-0  identical.   STEP 003-007-1  identical.   STEP 003-008-0  identical.   STEP 003-008-1  identical.   STEP 003-009-0  identical.   STEP 003-009-1  identical.   STEP 003-010-0  identical.   STEP 003-010-1  identical.   STEP 003-011-0  identical.   STEP 003-011-1  identical.   STEP 003-012-0  identical.   STEP 003-012-1  identical.   STEP 003-013-0  identical.   STEP 003-013-1  identical.   STEP 003-014-0  identical.   STEP 003-014-1  identical.   STEP 003-015-0  identical.   STEP 003-015-1  identical.   STEP 003-016-0  identical.   STEP 003-016-1  identical.   STEP 003-017-0  identical.   STEP 003-017-1  identical.   STEP 003-018-0  identical.   STEP 003-018-1  identical.   STEP 003-019-0  identical.   STEP 003-019-1  identical.   STEP 003-020-0  identical.   STEP 003-020-1  identical.   STEP 003-021-0  identical.   STEP 003-021-1  rejected.STEP 003-022-0  identical.   STEP 003-022-1  identical.   STEP 003-023-0  identical.   STEP 003-023-1  identical.   STEP 003-024-0  identical.   STEP 003-024-1  identical.   STEP 003-025-0  identical.   STEP 003-025-1  identical.   STEP 003-026-0  identical.   STEP 003-026-1  identical.   STEP 003-027-0  identical.   STEP 003-027-1  identical.   STEP 003-028-0  identical.   STEP 003-028-1  identical.   STEP 003-029-0  identical.   STEP 003-029-1  identical.   STEP 003-030-0  identical.   STEP 003-030-1  identical.   STEP 003-031-0  identical.   STEP 003-031-1  rejected.STEP 003-032-0  identical.   STEP 003-032-1  identical.   STEP 003-033-0  identical.   STEP 003-033-1  identical.   
+Converged.
+
+done
+dvtditr (aa) Version 7.313 alg=A, model=BLOSUM62, 1.53, -0.00, -0.00, noshift, amax=0.0
+0 thread(s)
+
+
+Strategy:
+ L-INS-i (Probably most accurate, very slow)
+ Iterative refinement method (<16) with LOCAL pairwise alignment information
+
+If unsure which option to use, try 'mafft --auto input > output'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+
+The default gap scoring scheme has been changed in version 7.110 (2013 Oct).
+It tends to insert more gaps into gap-rich regions than previous versions.
+To disable this change, add the --leavegappyregion option.
+
+>sp|Q5FW60|MUP20_MOUSE Major urinary protein 20 OS=Mus musculus OX=10090 GN=Mup20 PE=1 SV=1
+--------------------MKL------------------LVLLLCLG--LTLVCVHA-
+----EEAS--------------S-MERNFNVEKINGEWYTIMLATDKREKIE-EHGSMRV
+FVEYIHVLEN--SLALKFHIII--NE-ECSEIFLVADKTEKAGEYSVT----YDG--SNT
+FTILKTDYDNYIMIHL--INKKD--GETFQLMELYGREPDLSSDIKEKFAQLSEEHGIVR
+ENIIDLTNANR--------------C----LEARE----------
+>sp|P11590|MUP4_MOUSE Major urinary protein 4 OS=Mus musculus OX=10090 GN=Mup4 PE=1 SV=1
+--------------------MK---------------------LLLCLG--LTLVCIHA-
+----EEAT--------------S-KGQNLNVEKINGEWFSILLASDKREKIE-EHGSMRV
+FVEHIHVLEN--SLAFKFHTVI--DG-ECSEIFLVADKTEKAGEYSVM----YDG--FNT
+FTILKTDYDNYIMFHL--INEKD--GKTFQLMELYGRKADLNSDIKEKFVKLCEEHGIIK
+ENIIDLTKTNR--------------C----LKARE----------
+>tr|A2ANT5|A2ANT5_MOUSE MCG19332 OS=Mus musculus OX=10090 GN=Mup4 PE=2 SV=1
+--------------------MK---------------------LLLCLG--LTLVCIHA-
+----EEAT--------------S-KGQNLNVEKINGEWFSILLASDKREKIE-EHGSMRV
+FVEHIHVLEN--SLAFKFHTVI--DG-ECSEIFLVADKTEKAGEYSVM----YDG--FNT
+FTILKTDYDNYIMFHL--INEKD--GKTFQLMELYGRKADLNSDIKEKFVKLCEEHGIIK
+ENIIDLTKTNR--------------C----LKARE----------
+>tr|A2AV72|A2AV72_MOUSE MCG140531 OS=Mus musculus OX=10090 GN=Mup6 PE=3 SV=1
+--------------------MK--------------------LLLLCLG--LILVCVHA-
+----EEAS--------------S-MGRNFNVEKINGEWYTIILASDKRAKIE-EHGIMRL
+FVEHIHVLEN--SLGFKFHTVI--DE-ECSEIFLVADKTEKAGEYSVT----YDG--FKK
+FTVLKTDYDNYIMFHL--INEMN--GETFQLMSLYGREPDLNSDIKEKFVKLCEEHGIIR
+ENIIDFTKTNR--------------C----LQARE----------
+>tr|A2ANT6|A2ANT6_MOUSE Major urinary protein 6 OS=Mus musculus OX=10090 GN=Mup6 PE=3 SV=1
+--------------------ME----------------------RPTED--TVLVGLH--
+------------------------RKQNVVSCMINGEWYTIILASDKRAKIE-EHGIMRL
+FVEHIHVLEN--SLGFKFHTVI--DE-ECSEIFLVADKTEKAGEYSVT----YDG--FKK
+FTVLKTDYDNYIMFHL--INEMN--GETFQLMSLYGREPDLNSDIKEKFVKLCEEHGIIR
+ENIIDFTKTNR--------------C----LQARE----------
+>sp|P11591|MUP5_MOUSE Major urinary protein 5 OS=Mus musculus OX=10090 GN=Mup5 PE=2 SV=2
+--------------------MKL-------------------LLLLCLE--LTLVYVHA-
+----EEAS--------------S-EGQNLNVEKINGKWFSILLASDKREKIE-EHGTMRV
+FVEHIDVLEN--SLAFKFHTVI--DE-ECTEIYLVADKTEKAGEYSVT----YDG--FNT
+FTILKTDYDNYIMFHL--INKKD--EENFQLMELFGREPDLSSDIKEKFAKLCEEHGIVR
+ENIIDLSNANR--------------C----LQARE----------
+>sp|P02762|MUP6_MOUSE Major urinary protein 6 OS=Mus musculus OX=10090 GN=Mup6 PE=1 SV=2
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A2CGB6|A2CGB6_MOUSE Major urinary protein 6 OS=Mus musculus OX=10090 GN=Mup6 PE=3 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|B5TE76|B5TE76_MOUSE Major urinary protein 14 OS=Mus musculus OX=10090 GN=Mup17 PE=2 SV=1
+----------------------M-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A2AKN9|A2AKN9_MOUSE Major urinary protein 2 OS=Mus musculus OX=10090 GN=Mup2 PE=1 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVQKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>sp|P11588|MUP1_MOUSE Major urinary protein 1 OS=Mus musculus OX=10090 GN=Mup1 PE=1 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEKHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|Q58ES8|Q58ES8_MOUSE Major urinary protein 1 OS=Mus musculus OX=10090 GN=Mup1 PE=2 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEKHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A9R9W0|A9R9W0_MOUSE Major urinary protein 15 OS=Mus musculus OX=10090 GN=Mup15 PE=3 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVQKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEKHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|B5X0G0|B5X0G0_MOUSE Major urinary protein 13 OS=Mus musculus OX=10090 GN=Mup13 PE=3 SV=1
+----------------------M-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVQKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEKHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A2CEL1|A2CEL1_MOUSE Major urinary protein 1 OS=Mus musculus OX=10090 GN=Mup1 PE=3 SV=1
+--------------------MKM-------------------LLLLCVG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEKHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>sp|P04938|MUP11_MOUSE Major urinary protein 11 OS=Mus musculus OX=10090 GN=Mup11 PE=1 SV=2
+--------------------MKM------------------LLLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>sp|A2BIM8|MUP18_MOUSE Major urinary protein 18 OS=Mus musculus OX=10090 GN=Mup18 PE=3 SV=1
+--------------------MKM------------------LLLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|Q4FZE8|Q4FZE8_MOUSE Major urinary protein 1 OS=Mus musculus OX=10090 GN=Gm21320 PE=1 SV=1
+--------------------MKM------------------LLLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEK--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|Q58EV3|Q58EV3_MOUSE Major urinary protein 1 OS=Mus musculus OX=10090 GN=Mup7 PE=2 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKVHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEKHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A2CEK7|A2CEK7_MOUSE Major urinary protein 12 OS=Mus musculus OX=10090 GN=Mup14 PE=3 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIRVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A2AKN8|A2AKN8_MOUSE Major urinary protein 5 OS=Mus musculus OX=10090 GN=Mup8 PE=3 SV=1
+--------------------MKM-------------------LLLLCVG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIRVLEN--SLVLKVHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>sp|P11589|MUP2_MOUSE Major urinary protein 2 OS=Mus musculus OX=10090 GN=Mup2 PE=1 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEK--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAKLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A2BIN1|A2BIN1_MOUSE Major urinary protein 10 OS=Mus musculus OX=10090 GN=Mup10 PE=2 SV=1
+--------------------MKM-------------------MLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEK--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>sp|B5X0G2|MUP17_MOUSE Major urinary protein 17 OS=Mus musculus OX=10090 GN=Mup17 PE=2 SV=2
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-EHGNFRL
+FLEQIHVLEN--SLVLKVHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A2CEK6|A2CEK6_MOUSE Major urinary protein 11 OS=Mus musculus OX=10090 GN=Mup13 PE=3 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-EHGNFRL
+FLEQIHVLEN--SLVLKVHTVR--DE-ECSELSMVADKTEKAGKYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|L7MUC7|L7MUC7_MOUSE Major urinary protein 7 (Fragment) OS=Mus musculus OX=10090 GN=Mup7 PE=3 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKVHTV---DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEKHGILR
+ENIIDLSNA------------------------------------
+>tr|B0V388|B0V388_MOUSE Novel member of the major urinary protein (Mup) gene family OS=Mus musculus OX=10090 GN=CU041261.1001 PE=3 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-VNGNFRL
+FLEQIHVLEN--SLVLKVHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLRSDIKERFAQLCEEHGILR
+ENIIDLSNANR--------------C----LQARE----------
+>tr|A9C497|A9C497_MOUSE Major urinary protein 19 OS=Mus musculus OX=10090 GN=Mup19 PE=3 SV=1
+--------------------MKM-------------------LLLLCLG--LTLVCVHA-
+----EEAS--------------S-TGRNFNVEKINGEWHTIILASDKREKIE-DNGNFRL
+FLEQIHVLEN--SLVLKFHTVR--DE-ECSELSMVADKTEKAGEYSVT----YDG--FNT
+FTIPKTDYDNFLMAHL--INEKD--GETFQLMGLYGREPDLSSDIKERFAQLCEEHGILR
+ENIIDLSNASK--------------SGFSYFSHPEYLS-------
+>sp|P04939|MUP3_MOUSE Major urinary protein 3 OS=Mus musculus OX=10090 GN=Mup3 PE=1 SV=1
+--------------------MKL------LLP---------LLLLLCLE--LTLVCIHA-
+----EESS--------------S-MERNFNVEQISGYWFSIAEASYEREKIE-EHGSMRA
+FVENITVLEN--SLVFKFHLIV--NE-ECTEMTAIGEQTEKAGIYYMN----YDG--FNT
+FSILKTDYDNYIMIHL--INKKD--GKTFQLMELYGREPDLSLDIKEKFAKLCEEHGIIR
+ENIIDLTNVNR--------------C----LEARE----------
+>tr|Q3KQQ2|Q3KQQ2_MOUSE MCG15829, isoform CRA_a OS=Mus musculus OX=10090 GN=Mup3 PE=1 SV=1
+--------------------MKL------LLP---------LLLLLCLE--LTLVCIHA-
+----EESS--------------S-MERNFNVEQISGYWFSIAEASDEREKIE-EHGSMRA
+FVENITVLEN--SLVFKFHLIV--NE-ECTEMTAIGEQTEKAGIYYMN----YDG--FNT
+FSILKTDYDNYIMIHL--INKKD--GKTFQLMELYGREPDLSLDIKEKFAKLCEEHGIIR
+ENIIDLTNVNR--------------C----LEARE----------
+>tr|Q80YX8|Q80YX8_MOUSE Major urinary protein 21 OS=Mus musculus OX=10090 GN=Mup21 PE=2 SV=1
+--------------------MKL------------------LLLLLCLG--LTIVCIQA-
+----EEYS--------------S-MGRNFNVEQISGYWFSIAEASDEREKIE-EHGSMRA
+FVENITVLEN--SLVFKFHFIV--NE-ECTEMTLIGEETEKAGIYYLN----YDG--FNT
+FTILKTDYDNYIMIYL--INEKD--GETFQLMELYGREPYLSLDIKEKFAKLCEEHGIIR
+ENIIDLTNVNR--------------C----LEARE----------
+>tr|A9R9V7|A9R9V7_MOUSE MCG132777 OS=Mus musculus OX=10090 GN=Mup21 PE=2 SV=1
+--------------------MKL------------------LLLLLCLG--LTIVCIQA-
+----EEYS--------------S-MGRNFNVEQISGYWFSIAEASDEREKIE-EHGSMRA
+FVENITVLEN--SLVFKFHFIV--NE-ECTEMTLIGEETEKAGIYYLN----YDG--FNT
+FTILKTDYDNYIMIYL--INEKD--GETFQLMELYGREPDLSLDIKEKFAKLCEEHGIIR
+ENIIDLTNVNR--------------C----LEARE----------
+>sp|P02761|MUP_RAT Major urinary protein OS=Rattus norvegicus OX=10116 PE=1 SV=1
+--------------------MKL------------------LLLLLCLG--LTLVCGHA-
+----EEAS--------------S-TRGNLDVAKLNGDWFSIVVASNKREKIE-ENGSMRV
+FMQHIDVLEN--SLGFKFRIKE--NG-ECRELYLVAYKTPEDGEYFVE----YDG--GNT
+FTILKTDYDRYVMFHL--INFKN--GETFQLMVLYGRTKDLSSDIKEKFAKLCEAHGITR
+DNIIDLTKTDR--------------C----LQARG----------
+>tr|Q9JJH9|Q9JJH9_RAT Alpha2u globulin OS=Rattus norvegicus OX=10116 GN=Mup4 PE=2 SV=1
+--------------------MKL------------------LLLLLCLG--LTLVCGHA-
+----EEAS--------------S-VRGNLDVDKLNGDWFSIVLASDKREKIE-ENGSMRV
+FMQHIDVLEN--SLGFKFHIKK--NG-ECREVYLVAYKTPKDGEYFVE----HDG--GNT
+FTILKTDYDRYVMIHL--VNVKN--GETFQLMLLYGRTKDLSSDIKEKFEKLCVAHGITR
+DNIIDLTKTDR--------------C----LKARG----------
+>tr|F8WFF8|F8WFF8_RAT Major urinary protein 4 OS=Rattus norvegicus OX=10116 GN=LOC298111 PE=3 SV=3
+--------------------MKL------------------LLLLLCLG--LTLVCGHA-
+----EEAS--------------F-ERGNLDVDKLNGDWFSIVVASNKREKIE-ENGSMRV
+FMQHIDVLEN--SLGFKFRIKE--NG-VCTEFSLVAYKTAKNGEYFVE----YDG--GNT
+FTILKTDYDRYVMFHL--VNFKN--GETFQLMELYGRTKDLSSDIKEKFEKLCVAHGITR
+DNIIDLTKTDR--------------C----LKARG----------
+>tr|F1LQM1|F1LQM1_RAT Major urinary proteinlike OS=Rattus norvegicus OX=10116 GN=LOC100912565 PE=3 SV=3
+--------------------MKL------------------LLLLLRLG--LNLVCGHA-
+----EEAS--------------F-ERGNLDVDKLNGDWFSIVVASNKREKIE-ENGSMRV
+FMQHIDVLEN--FLGFKFRIKV--NG-ECRELYMVAYRTPKDGEYFVE----YDG--GNT
+FNILKTDYDRYVMFHL--VNFKD--GETFQLMNLFGRTKDLSSDIKEKFAKLCVAHGITR
+ENIIDVTKTNR--------------C----LQARG----------
+>tr|M0R620|M0R620_RAT Major urinary proteinlike OS=Rattus norvegicus OX=10116 GN=LOC100912565 PE=3 SV=2
+--------------------MKL------------------LLLLLRLG--LNLVCGHA-
+----EEAS--------------F-ERGNLDVDKLNGDWFSIVVASNKREKIE-ENGSMRV
+FMQHIDVLEN--FLGFKFRIKV--NG-ECRELYMVAYRTPKDGEYFVE----FDG--GNT
+VNILKTDYYKYLILQI--INYKN--GRTYLVTKLWGRTKYLSSDIKEKFEKLCVAHGITR
+DNIIDLTKTDR--------------C----LQA------------
+>tr|T2B8F6|T2B8F6_MESAU Major urinary proteinlike lipocalin 1 OS=Mesocricetus auratus OX=10036 GN=MUP1 PE=2 SV=1
+--------------------MKL------------------LLLLLVLGLELTLVCVHA-
+----EEKT--------------SLTGKNFNPEKIVGECHSILLASDKREMIE-EHGSMRV
+FVKSIHLFKN-SSLAFKFHTIV--NG-ECTELYVVCDKTEEDGVYEVI----YDG--YNR
+FTVLGTNYDEYIIFKL--RNNKT--GEISHVMELFGRKPELSSNIKEMFGVLCKENGIVK
+ENILDLTEANR--------------C----LQARDGRNA------
+>tr|A0A0H4SQI0|A0A0H4SQI0_MESAU Major urinary proteinlike lipocalin 2 OS=Mesocricetus auratus OX=10036 GN=LOC101827005 PE=2 SV=1
+--------------------MKL------------------LLLLLVLGLELTLVCVHA-
+----EEKT--------------SLTGKNFNPEKIVGKWHSILLASDKREMIE-EYGSMRM
+FMEYIRLFKN-SSLAVKFHTIA--NE-ECTELYLVCDKTEKGGVYDAK----YDG--YNR
+FTILDTDYNDYIITHL--RNIKN--GETFQLMKLCGRKPKLSSNIKKKFGDLCQKHGIVK
+ENIIDLTEADH--------------C----LKTQVEIVA------
+>sp|Q95182|ALL1_HORSE Major allergen Equ c 1 OS=Equus caballus OX=9796 PE=1 SV=1
+--------------------MKL--------------------LLLCLG--LILVCAQQ-
+----EENS--------------DVAIRNFDISKISGEWYSIFLASDVKEKIE-ENGSMRV
+FVDVIRALDN-SSLYAEYQTKV--NG-ECTEFPMVFDKTEEDGVYSLN----YDG--YNV
+FRISEFENDEHIILYL--VNFDK--DRPFQLFEFYAREPDVSPEIKEEFVKIVQKRGIVK
+ENIIDLTKIDR--------------C----FQLRGNGVA----QA
+>sp|O18874|ALL2_CANLF Minor allergen Can f 2 OS=Canis lupus familiaris OX=9615 PE=1 SV=1
+--------------------MQL--------------------LLLTVG--LALICGLQ-
+----AQEG--------------NHEEPQGGLEELSGRWHSVALASNKSDLIK-PWGHFRV
+FIHSMSAKDG--NLHGDILIPQ--DG-QCEKVSLTAFKTATSNKFDLE----YWG--HND
+LYLAEVDPKSYLILYM--INQYN--DDTSLVAHLMVRDLSRQQDFLPAFESVCEDIGLHK
+DQIVVLSDDDR--------------C----QGSRD----------
+>sp|Q9QXU1|MSP_MESAU Malespecific submandibular salivary gland protein OS=Mesocricetus auratus OX=10036 GN=MSP PE=1 SV=2
+-------------------MVKF--------------------LLLALA--LGVSCAQH-
+----QNLE--------------------VSPSEVDGKWHSLYIAADNKSKVS-EGGPLRV
+YVKHLECSDECQTFTIKFYTKV--EN-VCQEHRVVGRKG-KDGKYITD----FSG--QNY
+FHVVE-KADDTMTFHN--VNVDD--SGKTNVILVVGKGESSSIEQKQRFEKTAEKYDIPK
+ENIEHLVTTDT--------------C-----------------NQ
+>sp|P41222|PTGDS_HUMAN ProstaglandinH2 Disomerase OS=Homo sapiens OX=9606 GN=PTGDS PE=1 SV=1
+--------------------MAT-------------------HHTLWMG--LALLGVLGD
+LQAAPEAQ--------------VSVQPNFQQDKFLGRWFSAGLASNSSWLRE-KKAALSM
+CKSVVAPATD-GGLNLTSTFLR--KN-QCETRTMLLQPAGSLGSYSYRSPH-WGS--TYS
+VSVVETDYDQYALLYS--QGSKGP-GEDFRMATLYSRTQTPRAELKEKFTAFCKAQGFTE
+DTIVFLPQTDK--------------C----MTEQ-----------
+>tr|F1PE45|F1PE45_CANLF Uncharacterized protein OS=Canis lupus familiaris OX=9615 PE=3 SV=1
+------------------------------------------HHVITLL--VPILTPLSG
+----PQAL--------------YEGPQNFNENLVNGNWFSTAQASDDLELLQ-EDSDMMF
+FIHKIHVILQ--TIEFHIHRRI--KG-MCVPIIITASKTE--GNFSIRST--DAG--HNM
+IFLKDVGPHRFAIFCA--HSNWH--GKKRVVVNALSWTPPVSCDVMQRFKNYCKSHRISP
+ANTISLTGTDR-------------TC----VTEN-----------
+>sp|P41222|PTGDS_HUMAN Prostaglandin-H2 D-isomerase OS=Homo sapiens OX=9606 GN=PTGDS PE=1 SV=1
+--------------------MAT-------------------HHTLWMG--LALLGVLGD
+LQAAPEAQ--------------VSVQPNFQQDKFLGRWFSAGLASNSSWLRE-KKAALSM
+CKSVVAPATD-GGLNLTSTFLR--KN-QCETRTMLLQPAGSLGSYSYRSPH-WGS--TYS
+VSVVETDYDQYALLYS--QGSKGP-GEDFRMATLYSRTQTPRAELKEKFTAFCKAQGFTE
+DTIVFLPQTDK--------------C----MTEQ-----------
+>sp|P22057|PTGDS_RAT Prostaglandin-H2 D-isomerase OS=Rattus norvegicus OX=10116 GN=Ptgds PE=1 SV=2
+--------------------MAA-------------------LPMLWTG--LVLLGLLGF
+PQTPAQGH--------------DTVQPNFQQDKFLGRWYSAGLASNSSWFRE-KKELLFM
+CQTVVAPSTE-GGLNLTSTFLR--KN-QCETKVMVLQPAGVPGQYTYNSPH-WGS--FHS
+LSVVETDYDEYAFLFS--KGTKGP-GQDFRMATLYSRAQLLKEELKEKFITFSKDQGLTE
+EDIVFLPQPDK--------------C----IQE------------
+>sp|O09114|PTGDS_MOUSE Prostaglandin-H2 D-isomerase OS=Mus musculus OX=10090 GN=Ptgds PE=1 SV=1
+--------------------MAA-------------------LRMLWMG--LVLLGLLGF
+PQTPAQGH--------------DTVQPNFQQDKFLGRWYSAGLASNSSWFRE-KKAVLYM
+CKTVVAPSTE-GGLNLTSTFLR--KN-QCETKIMVLQPAGAPGHYTYSSPH-SGS--IHS
+VSVVEANYDEYALLFS--RGTKGP-GQDFRMATLYSRTQTLKDELKEKFTTFSKAQGLTE
+EDIVFLPQPDK--------------C----IQE------------
+>sp|O02853|PTGDS_BOVIN Prostaglandin-H2 D-isomerase OS=Bos taurus OX=9913 GN=PTGDS PE=1 SV=1
+--------------------MAT-------------------PNRLWMA--LLLLGVLGV
+LQTPAPAQ--------------AALQPNFEEDKFLGRWFTSGLASNSSWFLE-KKKVLSM
+CKSVVAPAAD-GGLNLTSTFLR--KD-QCETRTLLLRPAGPPGCYSYTSPH-WSS--THE
+VSVAETDYETYALLYT--EGVRGP-GQDFRMATLYSRSQNPRAEVKEHFTTFAKSLGFTE
+EGIVFLPKTDK--------------C----MEEHP----------
+>sp|Q9XSM0|PTGDS_SHEEP Prostaglandin-H2 D-isomerase OS=Ovis aries OX=9940 GN=PTGDS PE=1 SV=1
+--------------------MAT-------------------PNRPWMG--LLLLGVLGV
+LQTPAPTE--------------AALQPNFEEDKFLGRWFTSGLASNSSWFLE-KRKVLSM
+CKSEVAPAAD-GGLNVTSTFLR--KD-QCETRTLLLRPAGPPGCYSYTSPH-WSS--THE
+VSVAETDYETYALLYT--ESVRGP-GPDSLMATLYSRTQTPRAEVKEKFTTFARSLGFTE
+EGIVFLPKTDK--------------C----MEVRT----------
+>sp|O97921|PTGDS_HORSE Prostaglandin-H2 D-isomerase OS=Equus caballus OX=9796 GN=PTGDS PE=1 SV=1
+--------------------MAA-------------------SHTLWMG--LVLLGVLGV
+LQTRAQAQ--------------PSLQPNFQQDKFLGRWFTSGLASNSSWFRE-KKKVLSM
+CTSVVAPTAD-GGFNLTSTFLR--KD-QCETRTLLLQPAGPPGCYSYTSPH-WGM--VHE
+VSVVETDYEEYALLYTHAESTKGLGGQDFRMATLYSRVQSPRPEVKEKFSTFAKAQGFTE
+DAIVFLPQTDK--------------C----MEEHN----------
+>sp|Q9XS65|PTGDS_CANLF Prostaglandin-H2 D-isomerase OS=Canis lupus familiaris OX=9615 GN=PTGDS PE=2 SV=1
+--------------------MGA-------------------LCTLWLG--LVLLGVLGA
+LQTSAQAQ--------------VSLQPNFQQDKFLGRWFTSGLASNSSWFRE-KKNVLSM
+CMSVVAPTAD-GGLNLTSTFLR--KD-QCETRTLLLRPAGTPGCYSYTSPH-WGS--THD
+VWVVATNYEEYALLYT--AGSKGL-GQDFHMATLYSRTQTPKAEIKEKFSTFAKTQGFTE
+DAIVFLPQTDK--------------C----MEENK----------
+>sp|Q29095|PTGDS_PIG Prostaglandin-H2 D-isomerase OS=Sus scrofa OX=9823 GN=PTGDS PE=1 SV=1
+--------------------MAT-------------------PSSLWLG--LALLGTLGV
+LQTP--AQ--------------ASLQPNFQEDKFLGRWFTSGLASNSSWFLE-KKKVLSM
+CKSLVAPAPD-GGFNLTSTFLR--KD-QCVTRTLMLRPAGPPGCYSYTSPH-GGS--NLE
+VSVVETDYKNYALLHT--ESGPSP-GPAFRMATLYSRSQAPGAAVREKFTAFAKARGFTE
+DGIVFLPRNEK--------------C----LEEHE----------
+>sp|Q29487|PTGDS_FELCA Prostaglandin-H2 D-isomerase OS=Felis catus OX=9685 GN=PTGDS PE=2 SV=1
+--------------------MAA-------------------LHTLWMG--LVLLGVLGV
+LQTRAQAQ--------------VSRQPNFQQDKFLGRWFTSGLASNSSWFRE-KKNALSM
+CISVVAPSAE-GGLNLTTTFLR--KD-QCETRTLLLRPAETPGCYSYTSPH-WGS--THD
+VWVVATDYEEYALLYT--AGTKSP-GQDFHMATLYSRTQTPRAEVKEKFSTFAKTRGFTE
+DAIVFLPKTER--------------C----MEEHR----------
+>sp|Q29562|PTGDS_URSAR Prostaglandin-H2 D-isomerase OS=Ursus arctos OX=9644 GN=PTGDS PE=2 SV=1
+--------------------MAA-------------------LHTLWMG--LVLLGVLGV
+LQTQAQVQ--------------VSLQPNFQQDKFLGRWFTSGLASNSSWFRE-KKKVLSM
+CVSVVAPSAD-GGLNLTSTFLR--KE-QCETRTLLLRPAGTPGCYSYTSPH-WGS--THD
+VWVAMTDYDEYALLYT--TGTKGL-GQDFHMATLYSRTQTPRAEIKEKFTTFAKTQGFTE
+DAIVFLPQTDK--------------C----MEEHK----------
+>sp|Q8WNM1|PTGDS_GORGO Prostaglandin-H2 D-isomerase OS=Gorilla gorilla gorilla OX=9595 GN=PTGDS PE=2 SV=1
+--------------------MAT-------------------HHTLWMG--LALLGVLGD
+LQAAPEAQ--------------VSVQPNFQQDKFLGRWFSAGLASNSSWLRE-KKAALSM
+CKSVVAPAAD-GGLNLTSTFLR--KN-QCETRTMLLQTAGSLGSYSYRSPH-WGS--TYS
+VSVVETDYDQYALLYS--QGSKGP-GEDFRMATLYSRTQTPRAELKEKFTAFCKAQGFTE
+DTIVFLPQTDK--------------C----LTEQ-----------
+>sp|Q9TUI1|PTGDS_MACFU Prostaglandin-H2 D-isomerase OS=Macaca fuscata fuscata OX=9543 GN=PTGDS PE=2 SV=1
+--------------------MAT-------------------HHTLWMG--LVLLGLLGG
+LQAAPEAQ--------------VSVQPNFQPDKFLGRWFSAGLASNSSWLQE-KKAALSM
+CKSVVAPATD-GGLNLTSTFLR--KN-QCETRTMLLQPGESLGSYSYGSPH-WGS--TYS
+VSVVETDYDHYALLYS--QGSKGP-GEDFRMATLYSRTQTPRAELKEKFSAFCKAQGFTE
+DSIVFLPQTDK--------------C----MTEQ-----------
+>tr|G1M411|G1M411_AILME Uncharacterized protein OS=Ailuropoda melanoleuca OX=9646 GN=PTGDS PE=3 SV=1
+--------------------MAA-------------------LHTLWMG--LVLLGVLGV
+LQTGAQAQ--------------VSLQPNFQQDKFLGRWFTSGLASNSSWFRE-KKKVLSV
+CVSVVAPSAD-GGLNLTSTFLR--KE-QCETRSMLLRPAGPPGCYSYTSPH-WGS--THD
+VWVAMTDYDEYALLYT--TGTKGL-GQDFHMATLYSRTQTPRAEIKEKFTTFAKTQGFTE
+DAIVFLPQTDK--------------C----MEEHK----------
+>tr|I3NER4|I3NER4_ICTTR Uncharacterized protein OS=Ictidomys tridecemlineatus OX=43179 GN=Ptgds PE=3 SV=1
+--------------------MAT-------------------LRMLWME--LVLLGILGV
+LQT--QAQ--------------VSVQPDFQQDKFLGRWFSAGLASNSSWFRE-KKSMLSM
+CKSVVTPTAD-GGLNLTSTFLR--KN-QCETRTMLLQPTGNPGSYSYLSPH-WGS--THA
+VSVVETNYKEYALLFS--QGTKGP-GQDFHMATLYSRTQTPRAELKEKFADFCKAHGFTE
+NDIVFLPQNDK--------------C----LKEQE----------
+>tr|G3W419|G3W419_SARHA Uncharacterized protein OS=Sarcophilus harrisii OX=9305 GN=PTGDS PE=3 SV=1
+--------------------MMA-------------------MGLLWMG--LALLQALE-
+--TQGQSQES---------PQEIPVQPDFLEDKFVGTWYSVGLASTFPWFLK-KKAELMM
+CKTVLTPEAD-GTVNFTATFVS--NN-QCETRTSLLRKTQQPGHYVYKSIK-WGS--EHN
+IFVVETNYEEYSLLYT--TKTKG--NSNFNMATLYSRTKDVRPELKERFISFAKSHGFTE
+DTIVILPKTDQ--------------C----INEKP----------
+>tr|A0A1D5P1B1|A0A1D5P1B1_CHICK Uncharacterized protein OS=Gallus gallus OX=9031 GN=PTGDS PE=3 SV=1
+--------------------MQA-------------------MLLSILG--LALLGALH-
+----AQNS--------------IPVQADFQQDKLAGRWYSIGLASNSNWFKD-KKHLLKM
+CTTDIAVTAD-GNMEVTSTYPK--GE-QCEKRNSLYIRTEQPGRFSYTNPR-WGS--NHD
+IRVVETNYDEYALVAT--QISKS--TGSSNMVLLYSRTKEVAPQRLERFMQFSQEQGLKD
+EEILILPQTVPGGCWVCTLYALTWCC----LAIKPAPPGTKGFQG
+>tr|Q8QGV5|Q8QGV5_DANRE Lipocalin-type prostaglandin D synthase-like protein OS=Danio rerio OX=7955 GN=ptgdsb.1 PE=1 SV=1
+--------------------MTS--------------------VVVKML--CLLLCAVF-
+----ASAD--------------VMPMTDFDLQKVEGKWYLVGFATNAKWFVS-HKDDMKM
+GTAMLVPTQE-GDLDLSYSNLK--SDGSCWRMTYLAKKTETPGRFVFYSQR-WGN--DND
+MRVVDAKFDEYAIFHT--IKTKG--GVSEILNKLYSRTPEMVDDLKEKFRQFCLDTGILE
+ENIVMLPQNGE--------------C----SVAA-----------
+>tr|Q8QGV4|Q8QGV4_DANRE Lipocalin-type prostaglandin D synthase-like protein OS=Danio rerio OX=7955 GN=ptgdsb.1 PE=2 SV=1
+--------------------MAS--------------------VVVKML--CLLLCAVF-
+----ASAD--------------VMPMTDFDLQKVEGKWYLVGFATNAKWFVS-HKDDMKM
+GTAMLVPTQE-GDLDLSYSNLK--SDGSCWRMTYLAKKTETPGRFVFYSQR-WGN--DND
+MRVVDAKFDEYAIFHT--IKTKG--GVSEILNKLYSRTPEMVDDLKEKFRQFCLDTGILE
+ENIVMLPQNGE--------------C----SVAA-----------
+>tr|Q0VFE9|Q0VFE9_XENTR Complement component 8, gamma polypeptide, gene 2 OS=Xenopus tropicalis OX=8364 GN=ptgds PE=2 SV=1
+--------------------MRI-------------------LLALSLV---AICCSLW-
+----VGAE--------------VLIQPDFQKEKVLGKWYGIGLASNSNWFQG-KKNHMKM
+CTTIITPTAD-GNMEVTATFPK--MD-RCEKKTMTYIKTEQPGRFRAKSPR-YGS--EHD
+MRVVETNYDEFILMYT--LKTKG--PETNQIVSLFARDKDVRPELLDKFQSFAKAQGLTD
+ENILILPHTDQ--------------C----MTEA-----------
+>tr|Q91721|Q91721_XENLA Cpl-1 protein OS=Xenopus laevis OX=8355 GN=ptgds PE=2 SV=1
+-------------------MMRI-------------------LLALSLG---VACCSLW-
+----VGAE--------------VQVQPDFQKEKVLGKWYGIGLASNSNWFKD-RKSHMKM
+CTTIITPTAD-GNLEVTATYPK--MD-RCETKSMTYFKTEQLGGFRAKSPR-YGS--EHD
+MRVVETNYDEYILMYT--VKTKG--SETNQIVSLFGRDKDLRPELLDKFQNFAKSQGLAD
+DNIIILPHTDQ--------------C----MTEA-----------
+>tr|Q6DKB2|Q6DKB2_XENLA MGC84695 protein OS=Xenopus laevis OX=8355 GN=ptgds PE=2 SV=1
+-------------------MMRI-------------------LLALSLG---VACCSLW-
+----VGAE--------------VPLQPDFQNEKVLGKWYGIGLASNSNWFKD-RKSHMKM
+CTTIITPTTD-GNMDVTATYPK--MD-RCETKSMTYFKTEQPGRFRAKSPR-YGS--EHD
+MRVVETNYDEYILMYT--VKTKG--SETNQIVSLFGRDKDVRPELLDKFQSFAKTQGLTD
+DNILLLPHTDQ--------------C----MTEA-----------
+>tr|A0A151MF27|A0A151MF27_ALLMI Prostaglandin-H2 D-isomerase OS=Alligator mississippiensis OX=8496 GN=PTGDS PE=3 SV=1
+--------------------MQA-------------------ALLSILG--LALIGSLC-
+----AQED--------------VPVQPDFQPEKFTGKWYSIGLASNAKWFQD-KKALMKM
+CTTVIESTPE-GNLDVTSTYPK--SD-RCEKRNSLYIKTDQPGRFSYTSQR-WGS--QHD
+IRVVETNYDEYALVYT--KKVKD--TNTFTMVLLYGRTKELSPERLEKFTQFSKGQGLPE
+DAILILPKSDQ--------------C----MEVAV----------
+>tr|A0A1S3GVC8|A0A1S3GVC8_DIPOR prostaglandin-H2 D-isomerase OS=Dipodomys ordii OX=10020 GN=Ptgds PE=3 SV=1
+--------------------MAA-------------------RNMLWVG--LVLLGVLG-
+--TQANDP--------------NSAQPHFLIDKFLGPWYSVGLASNASWFLE-KKNTLSM
+CKTTVVPSGD-GGLNLTSTFLR--KN-QCETRVVLLQPTAHPGQYTYHSPH-WGS--VHS
+VSVVETNYEEYAMLFS--KGLDGP-HQDFRMASLYSRTQTPKAELKEDFAAFCKSQGLTE
+DTIVFLPQPDK--------------C----INEQE----------
+>tr|F6S436|F6S436_MONDO Uncharacterized protein OS=Monodelphis domestica OX=13616 GN=PTGDS PE=3 SV=2
+--------------------MGSGSWAGSAVPYGGTTGQGEPLLRSRLV--WRLIAPLA-
+----CHKGAAL---------------------QFIGAWYSVGLASTFPWFLK-KKAELTM
+CKSVLTPEAD-GTVNLTATFIR--NN-QCESRTSLLRKTEEPGHYVYKSIK-WES--DHN
+VYVVETNYEEYALLYT--SKTKG--NSHFNMATLYSRTKDVKTELKERFIRFAKSHGFTE
+DTIVILPKTDH--------------C----IDEK-----------
+>sp|P80188|NGAL_HUMAN Neutrophil gelatinase-associated lipocalin OS=Homo sapiens OX=9606 GN=LCN2 PE=1 SV=2
+--------------------MPL--------------------GLLWLG--LALLGALH-
+----AQAQDSTSDLIPAPPLSKVPLQQNFQDNQFQGKWYVVGLAGNAIL-RE-DKDPQKM
+YATIYELKED-KSYNVTSVLFR--KK-KCDYWIRTFVPGCQPGEFTLGNIKSYPGLTSYL
+VRVVSTNYNQHAMVFF--KKVSQ--NREYFKITLYGRTKELTSELKENFIRFSKSLGLPE
+NHIVFPVPIDQ--------------C----IDG------------
+>sp|P30152|NGAL_RAT Neutrophil gelatinase-associated lipocalin OS=Rattus norvegicus OX=10116 GN=Lcn2 PE=1 SV=2
+--------------------MGL--------------------GVLCLA--LVLLGVLQ-
+----SQAQDSTQNLIPAPPLISVPLQPGFWTERFQGRWFVVGLAGNAVQ-KE-RQSRFTM
+YSTIYELQED-NSYNVTSILVR--GQ-GCRYWIRTFVPSSRPGQFTLGNIHSYPQIQSYD
+VQVADTDYDQFAMVFF--QKTSE--NKQYFKVTLYGRTKGLSDELKERFVSFAKSLGLKD
+NNIVFSVPTDQ--------------C----IDN------------
+>sp|P11672|NGAL_MOUSE Neutrophil gelatinase-associated lipocalin OS=Mus musculus OX=10090 GN=Lcn2 PE=1 SV=1
+--------------------MAL--------------------SVMCLG--LALLGVLQ-
+----SQAQDSTQNLIPAPSLLTVPLQPDFRSDQFRGRWYVVGLAGNAVQ-KK-TEGSFTM
+YSTIYELQEN-NSYNVTSILVRDQDQ-GCRYWIRTFVPSSRAGQFTLGNMHRYPQVQSYN
+VQVATTDYNQFAMVFF--RKTSE--NKQYFKITLYGRTKELSPELKERFTRFAKSLGLKD
+DNIIFSVPTDQ--------------C----IDN------------
+>tr|E2RSM4|E2RSM4_CANLF Lipocalin 2 OS=Canis lupus familiaris OX=9615 GN=LCN2 PE=3 SV=1
+--------------------MTQ--------------------VLLWLG--LALLGSLQ-
+----VQTQDSTPSLIPAPPPLKVPLQPDFQHDQFQGKWYVIGIAGNILK-KE-GHGQLKM
+YTTTYELKDD-QSYNVTSTLLR--NE-RCDYWNRDFVPSFQPGQFSLGDIQLYPGVQSYL
+VQVVATNYNQYALVYF--RKVYK--SQEYFKITLYGRTKELPLELKKEFIRFAKSIGLTE
+DHIIFPVPIDQ--------------C----IDE------------
+>tr|E1B6Z6|E1B6Z6_BOVIN Lipocalin 2 OS=Bos taurus OX=9913 GN=LCN2 PE=1 SV=2
+-------------------TMSV--------------------GLLWLG--FTLLGALH-
+----TQARSSSSRLLRAPPLSRIPLQPNFQADQFQGKWYTVGVAGNAIK-KE-EQDPLKM
+YSSNYELKED-GSYNVTSILLK--DD-LCDYWIRTFVPSSQPGQFTLGNIKSYRGIRSYT
+VRVVNTDYNQFAIVYF--KKVQR--KKTYFKITLYGRTKELTPEVRENFINFAKSLGLTD
+DHIVFTVPIDR--------------C----IDDQ-----------
+>tr|F1RRX1|F1RRX1_PIG Uncharacterized protein OS=Sus scrofa OX=9823 GN=LCN2 PE=1 SV=2
+--------------------MAL--------------------SLLWLG--LTLLGALQ-
+----TQAQGTIPNWIPAPPLSKVPLQPNFQADQFQGKWYVVGLAGNAVK-KE-EQGRFKM
+YTTTYELKED-GSYNVVSTLLR--GQ-LCDNWIRTFVPSLQPGQFKLGDIKKYSGLQSYV
+VRVVSTNYSQFAIVFF--KKVSN--NQEYFKTTLYGRTKVLSPELKENFVRFAKSLGLSD
+DNIIFPVAIDQ--------------C----IDGQ-----------
+>tr|W5PMH6|W5PMH6_SHEEP Uncharacterized protein OS=Ovis aries OX=9940 GN=LCN2 PE=3 SV=1
+-------------------IMSI--------------------GLLWLG--FTLLGALH-
+----TQARSSTPRLLRAPPLSRIPLQPNFQADQFQGKWYTVGVAGNAIK-KE-EQDQFKM
+YTSNYELKED-GSYNVTSILLR--DE-RCDYWIRTFVPSSRPGQFTLGNIRSFPGIRSYT
+VRVVNTDYNQFAIVYF--KKVQR--KQGYFKITLYGRTKELTPEVRENFITFAKSLGLTD
+DHIIFPVPIDR--------------C----IDAQ-----------
+>tr|F6TIR2|F6TIR2_HORSE Lipocalin 2 OS=Equus caballus OX=9796 GN=LCN2 PE=3 SV=1
+--------------------MAL--------------------GLLWLG--FTLLGALQ-
+----TQARDPAPKLIPAPPLDRVPLQPDFKDDQFQGKWYVVGVAGNAFK-KE-EQGQFTM
+YTTTYELKED-HSYNVTSILLR--DQ-NCDHWIRTFIPSSQPGQFNLGDIKRYFGVQSYI
+VRVADTDYNQFAIVFF--RKVYK--NQEYFKTTLYRRTKELTPELREKFISFAKSLGLTD
+DHIIFPVPIDQ--------------C----IDEE-----------
+>tr|G3TQ27|G3TQ27_LOXAF Uncharacterized protein OS=Loxodonta africana OX=9785 GN=LCN2 PE=3 SV=1
+--------------------MPL--------------------NLLWLG--LTLLGALQ-
+----TQAQTHSPTLIPAPPLLRVPLQPDFQDDKFQGKWYVIGLAGNAVE-KK-EQGQFKM
+YTTTYELKED-GSYNVTSTLLQ--EDGKCSYWIRTFVPSFQPGQFNLGNIKNFPGLQSYT
+VRVTATNYNQFAIVFF--KKVSK--NGEYFKTTLYGRTKELTPELKERFIRFAKSLGLS-
+DHIIFPVPIDR--------------C----IDD------------
+>tr|H9H4D4|H9H4D4_MACMU Lipocalin 2 OS=Macaca mulatta OX=9544 GN=LCN2 PE=3 SV=1
+--------------------MPL--------------------GLLWLG--LALLGALH-
+----AQAQDSSSDLIPAPPLSKVPLQQNFQDNQFQGKWYVVGLSGNAVG-RK-DEAPLKM
+YATIYELKED-KSYNVTSILFR--KE-KCDYWIRTFVPGSQPGEFTLGNIQNHPGLTSYV
+VRVVSTNYKQYAMVFF--KKVSQ--NKEYFKITLYGRTKELTSELKENFIRFSKSLGLPE
+NHIVFSVPIDQ--------------C----ING------------
+>tr|A0A2J8NBI1|A0A2J8NBI1_PANTR LCN2 isoform 1 OS=Pan troglodytes OX=9598 GN=LCN2 PE=3 SV=1
+--------------------MPL--------------------GLLWLG--LALLGALH-
+----AQAQDSTSDLIPAPPLSKVPLQQNFQDNQFQGKWYVVGLAGNAIL-RE-DKDPQKM
+YATIYELKED-KSYNVTSVLFR--KK-KCDYWIRTFVPGRQPGEFTLGNIKSYPGLTSYL
+VRVVSTNYNQHAMVFF--KKVSQ--NREYFKITLYGRTKELTSELQENFIRFSKSLGLPE
+NHIVFPVPIDQ--------------C----IDG------------
+>tr|G3SEI1|G3SEI1_GORGO Lipocalin 2 OS=Gorilla gorilla gorilla OX=9595 GN=LCN2 PE=3 SV=2
+M-----PSSHHSACFLGPEIMPL--------------------GLLWLG--LALLGALH-
+----AQAQDSTSDLIPAPPLSKVPLQQNFQDNQFQGKWYVVGLAGNAIL-RE-DKDPQKM
+YATIYELKED-KSYNVTSVLFR--KK-KCDYWIRTFVPGSQPGEFTLGNIKSYPGLTSYL
+VRVVSTNYNQHAMVFF--KKVSQ--NREYFKITLYGRTKELTSELKENFIRFSKSLGLPE
+NHIVFPVPIDQ--------------C----IDG------------
+>tr|G1TRW8|G1TRW8_RABIT Uncharacterized protein OS=Oryctolagus cuniculus OX=9986 GN=LCN2 PE=3 SV=1
+--------------------MPL--------------------GLLWLG--LTLLGALH-
+----IQAQDPTPKLIPAPSLRRVPLQRNFQDEQFQGKWYVVGLAGNAVQ-KR-EEGQEPM
+YSTTYELNED-RSFNVTSTLLR--DQ-RCDHWIRTFVPTSRPGQYNLGNIKSYPGVKNYI
+VRVVATDYSQYAMMFF--RKGSR--NKQFFKTTLYGRTKELSPELRERFTRFAKSLGLPD
+DRIVFPTPIDQ--------------C----IDD------------
+>tr|H2TI84|H2TI84_TAKRU Prostaglandin D2 synthase a OS=Takifugu rubripes OX=31033 GN=lcn2 PE=3 SV=1
+--------------------MK-----------------------ASVV--VVMMCVTL-
+----AHAN--------------VKPQKDFNISRFAGRWYRVGLAYDSAHFAP-YRDKLKV
+SMGVITVLPN-GSVNLSMWEPT--PL-GCVNQVYQYIKTSTAGQFTYFSRRKHNM--VKD
+ITVVDTNYNEYALVLK--HKVF---HREYTQVALYGRSQTLKNSIIQKFKAFALSQSFPR
+ESILTPPPAAH------TEN-----C----PPSGSG---------
+>tr|A0A1S3KR13|A0A1S3KR13_SALSA neutrophil gelatinase-associated lipocalin isoform X1 OS=Salmo salar OX=8030 GN=lcn2 PE=3 SV=1
+--------------------MRI--------------------TFVTMA--TAMVCLMG-
+----VHGD--------------VQPQRDFDLQRFAGKWYRVGLAYDSPGFTALYRDKLRV
+SMGILNPQTN-GNVNLTMWTQR--SS-GCRSKLYTYEKTAIPGAFTYFSTR-HNK--VKD
+ITVVETNYNEYALVLK--HKKM---DREYTQVALYGRSQKVKPEVIQKFRDFATSHGFPK
+DAILTPPPAGS------SLKN----C----PPSGR----------
+>tr|A0A1W5A1F4|A0A1W5A1F4_9TELE neutrophil gelatinase-associated lipocalin isoform X1 OS=Scleropages formosus OX=113540 GN=lcn2 PE=3 SV=1
+--------------------MRT--------------------AVLTF---TVMLLALS-
+----IHAD--------------VQPQKDFDLRRFAGKWYRVGLAYDSPGFVR-YRSKMRI
+SMGILTPQLN-GDANLTMWEMS--PL-GCHPLSYVYEKTSVPGQFKYFSTR-HNR--TKD
+IMVVETNYNEYALVLK--HKKM---DKEFTQVALYGRSQKLRTELLDKFREFALSRGFSR
+ESILTPPAAAD---------D----C----PPA------------
+>tr|A0A2I4AV18|A0A2I4AV18_9TELE neutrophil gelatinase-associated lipocalin isoform X1 OS=Austrofundulus limnaeus OX=52670 GN=lcn2 PE=3 SV=1
+--------------------MRT--------------------TVVSVA--MVMXCVMM-
+----VHAS--------------VKPQKDFNLQKFAGKWYRVGFAYDSAGFVP-VRDRVKI
+SMGIVTPLPN-GNVNLTMWEAL--PV-GCLTQFYKYDKTNVPGQFTYFSIR-HNM--VKD
+ITVVDTNYNEYALVVK--HKVF---NREFTQVALYGRSQRLRVEVIQKFKALALSCGFPR
+QSILTPPPAGA------SRQETGQTC----RTVGQEDQDLWL--K
+>tr|I0FM65|I0FM65_MACMU Neutrophil gelatinase-associated lipocalin OS=Macaca mulatta OX=9544 GN=LCN2 PE=2 SV=1
+--------------------MPL--------------------GLLWLG--LALLGALH-
+----AQAQDSSSDLIPAPPLSKVPLQQNFQDNQFQGKWYVVGLSGNAVG-RK-DEAPLKM
+YATIYELKED-KSYNVTSILFR--KE-KCDYWIRTFVPGSRPGEFTLGNIQNHPGLTSYV
+VRVVSTNYKQYAMVFF--KKVSQ--NKEYFKITLYGRTKELTSELKENFIRFSKSLGLPE
+NHIVFSVPIDQ--------------C----IDG------------
+>tr|A0A2D0SPV9|A0A2D0SPV9_ICTPU neutrophil gelatinase-associated lipocalin OS=Ictalurus punctatus OX=7998 GN=lcn2 PE=3 SV=1
+MKFFILSQGAQTFALTRISMMKI--------------------TLVSIT--VTIALLLE-
+----VHAD--------------VLPQKNFDLKRFAGRWYRVGLAYNSPGFAR-HRNKLTI
+CMGVVEPKEN-GDVMMTVWKTK--SS-ICQKEVYRYEKTAVPGVFTYFSTR-HSR--VKD
+ITVVETNYSEFAVIYK--HRKF---NREFSQVSLYSRSQKLRPEVIEKFKKYATQHGFPE
+ESIVIPPPADN--------------C----PLARH----------

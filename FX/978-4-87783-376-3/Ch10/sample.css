@@ -1,0 +1,13 @@
+.button {
+    -fx-background-insets: 0 0 0 0;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(three-pass-box, gray, 1.0, 1.0, 3.0, 3.0);
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+}
+
+.button:armed {
+    -fx-effect: null;
+    -fx-translate-x: 3;
+    -fx-translate-y: 3;
+}
